@@ -30,4 +30,22 @@ public class stove_controller : MonoBehaviour
         //GetComponentInChildren<Transform>().eulerAngles = new Vector3(0f, angle, 0f);
         transform.Find("pan").eulerAngles = new Vector3(0f, angle, 0f);
     }
+
+    public void Cook(GameObject food)
+    {
+        //Start cooking process
+        Debug.Log("Cook");
+        StartCoroutine(cookProcess(food));
+    }
+
+    IEnumerator cookProcess(GameObject food)
+    {
+        do
+        {
+            Debug.Log("Cooking");
+            angle += .1f;
+            food.GetComponent<test_food_script>().cookTimeLeft -= 50 * Time.deltaTime;
+            yield return null;
+        } while (food.GetComponent<test_food_script>().inCookingArea);
+    }
 }
