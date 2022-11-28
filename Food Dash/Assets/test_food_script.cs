@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class testFoodScript : MonoBehaviour
+public class test_food_script : MonoBehaviour
 {
     // Start is called before the first frame update
     string target;
@@ -35,8 +35,9 @@ public class testFoodScript : MonoBehaviour
         inCookingArea = true;
         if(coll.CompareTag("Test"))
         {
+            GO.GetComponent<Rigidbody>().velocity = Vector3.zero;
             GO.transform.position = coll.transform.GetChild(0).transform.position;
-            coll.transform.parent.GetComponent<stove_controller>().Cook(GO);
+            coll.transform.parent.parent.GetComponent<stove_controller>().Cook(GO);
         }
         Debug.Log("Teleport");
            
@@ -46,6 +47,8 @@ public class testFoodScript : MonoBehaviour
     {
         if (coll.CompareTag("Test")) 
         {
+            //Keep object in place
+            GO.transform.position = coll.transform.GetChild(0).transform.position;
             //Debug.Log(cookTimeLeft);
             //cookTimeLeft -= 50 * Time.deltaTime;
             

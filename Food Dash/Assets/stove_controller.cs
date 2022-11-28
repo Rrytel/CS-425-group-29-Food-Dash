@@ -29,6 +29,11 @@ public class stove_controller : MonoBehaviour
         }
         //GetComponentInChildren<Transform>().eulerAngles = new Vector3(0f, angle, 0f);
         transform.Find("pan").eulerAngles = new Vector3(0f, angle, 0f);
+
+        //Animate pan
+        //transform.Find("pan").position += new Vector3(0f, .001f, 0f);
+
+        
     }
 
     public void Cook(GameObject food)
