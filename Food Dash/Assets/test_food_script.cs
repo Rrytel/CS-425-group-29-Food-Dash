@@ -31,12 +31,14 @@ public class test_food_script : MonoBehaviour
             //Swap for cooked mesh
             meshF.sharedMesh = Resources.Load<Mesh>("heat_lamp");
             //Play sound
+
         }
         if(heat > burnThresh)
         {
             //Swap for burnt mesh
             meshF.sharedMesh = Resources.Load<Mesh>("sink_handwash");
             //Play sound
+
         }
     }
 
