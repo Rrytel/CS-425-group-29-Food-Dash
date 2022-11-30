@@ -11,36 +11,48 @@ public class test_food_script : MonoBehaviour
     public bool cooked = false;
     public bool burnt = false;
     public bool inCookingArea = false;
+    float heat = 0;
+    public float cookThresh;
+    public float burnThresh;
     MeshFilter meshF;
     
     void Start()
     {
-        target = "Box Volume";
+        //target = "Box Volume";
         meshF = GO.GetComponent<MeshFilter>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if (cookTimeLeft < 0)
+        //Update mesh based on stage in cooking process
+        if (heat > cookThresh)
         {
+            //Swap for cooked mesh
             meshF.sharedMesh = Resources.Load<Mesh>("heat_lamp");
-            
+            //Play sound
+        }
+        if(heat > burnThresh)
+        {
+            //Swap for burnt mesh
+            meshF.sharedMesh = Resources.Load<Mesh>("sink_handwash");
+            //Play sound
         }
     }
 
     void OnTriggerEnter(Collider coll)
     {
-        inCookingArea = true;
-        if(coll.CompareTag("Test"))
+        if (coll.transform.parent.parent.GetComponent<stove_controller>().occupied == false)
         {
-            GO.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            GO.transform.position = coll.transform.GetChild(0).transform.position;
-            coll.transform.parent.parent.GetComponent<stove_controller>().Cook(GO);
+            inCookingArea = true;
+            if (coll.CompareTag("Test"))
+            {
+                //Remove velocity and place in work zone
+                GO.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                GO.transform.position = coll.transform.GetChild(0).transform.position;
+                coll.transform.parent.parent.GetComponent<stove_controller>().Cook(GO);
+            }
         }
-        Debug.Log("Teleport");
-           
     }
 
     void OnTriggerStay(Collider coll)
@@ -49,16 +61,20 @@ public class test_food_script : MonoBehaviour
         {
             //Keep object in place
             GO.transform.position = coll.transform.GetChild(0).transform.position;
-            //Debug.Log(cookTimeLeft);
+            
+            //Alterante way to add heat
             //cookTimeLeft -= 50 * Time.deltaTime;
             
         }
-        
-
     }
 
     void OnTriggerExit(Collider coll)
     {
         inCookingArea = false;
+    }
+
+    public void AddHeat(float amount)
+    {
+        heat += amount * Time.deltaTime;
     }
 }
