@@ -9,6 +9,7 @@ public class stove_controller : MonoBehaviour
     ParticleSystem ps;
     public Image LoadingBar;
     public Image marker;
+    public Image CompleteMarker;
     float timerVal;
     float angle;
     float panHeight;
@@ -18,10 +19,12 @@ public class stove_controller : MonoBehaviour
     Color lerpedColor = Color.green;
     public Collider cookVolume;
     public List <GameObject> activeItems = null;
+
     // Start is called before the first frame update
     void Start()
     {
          marker.enabled = false;
+         CompleteMarker.enabled = false;
          ps = GetComponent<ParticleSystem>();
          LoadingBar.fillAmount = 0;
          angle = 0;
@@ -59,16 +62,45 @@ public class stove_controller : MonoBehaviour
         StartCoroutine(cookProcess(food));
     }
 
+    IEnumerator colorShiftCMark(Color start, Color end)
+    {
+        float timer = 0f;
+        bool done = false;
+        Color tempColor;
+        //Debug.Log("CSM");
+        do
+        {
+            //Set color based on timer
+            tempColor = Color.Lerp(start, end, timer);
+            CompleteMarker.color = tempColor;
+            //Step timer
+            if(timer<1)
+            {
+                timer += Time.deltaTime * .9f;
+            }
+            
+            if (!(timer < 1))
+            {
+                done = true;
+            }
+            
+            yield return null;
+        }while(done!=true);
+    }
+
     IEnumerator cookProcess(GameObject food)
     {
+        //Debug.Log("CookP");
+        int indicatorStatus = 0;
         occupied = true;
+        CompleteMarker.enabled = true;
         marker.enabled = true;
         timerVal = food.GetComponent<test_food_script>().heat;
         //Turn on flame particle
         ps.Play(true);
         do
         {
-            Debug.Log("Cooking");
+            //Debug.Log("Cooking");
 
             //Get and set pan data
             panHeight = transform.Find("pan").transform.position.y;
@@ -88,12 +120,46 @@ public class stove_controller : MonoBehaviour
 
             //Update visual timer
             float burn = food.GetComponent<test_food_script>().burnThresh;
+            float cook = food.GetComponent<test_food_script>().cookThresh;
             if (timerVal < burn)
             {
                 timerVal += 5.0f * Time.deltaTime;
             }
             LoadingBar.fillAmount = timerVal / burn;
-            lerpedColor = Color.Lerp(Color.green, Color.red, (timerVal/burn));
+            //Adjust color of timer depending on foods cock status
+            if((timerVal/burn)<(cook/burn))
+            {
+                //First half of timer
+                //lerpedColor = Color.Lerp(Color.white, Color.green, (timerVal / burn) * 2);
+                lerpedColor = Color.Lerp(Color.white, Color.green, (timerVal / cook));
+            }
+            else if ((timerVal/burn)<1)
+            {
+                //Second half of timer
+                //lerpedColor = Color.Lerp(Color.green, Color.red, ((timerVal / burn) -.5f) * 2);
+                lerpedColor = Color.Lerp(Color.green, Color.red, ((timerVal / burn) - (cook/burn))*2);
+                //Mark food as done cooking
+                //CompleteMarker.color = Color.green;
+                if(indicatorStatus == 0)
+                {
+                    StartCoroutine(colorShiftCMark(Color.white, Color.green));
+                    indicatorStatus = 1;
+                }
+                
+            }
+            else
+            {
+                //Mark food as burnt
+                //CompleteMarker.color = Color.red;
+                if(indicatorStatus == 1)
+                {
+                    StopCoroutine(colorShiftCMark(Color.white, Color.green));
+                    StartCoroutine(colorShiftCMark(Color.green, Color.red));
+                    indicatorStatus = 2;
+                }
+               
+            }
+            
             LoadingBar.color = lerpedColor;
 
             //Update pan metrics
@@ -105,12 +171,14 @@ public class stove_controller : MonoBehaviour
 
 
             yield return null;
-        //} while (activeItems.Contains(food.gameObject));
-        } while (food.GetComponent<test_food_script>().activeArea == cookVolume );
+        } while (activeItems.Contains(food.gameObject));
+        //} while (food.GetComponent<test_food_script>().activeArea == cookVolume );
         //Reset values 
         transform.Find("pan").localPosition = new Vector3(0f, 0f, 0f);
         occupied = false;
         marker.enabled = false;
+        CompleteMarker.enabled = false;
+        CompleteMarker.color = Color.white;
         ps.Stop(true);
         LoadingBar.fillAmount = 0;
         timerVal = 0;
