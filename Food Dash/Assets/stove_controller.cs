@@ -16,6 +16,8 @@ public class stove_controller : MonoBehaviour
     float deltaPan;
     float panDirection = .1f;
     Color lerpedColor = Color.green;
+    public Collider cookVolume;
+    public List <GameObject> activeItems = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +63,7 @@ public class stove_controller : MonoBehaviour
     {
         occupied = true;
         marker.enabled = true;
+        timerVal = food.GetComponent<test_food_script>().heat;
         //Turn on flame particle
         ps.Play(true);
         do
@@ -102,12 +105,24 @@ public class stove_controller : MonoBehaviour
 
 
             yield return null;
-        } while (food.GetComponent<test_food_script>().inCookingArea);
+        //} while (activeItems.Contains(food.gameObject));
+        } while (food.GetComponent<test_food_script>().activeArea == cookVolume );
         //Reset values 
-        transform.Find("pan").position = new Vector3(0f, 0f, 0f);
+        transform.Find("pan").localPosition = new Vector3(0f, 0f, 0f);
         occupied = false;
         marker.enabled = false;
         ps.Stop(true);
         LoadingBar.fillAmount = 0;
+        timerVal = 0;
+    }
+
+    public void ObjectEnter(GameObject food)
+    {
+        activeItems.Add(food.gameObject);
+    }
+
+    public void ObjectExit(GameObject food)
+    {
+        activeItems.Remove(food.gameObject);
     }
 }

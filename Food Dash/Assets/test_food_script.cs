@@ -11,15 +11,18 @@ public class test_food_script : MonoBehaviour
     public bool cooked = false;
     public bool burnt = false;
     public bool inCookingArea = false;
-    float heat = 0;
+    public float heat = 0;
     public float cookThresh;
     public float burnThresh;
     MeshFilter meshF;
+    public Collider activeArea;
+    Rigidbody m_Rigidbody;
     
     void Start()
     {
         //target = "Box Volume";
         meshF = GO.GetComponent<MeshFilter>();
+        m_Rigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -40,6 +43,11 @@ public class test_food_script : MonoBehaviour
             //Play sound
 
         }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            m_Rigidbody.velocity = transform.forward * 5;
+        }
     }
 
     void OnTriggerEnter(Collider coll)
@@ -47,11 +55,15 @@ public class test_food_script : MonoBehaviour
         if (coll.transform.parent.parent.GetComponent<stove_controller>().occupied == false)
         {
             inCookingArea = true;
+            activeArea = coll;
+            
             if (coll.CompareTag("Test"))
             {
                 //Remove velocity and place in work zone
                 GO.GetComponent<Rigidbody>().velocity = Vector3.zero;
                 GO.transform.position = coll.transform.GetChild(0).transform.position;
+
+                coll.transform.parent.parent.GetComponent<stove_controller>().ObjectEnter(GO);
                 coll.transform.parent.parent.GetComponent<stove_controller>().Cook(GO);
             }
         }
@@ -62,7 +74,7 @@ public class test_food_script : MonoBehaviour
         if (coll.CompareTag("Test")) 
         {
             //Keep object in place
-            GO.transform.position = coll.transform.GetChild(0).transform.position;
+           // GO.transform.position = coll.transform.GetChild(0).transform.position;
             
             //Alterante way to add heat
             //cookTimeLeft -= 50 * Time.deltaTime;
@@ -73,6 +85,9 @@ public class test_food_script : MonoBehaviour
     void OnTriggerExit(Collider coll)
     {
         inCookingArea = false;
+        coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(GO);
+
+        //activeArea = null;
     }
 
     public void AddHeat(float amount)

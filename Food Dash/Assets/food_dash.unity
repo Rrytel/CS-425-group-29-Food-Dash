@@ -1795,7 +1795,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.406
+      value: 7.543
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3313,6 +3313,8 @@ MonoBehaviour:
   LoadingBar: {fileID: 281906462}
   marker: {fileID: 2092293715}
   occupied: 0
+  cookVolume: {fileID: 35379499}
+  activeItems: []
 --- !u!199 &1718935267
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -8096,6 +8098,8 @@ MonoBehaviour:
   LoadingBar: {fileID: 245878345}
   marker: {fileID: 746082059}
   occupied: 0
+  cookVolume: {fileID: 1042820774}
+  activeItems: []
 --- !u!198 &1939789649
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -12888,8 +12892,10 @@ MonoBehaviour:
   cooked: 0
   burnt: 0
   inCookingArea: 0
+  heat: 0
   cookThresh: 100
   burnThresh: 200
+  activeArea: {fileID: 0}
 --- !u!135 &2020384287
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12960,14 +12966,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020384285}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.9, y: 3.46, z: -15.59}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 6.22, y: 3.46, z: -15.59}
   m_LocalScale: {x: 0.4321133, y: 0.4321133, z: 0.4321133}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 26
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!54 &2020384291
 Rigidbody:
   m_ObjectHideFlags: 0
