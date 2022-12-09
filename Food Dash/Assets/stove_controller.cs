@@ -186,11 +186,19 @@ public class stove_controller : MonoBehaviour
 
     public void ObjectEnter(GameObject food)
     {
+        if(occupied)
+        {
+            return;
+        }
         activeItems.Add(food.gameObject);
     }
 
     public void ObjectExit(GameObject food)
     {
-        activeItems.Remove(food.gameObject);
+        if(activeItems.Contains(food.gameObject))
+        {
+            activeItems.Remove(food.gameObject);
+        }
+        
     }
 }

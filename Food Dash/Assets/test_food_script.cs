@@ -84,9 +84,11 @@ public class test_food_script : MonoBehaviour
 
     void OnTriggerExit(Collider coll)
     {
-        inCookingArea = false;
-        coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(GO);
-
+        if (coll.CompareTag("Test"))
+        {
+            inCookingArea = false;
+            coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(GO);
+        }
         //activeArea = null;
     }
 
