@@ -14,13 +14,18 @@ public class test_food_script : MonoBehaviour
     public float heat = 0;
     public float cookThresh;
     public float burnThresh;
+    public int chopThresh;
+    public AudioSource audioSource;
+    public AudioClip cookedSound;
+    public AudioClip burntSound;
     MeshFilter meshF;
     public Collider activeArea;
     Rigidbody m_Rigidbody;
+    int chopState = 0;
+
     
     void Start()
     {
-        //target = "Box Volume";
         meshF = GO.GetComponent<MeshFilter>();
         m_Rigidbody = GetComponent<Rigidbody>();
     }
@@ -29,20 +34,35 @@ public class test_food_script : MonoBehaviour
     void Update()
     {
         //Update mesh based on stage in cooking process
-        if (heat > cookThresh)
+        if (heat > cookThresh && cooked == false)
         {
+            //Update variables
+            cooked = true;
             //Swap for cooked mesh
             meshF.sharedMesh = Resources.Load<Mesh>("heat_lamp");
-            //Play sound
-
+            //Play sound for cooked food
+            audioSource.PlayOneShot(cookedSound, .3f);
         }
-        if(heat > burnThresh)
+        if(heat > burnThresh && burnt == false)
         {
+            //Update variables
+            burnt = true;
             //Swap for burnt mesh
             meshF.sharedMesh = Resources.Load<Mesh>("sink_handwash");
-            //Play sound
+            //Play sound for burnt food
+            audioSource.PlayOneShot(burntSound, .3f);
 
         }
+
+        //Update mesh based on stage in chopping process
+        if(chopState > chopThresh)
+        {
+            //Update varibles
+
+            //Swap for chopped mesh
+            meshF.sharedMesh = Resources.Load<Mesh>("sink_handwash");
+        }
+
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
@@ -52,48 +72,89 @@ public class test_food_script : MonoBehaviour
 
     void OnTriggerEnter(Collider coll)
     {
-        if (coll.transform.parent.parent.GetComponent<stove_controller>().occupied == false)
-        {
-            inCookingArea = true;
-            activeArea = coll;
-            
-            if (coll.CompareTag("Test"))
-            {
-                //Remove velocity and place in work zone
-                GO.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                GO.transform.position = coll.transform.GetChild(0).transform.position;
 
-                coll.transform.parent.parent.GetComponent<stove_controller>().ObjectEnter(GO);
-                coll.transform.parent.parent.GetComponent<stove_controller>().Cook(GO);
-            }
+        switch(coll.tag)
+        {
+            case "Test":
+                /*if (coll.transform.parent.parent.GetComponent<stove_controller>().occupied == false)
+                {
+                    inCookingArea = true;
+                    activeArea = coll;
+
+                    //Remove velocity and place in work zone
+                    GO.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                    GO.transform.position = coll.transform.GetChild(0).transform.position;
+                    //Call stove cooking functions
+                    coll.transform.parent.parent.GetComponent<stove_controller>().ObjectEnter(GO);
+                    coll.transform.parent.parent.GetComponent<stove_controller>().Cook(GO);
+                    
+                }*/
+                break;
+
+            case "Knife":
+                chopState += 1;
+                break;
+        
+        
         }
     }
 
     void OnTriggerStay(Collider coll)
     {
-        if (coll.CompareTag("Test")) 
+
+        switch (coll.tag)
         {
-            //Keep object in place
-           // GO.transform.position = coll.transform.GetChild(0).transform.position;
-            
-            //Alterante way to add heat
-            //cookTimeLeft -= 50 * Time.deltaTime;
-            
+            case "Test":
+
+                //Check to see if stove is busy
+                if (coll.transform.parent.parent.GetComponent<stove_controller>().occupied == false)
+                {
+                    inCookingArea = true;
+                    activeArea = coll;
+
+                    //Remove velocity and place in work zone
+                    GO.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                    GO.transform.position = coll.transform.GetChild(0).transform.position;
+                    //Call stove cooking functions
+                    coll.transform.parent.parent.GetComponent<stove_controller>().ObjectEnter(GO);
+                    coll.transform.parent.parent.GetComponent<stove_controller>().Cook(GO);
+                }
+
+                //Keep object in place
+                //GO.transform.position = coll.transform.GetChild(0).transform.position;
+
+                //Alterante way to add heat
+                //cookTimeLeft -= 50 * Time.deltaTime;
+                break;
+
+            case "Knife":
+                
+                break;
+
+
         }
     }
 
     void OnTriggerExit(Collider coll)
     {
-        if (coll.CompareTag("Test"))
+        switch (coll.tag)
         {
-            inCookingArea = false;
-            coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(GO);
+            case "Test":
+                inCookingArea = false;
+                coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(GO);
+                //activeArea = null;
+                break;
+
+            case "Knife":
+                
+                break;
         }
-        //activeArea = null;
     }
 
     public void AddHeat(float amount)
     {
         heat += amount * Time.deltaTime;
     }
+
+    
 }

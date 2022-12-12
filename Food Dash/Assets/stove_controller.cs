@@ -10,6 +10,8 @@ public class stove_controller : MonoBehaviour
     public Image LoadingBar;
     public Image marker;
     public Image CompleteMarker;
+    public AudioSource audioSource;
+    public AudioClip ignitionSound;
     float timerVal;
     float angle;
     float panHeight;
@@ -36,22 +38,6 @@ public class stove_controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        var emission = ps.emission;
-        //Testing
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            // Spacebar was pressed 
-            Debug.Log("Hello: ");
-            //emission.enabled = false;
-            ps.Stop(true);
-            angle += 15;
-        }
-        //GetComponentInChildren<Transform>().eulerAngles = new Vector3(0f, angle, 0f);
-
-
-        
-
 
     }
 
@@ -90,18 +76,19 @@ public class stove_controller : MonoBehaviour
 
     IEnumerator cookProcess(GameObject food)
     {
-        //Debug.Log("CookP");
+        //Initialize variables
         int indicatorStatus = 0;
         occupied = true;
         CompleteMarker.enabled = true;
         marker.enabled = true;
         timerVal = food.GetComponent<test_food_script>().heat;
-        //Turn on flame particle
+
+        //Turn on flame particle and sounds
+        audioSource.PlayOneShot(ignitionSound, 2f);
+        audioSource.Play();
         ps.Play(true);
         do
         {
-            //Debug.Log("Cooking");
-
             //Get and set pan data
             panHeight = transform.Find("pan").transform.position.y;
             if (panHeight > .18f)
@@ -139,7 +126,6 @@ public class stove_controller : MonoBehaviour
                 //lerpedColor = Color.Lerp(Color.green, Color.red, ((timerVal / burn) -.5f) * 2);
                 lerpedColor = Color.Lerp(Color.green, Color.red, ((timerVal / burn) - (cook/burn))*2);
                 //Mark food as done cooking
-                //CompleteMarker.color = Color.green;
                 if(indicatorStatus == 0)
                 {
                     StartCoroutine(colorShiftCMark(Color.white, Color.green));
@@ -150,7 +136,6 @@ public class stove_controller : MonoBehaviour
             else
             {
                 //Mark food as burnt
-                //CompleteMarker.color = Color.red;
                 if(indicatorStatus == 1)
                 {
                     StopCoroutine(colorShiftCMark(Color.white, Color.green));
@@ -161,19 +146,19 @@ public class stove_controller : MonoBehaviour
             }
             
             LoadingBar.color = lerpedColor;
-
             //Update pan metrics
             angle += .1f;
 
             //Cook food
             food.GetComponent<test_food_script>().AddHeat(5.0f);
-                     //food.BroadcastMessage("AddHeat", 5.0);
-
+            //food.BroadcastMessage("AddHeat", 5.0);
 
             yield return null;
         } while (activeItems.Contains(food.gameObject));
         //} while (food.GetComponent<test_food_script>().activeArea == cookVolume );
+
         //Reset values 
+        audioSource.Stop();
         transform.Find("pan").localPosition = new Vector3(0f, 0f, 0f);
         occupied = false;
         marker.enabled = false;
@@ -199,6 +184,5 @@ public class stove_controller : MonoBehaviour
         {
             activeItems.Remove(food.gameObject);
         }
-        
     }
 }
