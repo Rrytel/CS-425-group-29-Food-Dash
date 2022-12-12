@@ -1201,7 +1201,7 @@ MonoBehaviour:
   marker: {fileID: 1268542419}
   CompleteMarker: {fileID: 861141834}
   audioSource: {fileID: 535316441}
-  ignitionSound: {fileID: 8300000, guid: 843b6d957c7904e05b141a997f4f60d3, type: 3}
+  ignitionSound: {fileID: 8300000, guid: 4b235b3658aff884c8107812c8ead7fa, type: 3}
   occupied: 0
   cookVolume: {fileID: 1109849017}
   activeItems: []
@@ -5885,7 +5885,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2fc337dc6cbcf427e88611007d9e9f21, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ba1d734b736d63d488a3a9ec814d93fc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.023
   m_Pitch: 1
@@ -8849,7 +8849,7 @@ MonoBehaviour:
   marker: {fileID: 746082059}
   CompleteMarker: {fileID: 716958790}
   audioSource: {fileID: 1939789651}
-  ignitionSound: {fileID: 8300000, guid: 843b6d957c7904e05b141a997f4f60d3, type: 3}
+  ignitionSound: {fileID: 8300000, guid: 4b235b3658aff884c8107812c8ead7fa, type: 3}
   occupied: 0
   cookVolume: {fileID: 1042820774}
   activeItems: []
@@ -13528,7 +13528,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2fc337dc6cbcf427e88611007d9e9f21, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ba1d734b736d63d488a3a9ec814d93fc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.023
   m_Pitch: 1
