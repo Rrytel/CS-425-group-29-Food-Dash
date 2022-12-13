@@ -22,7 +22,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
         //Creating max number of players allowed in a room
         RoomOptions roomOptions = new RoomOptions();
-        roomOptions.MaxPlayers = 2;
+        roomOptions.MaxPlayers = 3;
 
         //Note: ADD where to make sure input field isn't empty before creating room
         //need string input for room name-> name of room will be whatever we write in the "createInput" input field
