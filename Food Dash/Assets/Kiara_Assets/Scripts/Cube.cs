@@ -8,7 +8,7 @@ public class Cube : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        moveSpeed = .4f;
+        moveSpeed = 1.0f;
     }
 
     // Update is called once per frame
@@ -19,7 +19,7 @@ public class Cube : MonoBehaviourPunCallbacks
         //transform.Translate(1f * Time.deltaTime, 0f, 0f);
         if(photonView.IsMine)
         {
-            transform.Translate(moveSpeed * Input.GetAxis("Horizontal"), 0f, moveSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
+            transform.Translate(moveSpeed * Input.GetAxis("Horizontal"), 1.0f, moveSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
         }
         
     }

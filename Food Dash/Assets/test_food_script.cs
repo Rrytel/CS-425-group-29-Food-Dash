@@ -64,7 +64,7 @@ public class test_food_script : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.K))
         {
             m_Rigidbody.velocity = transform.forward * 5;
         }

@@ -4,6 +4,7 @@ using UnityEngine;
 //allows to create inputfield vars. and anything else involving UI
 using UnityEngine.UI;
 using Photon.Pun;
+using Photon.Realtime;
 
 public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 {
@@ -14,8 +15,18 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     //Calling it from the Create Button therefore needs to be public
     public void CreateRoom()
     {
+
+        //if not connected, won't try to create a room
+        if(!PhotonNetwork.IsConnected)
+            return;
+
+        //Creating max number of players allowed in a room
+        RoomOptions roomOptions = new RoomOptions();
+        roomOptions.MaxPlayers = 2;
+
+        //Note: ADD where to make sure input field isn't empty before creating room
         //need string input for room name-> name of room will be whatever we write in the "createInput" input field
-        PhotonNetwork.CreateRoom(createInput.text);
+        PhotonNetwork.CreateRoom(createInput.text, roomOptions);
     }
 
     public void JoinRoom()
@@ -28,6 +39,6 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
      public override void OnJoinedRoom()
     {
         //Transition to actual game scene
-        PhotonNetwork.LoadLevel("GameScene");
+        PhotonNetwork.LoadLevel("food_dash");
     }
 }

@@ -429,10 +429,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 1413012764931406835, guid: 1d22517e2cc12944e9cb07c1b9bfafc0, type: 3}
-  minX: -3.42
-  maxX: 3.42
-  minY: 0.5
-  maxY: 0.5
+  minX: 6.53
+  maxX: 8.42
+  minY: 0.487
+  maxY: 0.487
 --- !u!4 &1917694886
 Transform:
   m_ObjectHideFlags: 0
