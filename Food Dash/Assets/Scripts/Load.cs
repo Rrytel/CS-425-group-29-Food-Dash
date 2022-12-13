@@ -8,7 +8,6 @@ public class Load : MonoBehaviour
 {
     public void LoadScene ()
     {
-        //name is the parameter
-        SceneManager.LoadScene ("LoadingScene");
+        SceneManager.LoadScene (name);
     }
 }
