@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Kiara_Assets/Scenes/LoadingScene.unity
+    guid: 78a30f959ba1f2e4ea042871c2e501a5
+  - enabled: 1
+    path: Assets/Kiara_Assets/Scenes/JoinScene.unity
+    guid: b88fafb2da3386a48af5dfb2b61ba5a9
+  - enabled: 1
+    path: Assets/Kiara_Assets/Scenes/GameScene.unity
+    guid: 8a19707af3a0bc841ab937aaf530f402
   m_configObjects: {}

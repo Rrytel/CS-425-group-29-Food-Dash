@@ -7,7 +7,7 @@ public class SpawnPlayers : MonoBehaviour
 {
 
     public GameObject playerPrefab; //will store player prefab
-    //Boundaries for where can randomly spawn player
+    //Boundaries for where can randomly spawn player- aka fields to enter in inspector
     public float minX;
     public float maxX;
     public float minY;
@@ -18,12 +18,9 @@ public class SpawnPlayers : MonoBehaviour
     {
         Vector2 randomPosition = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
         //Will spawn player on the server so each player is visible within the game
+        //Quaternion.identity = rotation
         PhotonNetwork.Instantiate(playerPrefab.name, randomPosition, Quaternion.identity);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
 }

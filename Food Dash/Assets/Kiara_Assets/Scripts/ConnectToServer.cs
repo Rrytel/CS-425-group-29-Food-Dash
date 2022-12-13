@@ -22,11 +22,13 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     //Anything in this fcn will get called when successfully connected to the server
     public override void OnConnectedToMaster()
     {
+        //Debug.Log("Connected to Master");
         PhotonNetwork.JoinLobby(); //power to create and join rooms if successfuly connected to server
     }
     //When have successfully joined the lobby, load Join Scene
     public override void OnJoinedLobby()
     {
+        //Debug.Log("Joined the room");
         SceneManager.LoadScene("JoinScene");
     }
 }
