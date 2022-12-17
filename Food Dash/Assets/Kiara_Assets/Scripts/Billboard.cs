@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Billboard : MonoBehaviour
 {
+    //Credit: https://www.youtube.com/watch?v=v75whPrOelU
+
     //Want Username to face the camera and be flat against the screen
 
     //Store reference to the camera
