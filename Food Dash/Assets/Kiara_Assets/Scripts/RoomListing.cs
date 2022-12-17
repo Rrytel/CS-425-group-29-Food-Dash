@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Credit: https://www.youtube.com/watch?v=KGzMxalSqQE
 public class RoomListing : MonoBehaviour
 {
     //setting room name text

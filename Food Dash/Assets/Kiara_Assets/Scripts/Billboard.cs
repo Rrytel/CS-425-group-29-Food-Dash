@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Credit: https://www.youtube.com/watch?v=v75whPrOelU
 public class Billboard : MonoBehaviour
 {
     //Want Username to face the camera and be flat against the screen
