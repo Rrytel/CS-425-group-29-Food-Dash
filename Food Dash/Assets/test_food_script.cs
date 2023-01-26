@@ -12,7 +12,7 @@ public class test_food_script : MonoBehaviour
     public GameObject GO;
     public bool cooked = false;
     public bool burnt = false;
-    public bool inCookingArea = false;
+    
     public float heat = 0;
     public float cookThresh;
     public float burnThresh;
@@ -79,7 +79,7 @@ public class test_food_script : MonoBehaviour
                 activeAreas.Add(coll);
                 /*if (coll.transform.parent.parent.GetComponent<stove_controller>().occupied == false)
                 {
-                    inCookingArea = true;
+                   
                     activeArea = coll;
 
                     //Remove velocity and place in work zone
@@ -110,8 +110,8 @@ public class test_food_script : MonoBehaviour
                 if (coll.transform.parent.parent.GetComponent<stove_controller>().occupied == false && active == false)
                 {
                     active = true;
-                    inCookingArea = true;
-                    //activeArea = coll;
+                    
+                    //activeArea = coll; // BAD!
 
                     if(!isHeld)
                     {
@@ -122,7 +122,6 @@ public class test_food_script : MonoBehaviour
                     
                     //Call stove cooking functions
                     coll.transform.parent.parent.GetComponent<stove_controller>().ObjectEnter(GO);
-                    coll.transform.parent.parent.GetComponent<stove_controller>().Cook(GO);
                 }
 
                 //Keep object in place
@@ -147,10 +146,9 @@ public class test_food_script : MonoBehaviour
             case "Test":
                 activeAreas.Remove(coll);
                 activeArea = null;
-                inCookingArea = false;
+                
                 StartCoroutine(ExitProcess(coll));
                 //coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(GO);
-                //activeArea = null;
                 break;
 
             case "Knife":

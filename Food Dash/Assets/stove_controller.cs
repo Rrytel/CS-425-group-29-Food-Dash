@@ -134,7 +134,6 @@ public class stove_controller : MonoBehaviour
                     StartCoroutine(colorShiftCMark(Color.white, Color.green));
                     indicatorStatus = 1;
                 }
-                
             }
             else
             {
@@ -148,7 +147,7 @@ public class stove_controller : MonoBehaviour
                 }
                
             }
-            
+            //Set loading bar color
             LoadingBar.color = lerpedColor;
             //Update pan metrics
             angle += .1f;
@@ -181,6 +180,7 @@ public class stove_controller : MonoBehaviour
             return;
         }
         activeItems.Add(food.gameObject);
+        Cook(food);
     }
 
     public void ObjectExit(GameObject food)

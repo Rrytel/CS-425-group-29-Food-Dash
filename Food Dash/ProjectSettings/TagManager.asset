@@ -9,6 +9,7 @@ TagManager:
   - UI
   - Bullet
   - Knife
+  - vaccum
   layers:
   - Default
   - TransparentFX
