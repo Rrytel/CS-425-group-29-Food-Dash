@@ -6,6 +6,8 @@ public class test_food_script : MonoBehaviour
 {
     // Start is called before the first frame update
     string target;
+    Collider tempCol;
+    public bool isHeld = false;
     public float cookTimeLeft = 100;
     public GameObject GO;
     public bool cooked = false;
@@ -20,8 +22,10 @@ public class test_food_script : MonoBehaviour
     public AudioClip burntSound;
     MeshFilter meshF;
     public Collider activeArea;
+    public List<Collider> activeAreas;
     Rigidbody m_Rigidbody;
     int chopState = 0;
+    public bool active = false;
 
     
     void Start()
@@ -33,6 +37,8 @@ public class test_food_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        //timer += .01f;
         //Update mesh based on stage in cooking process
         if (heat > cookThresh && cooked == false)
         {
@@ -57,25 +63,20 @@ public class test_food_script : MonoBehaviour
         //Update mesh based on stage in chopping process
         if(chopState > chopThresh)
         {
-            //Update varibles
+            //Update variables
 
             //Swap for chopped mesh
             meshF.sharedMesh = Resources.Load<Mesh>("sink_handwash");
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            m_Rigidbody.velocity = transform.forward * 5;
         }
     }
 
     void OnTriggerEnter(Collider coll)
     {
-
+        //activeArea = coll;
         switch(coll.tag)
         {
             case "Test":
+                activeAreas.Add(coll);
                 /*if (coll.transform.parent.parent.GetComponent<stove_controller>().occupied == false)
                 {
                     inCookingArea = true;
@@ -101,20 +102,24 @@ public class test_food_script : MonoBehaviour
 
     void OnTriggerStay(Collider coll)
     {
-
         switch (coll.tag)
         {
             case "Test":
-
+                activeArea = coll;
                 //Check to see if stove is busy
-                if (coll.transform.parent.parent.GetComponent<stove_controller>().occupied == false)
+                if (coll.transform.parent.parent.GetComponent<stove_controller>().occupied == false && active == false)
                 {
+                    active = true;
                     inCookingArea = true;
-                    activeArea = coll;
+                    //activeArea = coll;
 
-                    //Remove velocity and place in work zone
-                    GO.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                    GO.transform.position = coll.transform.GetChild(0).transform.position;
+                    if(!isHeld)
+                    {
+                        //Remove velocity and place in work zone
+                        GO.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                        GO.transform.position = coll.transform.GetChild(0).transform.position;
+                    }
+                    
                     //Call stove cooking functions
                     coll.transform.parent.parent.GetComponent<stove_controller>().ObjectEnter(GO);
                     coll.transform.parent.parent.GetComponent<stove_controller>().Cook(GO);
@@ -140,8 +145,11 @@ public class test_food_script : MonoBehaviour
         switch (coll.tag)
         {
             case "Test":
+                activeAreas.Remove(coll);
+                activeArea = null;
                 inCookingArea = false;
-                coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(GO);
+                StartCoroutine(ExitProcess(coll));
+                //coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(GO);
                 //activeArea = null;
                 break;
 
@@ -151,9 +159,37 @@ public class test_food_script : MonoBehaviour
         }
     }
 
+    IEnumerator ExitProcess(Collider coll)
+    {
+        float timer = 0f;
+        do
+        {
+            //Wait to see if object re-enters trigger zone within a time treshold
+            timer += 1f;
+            //Debug.Log(timer);
+            yield return null;
+        } while (!activeAreas.Contains(coll) && timer<2f);
+        //while (coll != activeArea && timer < 2f);
+        if(timer > 1f)
+        {
+
+            coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(GO);
+        }
+    }
+
     public void AddHeat(float amount)
     {
         heat += amount * Time.deltaTime;
+    }
+
+    public void grab()
+    {
+        isHeld = true;
+        
+    }
+    public void unGrab()
+    {
+        isHeld = false;
     }
 
     

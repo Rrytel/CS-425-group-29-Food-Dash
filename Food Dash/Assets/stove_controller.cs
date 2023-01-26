@@ -93,10 +93,12 @@ public class stove_controller : MonoBehaviour
             panHeight = transform.Find("pan").transform.position.y;
             if (panHeight > .18f)
             {
+                //Lower pad
                 panDirection = -.1f;
             }
             if (panHeight < 0f)
             {
+                //Raise pan
                 panDirection = .1f;
             }
             deltaPan = panDirection * Time.deltaTime;
@@ -125,6 +127,7 @@ public class stove_controller : MonoBehaviour
                 //Second half of timer
                 //lerpedColor = Color.Lerp(Color.green, Color.red, ((timerVal / burn) -.5f) * 2);
                 lerpedColor = Color.Lerp(Color.green, Color.red, ((timerVal / burn) - (cook/burn))*2);
+
                 //Mark food as done cooking
                 if(indicatorStatus == 0)
                 {
@@ -140,6 +143,7 @@ public class stove_controller : MonoBehaviour
                 {
                     StopCoroutine(colorShiftCMark(Color.white, Color.green));
                     StartCoroutine(colorShiftCMark(Color.green, Color.red));
+                    lerpedColor = Color.Lerp(Color.green, Color.red, ((timerVal / burn) - (cook / burn)) * 2);
                     indicatorStatus = 2;
                 }
                
@@ -171,6 +175,7 @@ public class stove_controller : MonoBehaviour
 
     public void ObjectEnter(GameObject food)
     {
+        //Check if stove is currently occupied
         if(occupied)
         {
             return;
@@ -180,9 +185,11 @@ public class stove_controller : MonoBehaviour
 
     public void ObjectExit(GameObject food)
     {
+        //Check if the food object is in this stoves list of active items
         if(activeItems.Contains(food.gameObject))
         {
             activeItems.Remove(food.gameObject);
+            food.GetComponent<test_food_script>().active = false;
         }
     }
 }
