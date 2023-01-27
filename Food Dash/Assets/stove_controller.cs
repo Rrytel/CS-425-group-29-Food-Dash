@@ -189,7 +189,8 @@ public class stove_controller : MonoBehaviour
         if(activeItems.Contains(food.gameObject))
         {
             activeItems.Remove(food.gameObject);
-            food.GetComponent<test_food_script>().active = false;
+            //food.GetComponent<test_food_script>().active = false;
+            food.GetComponent<test_food_script>().DA();
         }
     }
 }

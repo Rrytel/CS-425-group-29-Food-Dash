@@ -22,7 +22,8 @@ public class test_food_script : MonoBehaviour
     public AudioClip burntSound;
     MeshFilter meshF;
     public Collider activeArea;
-    public List<Collider> activeAreas;
+    public List<Collider> activeAreas = null;
+    public List<Collider> prevAreas = null;
     Rigidbody m_Rigidbody;
     int chopState = 0;
     public bool active = false;
@@ -92,15 +93,25 @@ public class test_food_script : MonoBehaviour
                 }
                 else
                 {
-                    /*
+                    //Kick food out
+                    
+                    if(prevAreas.Contains(coll))
+                    {
+                
+                        break;
+                        
+                    }
                     if(coll.transform.parent.parent.GetComponent<stove_controller>().occupied == true)
                     {
-                        break;
+                        GameObject tempFood = coll.transform.parent.parent.GetComponent<stove_controller>().activeItems[0];
+                        
+                        coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(tempFood);
+
+                        //coll.transform.parent.parent.GetComponent<stove_controller>().activeItems.Clear();
+                        //tempFood.GetComponent<test_food_script>().StartCoroutine(DelayActivate());
                     }
-                    Debug.Log("Not Held");
-                    coll.transform.parent.parent.GetComponent<stove_controller>().activeItems[0].GetComponent<test_food_script>().active = false;
-                    coll.transform.parent.parent.GetComponent<stove_controller>().activeItems.Clear();
-                    */
+
+
                 }
                 /*if (coll.transform.parent.parent.GetComponent<stove_controller>().occupied == false)
                 {
@@ -171,7 +182,7 @@ public class test_food_script : MonoBehaviour
             case "Test":
                 activeAreas.Remove(coll);
                 activeArea = null;
-                
+                prevAreas.Add(coll);
                 StartCoroutine(ExitProcess(coll));
                 //coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(GO);
                 break;
@@ -181,6 +192,8 @@ public class test_food_script : MonoBehaviour
                 break;
         }
     }
+
+    
 
     IEnumerator ExitProcess(Collider coll)
     {
@@ -197,7 +210,9 @@ public class test_food_script : MonoBehaviour
         {
 
             coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(GO);
+            
         }
+        prevAreas.Remove(coll);
     }
 
     public void AddHeat(float amount)
@@ -213,6 +228,22 @@ public class test_food_script : MonoBehaviour
     public void unGrab()
     {
         isHeld = false;
+    }
+
+    public void DA()
+    {
+        StartCoroutine(DelayActivate());
+    }
+
+    IEnumerator DelayActivate()
+    {
+        float timer = 0f;
+        do
+        {
+            timer += 1f * Time.fixedDeltaTime;
+            yield return null;
+        } while (timer < 2f);
+        active = false;
     }
 
     
