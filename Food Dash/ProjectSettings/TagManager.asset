@@ -10,6 +10,7 @@ TagManager:
   - Bullet
   - Knife
   - vaccum
+  - floor
   layers:
   - Default
   - TransparentFX

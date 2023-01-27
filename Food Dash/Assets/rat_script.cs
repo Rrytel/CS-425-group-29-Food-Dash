@@ -10,8 +10,9 @@ public class rat_script : MonoBehaviour
     public Transform goal;
     Mesh mesh;
     private Renderer mr;
-    private bool held = false;
+    private bool isHeld = false;
     private bool inVaccum = false;
+    private bool touchFloor = false;
 
     // Start is called before the first frame update
     void Start()
@@ -83,19 +84,59 @@ public class rat_script : MonoBehaviour
     IEnumerator wakeUp()
     {
         //Time to wake up after being interacted with
-        float timer = 0f;
+        float breakOutTimer = 0f;
+        float floorTimer = 0f;
+        
         do
         {
             //Wait to see if entity is picked up or is in range of vaccum
-            timer += 1f * Time.fixedDeltaTime;
-            Debug.Log(timer);
+            breakOutTimer += 1f * Time.fixedDeltaTime;
+            //Debug.Log(breakOutTimer);
+            if(touchFloor)
+            {
+                //If floor is being touched increment floor timer for faster wake up
+                floorTimer += 1f * Time.fixedDeltaTime;
+            }
             yield return null;
-        } while (!held && !inVaccum && timer < 20f);
+        } while (!isHeld && !inVaccum && floorTimer < 5f && breakOutTimer < 20f);
 
-        if (timer > 19f)
+        if (breakOutTimer > 19f || floorTimer > 4f)
         {
             //Wake up if not interacted with for a time threshold
             agent.enabled = true;
+            m_Rigidbody.drag = 20;
+            Debug.Log("wakeup");
         }
+    }
+
+    private void OnCollisionEnter(Collision coll)
+    {
+        if(coll.gameObject.CompareTag("floor"))
+        {
+            touchFloor = true;
+            //Debug.Log("floor");
+        }
+    }
+
+    private void OnCollisionExit(Collision coll)
+    {
+        if (coll.gameObject.CompareTag("floor"))
+        {
+            touchFloor = false;
+            //Debug.Log("floor");
+        }
+    }
+
+    public void grab()
+    {
+        agent.enabled = false;
+        isHeld = true;
+        //m_Rigidbody.drag = 1;
+    }
+    public void unGrab()
+    {
+        m_Rigidbody.drag = 1;
+        isHeld = false;
+        StartCoroutine(wakeUp());
     }
 }

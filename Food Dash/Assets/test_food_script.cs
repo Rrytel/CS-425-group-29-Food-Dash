@@ -58,6 +58,15 @@ public class test_food_script : MonoBehaviour
             //Play sound for burnt food
             audioSource.PlayOneShot(burntSound, .3f);
 
+            //Kill Rat
+            if(GO.GetComponent<rat_script>())
+            {
+                //GO.GetComponent<rat_script>().enabled = false;
+                GO.GetComponent<Rigidbody>().drag = 1;
+                Destroy(GO.GetComponent<rat_script>());
+            }
+            
+
         }
 
         //Update mesh based on stage in chopping process
@@ -77,6 +86,14 @@ public class test_food_script : MonoBehaviour
         {
             case "Test":
                 activeAreas.Add(coll);
+                if(isHeld)
+                {
+                    Debug.Log("Held");
+                }
+                else
+                {
+                    Debug.Log("Not Held");
+                }
                 /*if (coll.transform.parent.parent.GetComponent<stove_controller>().occupied == false)
                 {
                    
