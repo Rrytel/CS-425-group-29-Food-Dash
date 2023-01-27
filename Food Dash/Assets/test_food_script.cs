@@ -92,7 +92,15 @@ public class test_food_script : MonoBehaviour
                 }
                 else
                 {
+                    /*
+                    if(coll.transform.parent.parent.GetComponent<stove_controller>().occupied == true)
+                    {
+                        break;
+                    }
                     Debug.Log("Not Held");
+                    coll.transform.parent.parent.GetComponent<stove_controller>().activeItems[0].GetComponent<test_food_script>().active = false;
+                    coll.transform.parent.parent.GetComponent<stove_controller>().activeItems.Clear();
+                    */
                 }
                 /*if (coll.transform.parent.parent.GetComponent<stove_controller>().occupied == false)
                 {
