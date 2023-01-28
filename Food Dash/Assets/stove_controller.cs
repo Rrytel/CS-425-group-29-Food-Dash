@@ -21,6 +21,8 @@ public class stove_controller : MonoBehaviour
     Color lerpedColor = Color.green;
     public Collider cookVolume;
     public List <GameObject> activeItems = null;
+    public GameObject launchPos;
+    public GameObject smoke;
 
     // Start is called before the first frame update
     void Start()
@@ -84,6 +86,7 @@ public class stove_controller : MonoBehaviour
         timerVal = food.GetComponent<test_food_script>().heat;
 
         //Turn on flame particle and sounds
+        //smoke.GetComponent<ParticleSystem>().Play();
         audioSource.PlayOneShot(ignitionSound, 2f);
         audioSource.Play();
         ps.Play(true);
@@ -192,5 +195,12 @@ public class stove_controller : MonoBehaviour
             //food.GetComponent<test_food_script>().active = false;
             food.GetComponent<test_food_script>().DA();
         }
+    }
+
+    public void EjectFood(GameObject food)
+    {
+        //smoke.GetComponent<ParticleSystem>().Play();
+        food.GetComponent<Rigidbody>().MovePosition(launchPos.transform.position);
+        food.GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, -60));
     }
 }

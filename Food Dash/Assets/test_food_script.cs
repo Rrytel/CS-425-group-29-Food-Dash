@@ -91,24 +91,31 @@ public class test_food_script : MonoBehaviour
                 {
                     Debug.Log("Held");
                 }
-                else
+                if(isHeld == false)
                 {
+                    Debug.Log("Not held");
                     //Kick food out
                     
                     if(prevAreas.Contains(coll))
                     {
-                
                         break;
-                        
                     }
+                    if(active)
+                    {
+                        break;
+                    }
+                    
                     if(coll.transform.parent.parent.GetComponent<stove_controller>().occupied == true)
                     {
                         GameObject tempFood = coll.transform.parent.parent.GetComponent<stove_controller>().activeItems[0];
-                        
-                        coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(tempFood);
+                        coll.transform.parent.parent.GetComponent<stove_controller>().EjectFood(tempFood);
 
-                        //coll.transform.parent.parent.GetComponent<stove_controller>().activeItems.Clear();
-                        //tempFood.GetComponent<test_food_script>().StartCoroutine(DelayActivate());
+                            //coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(tempFood);
+                            //tempFood.gameObject.GetComponent<Rigidbody>().MovePosition(coll.transform.parent.parent.GetComponent<stove_controller>().launchPos.transform.position);
+                            //tempFood.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, -60));
+
+                        //coll.transform.parent.parent.GetComponent<stove_controller>().activeItems.Remove(tempFood.gameObject);
+                        //tempFood.GetComponent<test_food_script>().DA();
                     }
 
 
@@ -242,7 +249,7 @@ public class test_food_script : MonoBehaviour
         {
             timer += 1f * Time.fixedDeltaTime;
             yield return null;
-        } while (timer < 2f);
+        } while (timer < .2f);
         active = false;
     }
 

@@ -49,6 +49,7 @@ public class rat_script : MonoBehaviour
         switch(coll.tag)
         {
             case "vaccum":
+                m_Rigidbody.drag = 1;
                 inVaccum = true;
                 break;
         }
@@ -59,6 +60,10 @@ public class rat_script : MonoBehaviour
         switch (coll.tag)
         {
             case "vaccum":
+                if (this.gameObject.GetComponent<test_food_script>().active == true)
+                {
+                    break;
+                }
                 //Transform destinationTransform = coll.GetComponentInParent<Transform>();
                 Transform destinationTransform = coll.transform.parent.GetComponent<Transform>();
                 Vector3 moveDir = destinationTransform.position - m_Rigidbody.transform.position;
@@ -104,7 +109,7 @@ public class rat_script : MonoBehaviour
         {
             //Wake up if not interacted with for a time threshold
             agent.enabled = true;
-            m_Rigidbody.drag = 20;
+            m_Rigidbody.drag = 10;
             Debug.Log("wakeup");
         }
     }
