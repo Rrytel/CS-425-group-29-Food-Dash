@@ -105,8 +105,9 @@ public class test_food_script : MonoBehaviour
                     if (coll.transform.parent.parent.GetComponent<stove_controller>().occupied == true)
                     {
                         GameObject tempFood = coll.transform.parent.parent.GetComponent<stove_controller>().activeItems[0];
-                        coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(tempFood.gameObject);
                         coll.transform.parent.parent.GetComponent<stove_controller>().EjectFood(tempFood);
+                        coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(tempFood.gameObject);
+                        
 
                             //coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(tempFood.gameObject);
                             //tempFood.gameObject.GetComponent<Rigidbody>().MovePosition(coll.transform.parent.parent.GetComponent<stove_controller>().launchPos.transform.position);

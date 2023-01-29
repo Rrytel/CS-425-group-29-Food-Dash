@@ -203,7 +203,7 @@ public class stove_controller : MonoBehaviour
         //Place active food in launch position
         food.GetComponent<Rigidbody>().MovePosition(launchPos.transform.position);
         //Get forward direction and apply magnitude
-        Vector3 forward = transform.forward * 60;
+        Vector3 forward = transform.forward * 90;
         //Get vertical component and combine
         Vector3 vertical = new Vector3(0f, 500f, 0f);
         Vector3 launchVec = forward + vertical;
