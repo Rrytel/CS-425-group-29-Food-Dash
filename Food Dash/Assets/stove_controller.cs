@@ -200,7 +200,16 @@ public class stove_controller : MonoBehaviour
     public void EjectFood(GameObject food)
     {
         //smoke.GetComponent<ParticleSystem>().Play();
+        //Place active food in launch position
         food.GetComponent<Rigidbody>().MovePosition(launchPos.transform.position);
-        food.GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, -60));
+        //Get forward direction and apply magnitude
+        Vector3 forward = transform.forward * 60;
+        //Get vertical component and combine
+        Vector3 vertical = new Vector3(0f, 500f, 0f);
+        Vector3 launchVec = forward + vertical;
+        //Launch food
+        food.GetComponent<Rigidbody>().AddForce(launchVec);
+
+        //Debug.Log(launchVec);
     }
 }

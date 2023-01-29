@@ -11,6 +11,7 @@ TagManager:
   - Knife
   - vaccum
   - floor
+  - food
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - player
+  - food
   - 
   - 
   - 

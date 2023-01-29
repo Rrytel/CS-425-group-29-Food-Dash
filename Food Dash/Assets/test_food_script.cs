@@ -89,13 +89,10 @@ public class test_food_script : MonoBehaviour
                 activeAreas.Add(coll);
                 if(isHeld)
                 {
-                    Debug.Log("Held");
+
                 }
                 if(isHeld == false)
                 {
-                    Debug.Log("Not held");
-                    //Kick food out
-                    
                     if(prevAreas.Contains(coll))
                     {
                         break;
@@ -104,13 +101,14 @@ public class test_food_script : MonoBehaviour
                     {
                         break;
                     }
-                    
-                    if(coll.transform.parent.parent.GetComponent<stove_controller>().occupied == true)
+                    //Kick food out
+                    if (coll.transform.parent.parent.GetComponent<stove_controller>().occupied == true)
                     {
                         GameObject tempFood = coll.transform.parent.parent.GetComponent<stove_controller>().activeItems[0];
+                        coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(tempFood.gameObject);
                         coll.transform.parent.parent.GetComponent<stove_controller>().EjectFood(tempFood);
 
-                            //coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(tempFood);
+                            //coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(tempFood.gameObject);
                             //tempFood.gameObject.GetComponent<Rigidbody>().MovePosition(coll.transform.parent.parent.GetComponent<stove_controller>().launchPos.transform.position);
                             //tempFood.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, -60));
 
@@ -136,7 +134,10 @@ public class test_food_script : MonoBehaviour
                 break;
 
             case "Knife":
+                //Increment chop counter
                 chopState += 1;
+                //Play chop sound
+
                 break;
         
         
