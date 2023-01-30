@@ -130,18 +130,19 @@ public class test_food_script : MonoBehaviour
                     if (coll.transform.parent.parent.GetComponent<stove_controller>().occupied == true)
                     {
                         GameObject tempFood = coll.transform.parent.parent.GetComponent<stove_controller>().activeItems[0];
-                        //GO.GetComponent<Rigidbody>().velocity = Vector3.zero;
+
                         coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(tempFood.gameObject);
                         coll.transform.parent.parent.GetComponent<stove_controller>().ResetCook();
-                        
+
                         coll.transform.parent.parent.GetComponent<stove_controller>().EjectFood(tempFood, throwPow);
-                        //coll.transform.parent.parent.GetComponent<stove_controller>().ObjectEnter(GO);
+
 
 
                         //coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(tempFood.gameObject);
                         //tempFood.gameObject.GetComponent<Rigidbody>().MovePosition(coll.transform.parent.parent.GetComponent<stove_controller>().launchPos.transform.position);
                         //tempFood.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, -60));
 
+                        //coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(tempFood.gameObject);
                         //coll.transform.parent.parent.GetComponent<stove_controller>().activeItems.Remove(tempFood.gameObject);
                         //tempFood.GetComponent<test_food_script>().DA();
                     }
