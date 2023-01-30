@@ -47,7 +47,7 @@ public class rat_script : MonoBehaviour
 
         
         //Bait   
-        //agent.destination = goal.position;
+        agent.destination = goal.position;
 
         //Wandering functionality
 
@@ -62,7 +62,7 @@ public class rat_script : MonoBehaviour
         //Get random position to wander to
         Vector3 tempPos = RandomNavSphere(transform.position, wanderRad, -1);
         Debug.Log(tempPos);
-        agent.destination = tempPos;
+        //agent.destination = tempPos;
         
     }
 

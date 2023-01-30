@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class test_food_script : MonoBehaviour
 {
@@ -27,6 +28,9 @@ public class test_food_script : MonoBehaviour
     Rigidbody m_Rigidbody;
     int chopState = 0;
     public bool active = false;
+    float throwPow = 1.5f;
+    bool chargeUp = false;
+    
 
     
     void Start()
@@ -38,7 +42,24 @@ public class test_food_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Spin charge
+        if(chargeUp)
+        {
+            if(throwPow < 10)
+            {
+                //Scale up throwing power
+                throwPow += 1f * Time.fixedDeltaTime;
+            }
+            //Remove controller bound rotation
+            gameObject.GetComponent<XRGrabInteractable>().trackRotation = false;
+            transform.Rotate(new Vector3(88, 67, 22));
+            gameObject.GetComponent<XRGrabInteractable>().throwVelocityScale = throwPow;
+        }
+        else
+        {
+            gameObject.GetComponent<XRGrabInteractable>().trackRotation = true;
+        }
+
         //timer += .01f;
         //Update mesh based on stage in cooking process
         if (heat > cookThresh && cooked == false)
@@ -232,11 +253,13 @@ public class test_food_script : MonoBehaviour
     public void grab()
     {
         isHeld = true;
+        throwPow = 1.5f;
         
     }
     public void unGrab()
     {
         isHeld = false;
+        EndCharge();
     }
 
     public void DA()
@@ -253,6 +276,18 @@ public class test_food_script : MonoBehaviour
             yield return null;
         } while (timer < .2f);
         active = false;
+    }
+
+    public void StartCharge()
+    {
+        Debug.Log("s");
+        chargeUp = true;
+        
+    }    
+
+    public void EndCharge()
+    {
+        chargeUp = false;
     }
 
     
