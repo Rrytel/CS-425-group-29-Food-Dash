@@ -197,13 +197,13 @@ public class stove_controller : MonoBehaviour
         }
     }
 
-    public void EjectFood(GameObject food)
+    public void EjectFood(GameObject food, float launchPow)
     {
         //smoke.GetComponent<ParticleSystem>().Play();
         //Place active food in launch position
         food.GetComponent<Rigidbody>().MovePosition(launchPos.transform.position);
         //Get forward direction and apply magnitude
-        Vector3 forward = transform.forward * 90;
+        Vector3 forward = transform.forward * 90 * (launchPow/1.5f);
         //Get vertical component and combine
         Vector3 vertical = new Vector3(0f, 500f, 0f);
         Vector3 launchVec = forward + vertical;
@@ -211,5 +211,20 @@ public class stove_controller : MonoBehaviour
         food.GetComponent<Rigidbody>().AddForce(launchVec);
 
         //Debug.Log(launchVec);
+    }
+
+    public void ResetCook()
+    {
+        gameObject.GetComponent<stove_controller>().StopAllCoroutines();
+        //Reset values 
+        audioSource.Stop();
+        transform.Find("pan").localPosition = new Vector3(0f, 0f, 0f);
+        occupied = false;
+        marker.enabled = false;
+        CompleteMarker.enabled = false;
+        CompleteMarker.color = Color.white;
+        ps.Stop(true);
+        LoadingBar.fillAmount = 0;
+        timerVal = 0;
     }
 }

@@ -11,6 +11,8 @@ public class test_food_script : MonoBehaviour
     public bool isHeld = false;
     public float cookTimeLeft = 100;
     public GameObject GO;
+    //Food attributes
+    public string foodType;
     public bool cooked = false;
     public bool burnt = false;
     
@@ -35,6 +37,7 @@ public class test_food_script : MonoBehaviour
     
     void Start()
     {
+        
         meshF = GO.GetComponent<MeshFilter>();
         m_Rigidbody = GetComponent<Rigidbody>();
     }
@@ -52,7 +55,7 @@ public class test_food_script : MonoBehaviour
             }
             //Remove controller bound rotation
             gameObject.GetComponent<XRGrabInteractable>().trackRotation = false;
-            transform.Rotate(new Vector3(88, 67, 22));
+            transform.Rotate(new Vector3(25, 12, 34));
             gameObject.GetComponent<XRGrabInteractable>().throwVelocityScale = throwPow;
         }
         else
@@ -103,8 +106,9 @@ public class test_food_script : MonoBehaviour
 
     void OnTriggerEnter(Collider coll)
     {
+      
         //activeArea = coll;
-        switch(coll.tag)
+        switch (coll.tag)
         {
             case "Test":
                 activeAreas.Add(coll);
@@ -126,13 +130,17 @@ public class test_food_script : MonoBehaviour
                     if (coll.transform.parent.parent.GetComponent<stove_controller>().occupied == true)
                     {
                         GameObject tempFood = coll.transform.parent.parent.GetComponent<stove_controller>().activeItems[0];
-                        coll.transform.parent.parent.GetComponent<stove_controller>().EjectFood(tempFood);
+                        //GO.GetComponent<Rigidbody>().velocity = Vector3.zero;
                         coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(tempFood.gameObject);
+                        coll.transform.parent.parent.GetComponent<stove_controller>().ResetCook();
                         
+                        coll.transform.parent.parent.GetComponent<stove_controller>().EjectFood(tempFood, throwPow);
+                        //coll.transform.parent.parent.GetComponent<stove_controller>().ObjectEnter(GO);
 
-                            //coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(tempFood.gameObject);
-                            //tempFood.gameObject.GetComponent<Rigidbody>().MovePosition(coll.transform.parent.parent.GetComponent<stove_controller>().launchPos.transform.position);
-                            //tempFood.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, -60));
+
+                        //coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(tempFood.gameObject);
+                        //tempFood.gameObject.GetComponent<Rigidbody>().MovePosition(coll.transform.parent.parent.GetComponent<stove_controller>().launchPos.transform.position);
+                        //tempFood.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, -60));
 
                         //coll.transform.parent.parent.GetComponent<stove_controller>().activeItems.Remove(tempFood.gameObject);
                         //tempFood.GetComponent<test_food_script>().DA();
@@ -232,15 +240,13 @@ public class test_food_script : MonoBehaviour
         {
             //Wait to see if object re-enters trigger zone within a time treshold
             timer += 1f;
-            //Debug.Log(timer);
             yield return null;
         } while (!activeAreas.Contains(coll) && timer<2f);
         //while (coll != activeArea && timer < 2f);
         if(timer > 1f)
         {
-
+            //Object can exit
             coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(GO);
-            
         }
         prevAreas.Remove(coll);
     }
@@ -254,7 +260,6 @@ public class test_food_script : MonoBehaviour
     {
         isHeld = true;
         throwPow = 1.5f;
-        
     }
     public void unGrab()
     {
@@ -280,10 +285,8 @@ public class test_food_script : MonoBehaviour
 
     public void StartCharge()
     {
-        Debug.Log("s");
         chargeUp = true;
-        
-    }    
+    }
 
     public void EndCharge()
     {
