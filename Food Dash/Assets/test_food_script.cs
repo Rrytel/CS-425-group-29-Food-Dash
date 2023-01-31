@@ -278,9 +278,9 @@ public class test_food_script : MonoBehaviour
         float timer = 0f;
         do
         {
-            timer += 1f * Time.fixedDeltaTime;
+            timer += 1f;
             yield return null;
-        } while (timer < .2f);
+        } while (timer < 2f);
         active = false;
     }
 

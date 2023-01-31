@@ -24,6 +24,7 @@ public class stove_controller : MonoBehaviour
     public GameObject launchPos;
     public GameObject smoke;
     Coroutine CC;
+    Coroutine colorShift = null;
 
     // Start is called before the first frame update
     void Start()
@@ -84,8 +85,11 @@ public class stove_controller : MonoBehaviour
         int indicatorStatus = 0;
         occupied = true;
         CompleteMarker.enabled = true;
+        CompleteMarker.color = Color.white;
         marker.enabled = true;
         timerVal = food.GetComponent<test_food_script>().heat;
+        
+        //StartCoroutine(colorShiftCMark(CompleteMarker.color, Color.white));
 
         //Turn on flame particle and sounds
         //smoke.GetComponent<ParticleSystem>().Play();
@@ -136,7 +140,7 @@ public class stove_controller : MonoBehaviour
                 //Mark food as done cooking
                 if(indicatorStatus == 0)
                 {
-                    StartCoroutine(colorShiftCMark(Color.white, Color.green));
+                    colorShift = StartCoroutine(colorShiftCMark(Color.white, Color.green));
                     indicatorStatus = 1;
                 }
             }
@@ -145,8 +149,8 @@ public class stove_controller : MonoBehaviour
                 //Mark food as burnt
                 if(indicatorStatus == 1)
                 {
-                    StopCoroutine(colorShiftCMark(Color.white, Color.green));
-                    StartCoroutine(colorShiftCMark(Color.green, Color.red));
+                    StopCoroutine(colorShift);
+                    colorShift = StartCoroutine(colorShiftCMark(Color.green, Color.red));
                     lerpedColor = Color.Lerp(Color.green, Color.red, ((timerVal / burn) - (cook / burn)) * 2);
                     indicatorStatus = 2;
                 }
@@ -166,6 +170,12 @@ public class stove_controller : MonoBehaviour
         //} while (food.GetComponent<test_food_script>().activeArea == cookVolume );
 
         //Reset values 
+        if(colorShift!=null)
+        {
+            StopCoroutine(colorShift);
+        }
+        
+        
         StartCoroutine("markerFade");
         audioSource.Stop();
         transform.Find("pan").localPosition = new Vector3(0f, 0f, 0f);
@@ -235,6 +245,10 @@ public class stove_controller : MonoBehaviour
     {
         //gameObject.GetComponent<stove_controller>().StopAllCoroutines();
         gameObject.GetComponent<stove_controller>().StopCoroutine(CC);
+        if (colorShift != null)
+        {
+            StopCoroutine(colorShift);
+        }
         StartCoroutine("markerFade");
         //Reset values 
         audioSource.Stop();
