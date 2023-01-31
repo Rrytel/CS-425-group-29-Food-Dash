@@ -143,7 +143,7 @@ public class test_food_script : MonoBehaviour
                         //tempFood.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, -60));
 
                         //coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(tempFood.gameObject);
-                        //coll.transform.parent.parent.GetComponent<stove_controller>().activeItems.Remove(tempFood.gameObject);
+                        //coll.transform.parent.parent.GetComponent<stove_controller>().activeItems.Clear();
                         //tempFood.GetComponent<test_food_script>().DA();
                     }
 

@@ -23,6 +23,7 @@ public class stove_controller : MonoBehaviour
     public List <GameObject> activeItems = null;
     public GameObject launchPos;
     public GameObject smoke;
+    Coroutine CC;
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +48,7 @@ public class stove_controller : MonoBehaviour
     {
         //Start cooking process
         Debug.Log("Cook");
-        StartCoroutine(cookProcess(food));
+        CC = StartCoroutine(cookProcess(food));
     }
 
     IEnumerator colorShiftCMark(Color start, Color end)
@@ -79,6 +80,7 @@ public class stove_controller : MonoBehaviour
     IEnumerator cookProcess(GameObject food)
     {
         //Initialize variables
+        StopCoroutine("markerFade");
         int indicatorStatus = 0;
         occupied = true;
         CompleteMarker.enabled = true;
@@ -164,15 +166,31 @@ public class stove_controller : MonoBehaviour
         //} while (food.GetComponent<test_food_script>().activeArea == cookVolume );
 
         //Reset values 
+        StartCoroutine("markerFade");
         audioSource.Stop();
         transform.Find("pan").localPosition = new Vector3(0f, 0f, 0f);
         occupied = false;
-        marker.enabled = false;
-        CompleteMarker.enabled = false;
+        //marker.enabled = false;
+        //CompleteMarker.enabled = false;
         CompleteMarker.color = Color.white;
         ps.Stop(true);
-        LoadingBar.fillAmount = 0;
+        //LoadingBar.fillAmount = 0;
         timerVal = 0;
+    }
+
+    IEnumerator markerFade()
+    {
+        float timer = 0f;
+        do
+        {
+            timer += 1 * Time.fixedDeltaTime;
+            Debug.Log(timer);
+            yield return null;
+        }while(timer < .5f) ;
+        
+        marker.enabled = false;
+        CompleteMarker.enabled = false;
+        LoadingBar.fillAmount = 0;
     }
 
     public void ObjectEnter(GameObject food)
@@ -215,16 +233,18 @@ public class stove_controller : MonoBehaviour
 
     public void ResetCook()
     {
-        gameObject.GetComponent<stove_controller>().StopAllCoroutines();
+        //gameObject.GetComponent<stove_controller>().StopAllCoroutines();
+        gameObject.GetComponent<stove_controller>().StopCoroutine(CC);
+        StartCoroutine("markerFade");
         //Reset values 
         audioSource.Stop();
         transform.Find("pan").localPosition = new Vector3(0f, 0f, 0f);
         occupied = false;
-        marker.enabled = false;
-        CompleteMarker.enabled = false;
+        //marker.enabled = false;
+        //CompleteMarker.enabled = false;
         CompleteMarker.color = Color.white;
         ps.Stop(true);
-        LoadingBar.fillAmount = 0;
+        //LoadingBar.fillAmount = 0;
         timerVal = 0;
     }
 }
