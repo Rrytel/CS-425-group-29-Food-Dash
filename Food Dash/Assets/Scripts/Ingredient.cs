@@ -7,17 +7,20 @@ using UnityEngine;
 */
 public class Ingredient : MonoBehaviour
 {
-    public IngredientTypes type  = IngredientTypes.Dough;
+	public IngredientTypes type  = IngredientTypes.Dough;
 }
 
 public enum IngredientTypes
 {
-    Dough,
-    Sauce,
-    Bun,
-    Patty,
-    Cheese,
-    Lettuce,
-    Onion,
-    Tomato,
+	Dough,
+	Sauce,
+	Bun,
+	Patty,
+	Cheese,
+	Lettuce,
+	Potato,
+	Salt,
+	Beverage,
+	Ice,
+	Cup
 }
