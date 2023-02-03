@@ -73,7 +73,7 @@ public class Order : MonoBehaviour
 	/*
 	*	how close the order is to expectations (as a percent)
 	*/
-	public float determineAccuracy ()
+	public float DetermineAccuracy ()
 	{
 		float accuracy;
 

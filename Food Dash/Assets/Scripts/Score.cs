@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-	int score;
+	int score = 0;
 
 	/*
 	*	add to score after turning in an order
@@ -16,16 +16,22 @@ public class Score : MonoBehaviour
 	{
 		int increment = served.GetPrice () * 100;
 		int penalty = served.GetLifetime ();
-		float multiplier = served.determineAccuracy ();
+		float multiplier = served.DetermineAccuracy ();
 
-		score += (increment - penalty) *  (int) (multiplier / 100);
+		// (food price * 100 - time penalty) * accuracy
+		score += (int) ((increment - penalty) * (multiplier / 100));
 	}
 
 	/*
 	*	get the current score
 	*/
-	int GetScore ()
+	public int GetScore ()
 	{
 		return score;
+	}
+
+	public void ResetScore ()
+	{
+		score = 0;
 	}
 }
