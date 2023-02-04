@@ -12,6 +12,7 @@ TagManager:
   - vaccum
   - floor
   - food
+  - plate
   layers:
   - Default
   - TransparentFX
