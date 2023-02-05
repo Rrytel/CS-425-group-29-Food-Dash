@@ -61,7 +61,7 @@ public class rat_script : MonoBehaviour
         wanderTimer = 0;
         //Get random position to wander to
         Vector3 tempPos = RandomNavSphere(transform.position, wanderRad, -1);
-        Debug.Log(tempPos);
+        //Debug.Log(tempPos);
         //agent.destination = tempPos;
         
     }
@@ -136,7 +136,7 @@ public class rat_script : MonoBehaviour
         {
             //Wait to see if entity is picked up or is in range of vaccum
             breakOutTimer += 1f * Time.fixedDeltaTime;
-            Debug.Log(breakOutTimer);
+            //Debug.Log(breakOutTimer);
             if(touchFloor)
             {
                 //If floor is being touched increment floor timer for faster wake up
