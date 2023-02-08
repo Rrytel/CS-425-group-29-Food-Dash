@@ -14,12 +14,16 @@ public class Order : MonoBehaviour
 	int lifetime = 0;
 	float timer;
 
+	Score score;
+
 	// food or drinks in the order
-	List <FoodTypes> items;
-	List <FoodTypes> currentItems;
+	public List <FoodTypes> items = new List <FoodTypes> ();
+	List <FoodTypes> currentItems = new List <FoodTypes> ();
 
 	void Start ()
 	{
+		score = gameObject.GetComponent <Score> ();
+
 		CreateOrder ();
 	}
 
@@ -40,11 +44,34 @@ public class Order : MonoBehaviour
 	*/
 	void CreateOrder ()
 	{
-		// add items to order and calculate order price
-		for (int iterations = 0; iterations <= Random.Range (minItems, maxItems); iterations += 1)
+		// how many items will be in the order
+		int itemCount = Random.Range (minItems, maxItems + 1);
+
+		// temporary code for variety in orders
+		while (itemCount >= 0)
 		{
-			// in the future: add random food
-			items.Add (FoodTypes.Burger);
+			switch (itemCount)
+			{
+				case 0:
+					items.Add (FoodTypes.Fries);
+					break;
+
+				case 1:
+					items.Add (FoodTypes.Drink);
+					break;
+
+				case 2:
+					items.Add (FoodTypes.Burger);
+					break;
+
+				case 3:
+					items.Add (FoodTypes.Pizza);
+					// if you order pizza, do not order a burger
+					itemCount -= 1;
+					break;
+			}
+
+			itemCount -= 1;
 		}
 
 		// copy list for comparison later
@@ -126,8 +153,11 @@ public class Order : MonoBehaviour
 		return lifetime;
 	}
 
-	void Serve ()
+	public int Serve ()
 	{
+		score.UpdateScore (this);
 		served = true;
+
+		return score.GetScore ();
 	}
 }

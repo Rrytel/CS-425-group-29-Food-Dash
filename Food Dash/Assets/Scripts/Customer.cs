@@ -37,14 +37,18 @@ public class Customer : MonoBehaviour
 	/*
 	*	the process for leaving the restuarant
 	*/
-	public void Leave ()
+	public int Leave ()
 	{
 		/*
 		*	customer travels towards exit
 		*	maybe: leave a review depending on mood that affects score?
 		*/
 
+		int orderScore = order.Serve ();
+
 		Destroy (gameObject);
+
+		return orderScore;
 	}
 }
 

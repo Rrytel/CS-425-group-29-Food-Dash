@@ -7,13 +7,14 @@ public class Round : MonoBehaviour
 	// day 0: tutorial
 	public int day = 1;
 	// how long each round will last (in seconds)
-	public int timeLimit = 300;
+	public int timeLimit = 120;
+
+	public GameObject customerPrefab;
 
 	// score needed to advance to the next day
 	int minScore;
+	int score = 0;
 
-	// how many customers are currently in the restuarant
-	int currentCustomers = 0;
 	// how many customers will visit during this round
 	int totalCustomers;
 	// how many customers can be in the restuarant at the same time
@@ -24,17 +25,17 @@ public class Round : MonoBehaviour
 	float spawnTimer = 0;
 	float roundTimer = 0;
 
-	Score roundScore;
-
-	GameObject customerPrefab;
+	List <Customer> currentCustomers = new List <Customer> ();
 
 	void Start ()
 	{
-		roundScore = gameObject.GetComponent <Score> ();
-		// http://answers.unity.com/answers/674316/view.html
-		customerPrefab = Resources.Load <GameObject> (@"..\Prefabs\Game\Customer");
+		/*
+		*	load the prefab file
+		*	http://answers.unity.com/answers/674316/view.html
+		*/
+		//customerPrefab = Resources.Load <GameObject> (@"..\Prefabs\Game\Customer");
 
-		NewRound ();
+		NewRound();
 	}
 
 	void Update ()
@@ -64,25 +65,30 @@ public class Round : MonoBehaviour
 			}
 		}
 
-		if (spawnTimer > spawnFrequency)
+		if (CanSpawnCustomer ())
 		{
-			SpawnCustomer ();
-
-			spawnTimer = 0;
+			/*
+			*	events that take place once a customer spawns
+			*/
 		}
 	}
 
 	void NewRound ()
 	{
+		// remove customers from the previous round
+		while (currentCustomers.Count > 0)
+		{
+			RemoveCustomer (currentCustomers [0]);
+		}
+
 		// reset round properties
-		currentCustomers = 0;
 		spawnTimer = 0;
 		roundTimer = 0;
-		roundScore.ResetScore ();
+		score = 0;
 
 		// set new round properties
-		totalCustomers = day + Random.Range (0, day);
-		maxCustomers = totalCustomers / (day / 2);
+		totalCustomers = day + Random.Range (0, day + 1);
+		maxCustomers = totalCustomers / (day + 1 / 2);
 		spawnFrequency = timeLimit / 100;
 		// minimum score (needs tuning)
 		minScore = totalCustomers * 100;
@@ -92,13 +98,13 @@ public class Round : MonoBehaviour
 	*	attempts to spawn a customer
 	*	returns true on success
 	*/
-	bool SpawnCustomer ()
+	bool CanSpawnCustomer ()
 	{
-		if (currentCustomers < maxCustomers)
+		if (currentCustomers.Count < maxCustomers && spawnTimer > spawnFrequency)
 		{
-			Instantiate (customerPrefab);
+			currentCustomers.Add (Instantiate (customerPrefab).GetComponent <Customer> ());
 
-			currentCustomers += 1;
+			spawnTimer = 0;
 
 			return true;
 		}
@@ -111,19 +117,12 @@ public class Round : MonoBehaviour
 	*	occurs if a customer is served or if they leave (time out)
 	*	returns true on success
 	*/
-	bool RemoveCustomer (Customer toRemove)
+	void RemoveCustomer (Customer toRemove)
 	{
-		if (currentCustomers > 0)
-		{
-			toRemove.Leave ();
+		currentCustomers.Remove (toRemove);
+		score += toRemove.Leave ();
 
-			currentCustomers -= 1;
-			totalCustomers -= 1;
-
-			return true;
-		}
-
-		return false;
+		totalCustomers -= 1;
 	}
 
 	/*
@@ -159,6 +158,6 @@ public class Round : MonoBehaviour
 		*/
 
 		// if minimum score is achieved
-		return roundScore.GetScore () >= minScore;
+		return score >= minScore;
 	}
 }

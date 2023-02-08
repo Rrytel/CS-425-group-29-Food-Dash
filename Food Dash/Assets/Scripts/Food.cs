@@ -6,23 +6,13 @@ public class Food : MonoBehaviour
 {
     public FoodTypes type = FoodTypes.Pizza;
 
-	bool ready = false;
-
 	// stores the ingredients needed to prepare the food
-	List <IngredientTypes> ingredients;
+	List <IngredientTypes> ingredients = new List <IngredientTypes> ();
 
 	// Start is called before the first frame update
 	void Start ()
 	{
 		defineIngredients ();
-	}
-
-	void Update ()
-	{
-		if (ingredients.Count == 0)
-		{
-			ready = true;
-		}
 	}
 
 	/*
