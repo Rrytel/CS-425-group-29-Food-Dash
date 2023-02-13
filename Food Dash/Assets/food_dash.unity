@@ -6743,7 +6743,7 @@ GameObject:
   - component: {fileID: 640263563}
   m_Layer: 7
   m_Name: Capsule (4)
-  m_TagString: Untagged
+  m_TagString: Rat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6976,6 +6976,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
   goal: {fileID: 1758168237}
+  baitGoal: {fileID: 0}
+  baitList: []
+  baitRaidus: 5
   wanderRad: 0
 --- !u!54 &640263567
 Rigidbody:
@@ -8336,7 +8339,7 @@ GameObject:
   - component: {fileID: 780649195}
   m_Layer: 7
   m_Name: Capsule (3)
-  m_TagString: Untagged
+  m_TagString: Rat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8569,6 +8572,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
   goal: {fileID: 1758168237}
+  baitGoal: {fileID: 0}
+  baitList: []
+  baitRaidus: 5
   wanderRad: 0
 --- !u!54 &780649199
 Rigidbody:
@@ -9256,7 +9262,7 @@ GameObject:
   - component: {fileID: 1050669095}
   m_Layer: 7
   m_Name: Capsule (1)
-  m_TagString: Untagged
+  m_TagString: Rat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9460,6 +9466,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
   goal: {fileID: 1758168237}
+  baitGoal: {fileID: 0}
+  baitList: []
+  baitRaidus: 5
   wanderRad: 0
 --- !u!54 &1050669090
 Rigidbody:
@@ -17282,6 +17291,7 @@ GameObject:
   - component: {fileID: 1758168234}
   - component: {fileID: 1758168238}
   - component: {fileID: 1758168239}
+  - component: {fileID: 1758168240}
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
@@ -17498,6 +17508,18 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &1758168240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758168233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b01192959f330bf40995704249337ac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1804123401 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5843497292548984443, guid: c116b7497ab8ca34c9188965d4295e27, type: 3}
@@ -17607,7 +17629,7 @@ GameObject:
   - component: {fileID: 1830562286}
   m_Layer: 7
   m_Name: Capsule (2)
-  m_TagString: Untagged
+  m_TagString: Rat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17840,6 +17862,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
   goal: {fileID: 1758168237}
+  baitGoal: {fileID: 0}
+  baitList: []
+  baitRaidus: 5
   wanderRad: 0
 --- !u!54 &1830562290
 Rigidbody:

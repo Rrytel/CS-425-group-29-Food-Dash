@@ -15,6 +15,8 @@ public class rat_script : MonoBehaviour
     private bool isHeld = false;
     private bool inVaccum = false;
     private bool touchFloor = false;
+    private bool seekingBait = false;
+    public float baitRaidus = 5;
 
     public float wanderRad = 500f;
 
@@ -51,9 +53,14 @@ public class rat_script : MonoBehaviour
         //Bait
         //
 
-
+        seekingBait = false;
         baitGoal = FindClosestBait();
-        agent.destination = baitGoal.transform.position;
+        if((baitGoal.transform.position - transform.position).sqrMagnitude < baitRaidus)
+        {
+            agent.destination = baitGoal.transform.position;
+            seekingBait = true;
+        }
+        
         //agent.destination = goal.position;
 
 
@@ -63,6 +70,10 @@ public class rat_script : MonoBehaviour
 
 
         //Wandering functionality
+        if(seekingBait)
+        {
+            return;
+        }
 
         //Debug.Log(wanderTimer);
         if(!(wanderTimer > 10))
@@ -75,7 +86,7 @@ public class rat_script : MonoBehaviour
         //Get random position to wander to
         Vector3 tempPos = RandomNavSphere(transform.position, wanderRad, -1);
         //Debug.Log(tempPos);
-        //agent.destination = tempPos;
+        agent.destination = tempPos;
         
     }
 

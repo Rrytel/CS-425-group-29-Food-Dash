@@ -12,6 +12,7 @@ TagManager:
   - vaccum
   - floor
   - food
+  - Rat
   layers:
   - Default
   - TransparentFX
