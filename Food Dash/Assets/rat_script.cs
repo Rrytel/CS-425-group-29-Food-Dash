@@ -8,7 +8,9 @@ public class rat_script : MonoBehaviour
     Rigidbody m_Rigidbody;
     public NavMeshAgent agent;
     public Transform goal;
+    public GameObject baitGoal;
     Mesh mesh;
+    public List <GameObject> baitList;
     private Renderer mr;
     private bool isHeld = false;
     private bool inVaccum = false;
@@ -45,9 +47,20 @@ public class rat_script : MonoBehaviour
             return;
         }
 
-        
-        //Bait   
-        agent.destination = goal.position;
+
+        //Bait
+        //
+
+
+        baitGoal = FindClosestBait();
+        agent.destination = baitGoal.transform.position;
+        //agent.destination = goal.position;
+
+
+
+
+
+
 
         //Wandering functionality
 
@@ -63,6 +76,43 @@ public class rat_script : MonoBehaviour
         Vector3 tempPos = RandomNavSphere(transform.position, wanderRad, -1);
         //Debug.Log(tempPos);
         //agent.destination = tempPos;
+        
+    }
+
+    GameObject FindClosestBait()
+    {
+        GameObject closest = null;
+        Vector3 diff;
+        float curDist;
+        float minDist = Mathf.Infinity;
+        
+        foreach (GameObject bait in baitList)
+        {
+            diff = gameObject.transform.position - bait.transform.position;
+            curDist = diff.sqrMagnitude;
+            if(curDist<minDist)
+            {
+                minDist = curDist;
+                closest = bait;
+            }
+        }
+        return closest;
+    }
+
+    public void AddBait(GameObject bait)
+    {
+        if(!(baitList.Contains(bait)) )
+        {
+            baitList.Add(bait);
+        }
+        
+    }
+    public void RemoveBait(GameObject bait)
+    {
+        if(baitList.Contains(bait))
+        {
+            baitList.Remove(bait);
+        }
         
     }
 
