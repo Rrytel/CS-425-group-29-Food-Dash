@@ -7,7 +7,7 @@ public class Round : MonoBehaviour
 	// day 0: tutorial
 	public int day = 1;
 	// how long each round will last (in seconds)
-	public int timeLimit = 120;
+	public int timeLimit = 300;
 
 	public GameObject customerPrefab;
 
@@ -25,7 +25,7 @@ public class Round : MonoBehaviour
 	float spawnTimer = 0;
 	float roundTimer = 0;
 
-	List <Customer> currentCustomers = new List <Customer> ();
+	List <Customer> currentCustomers = new ();
 
 	void Start ()
 	{
@@ -87,8 +87,8 @@ public class Round : MonoBehaviour
 		score = 0;
 
 		// set new round properties
-		totalCustomers = day + Random.Range (0, day + 1);
-		maxCustomers = totalCustomers / (day + 1 / 2);
+		totalCustomers = day + Random.Range (0, day);
+		maxCustomers = totalCustomers / day;
 		spawnFrequency = timeLimit / 100;
 		// minimum score (needs tuning)
 		minScore = totalCustomers * 100;

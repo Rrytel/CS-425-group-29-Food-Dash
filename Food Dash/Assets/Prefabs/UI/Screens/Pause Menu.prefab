@@ -341,6 +341,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3548103200092185250, guid: bbbb14410dac2304896abb21fcf40be9, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4082351336446065907, guid: bbbb14410dac2304896abb21fcf40be9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -240
@@ -364,6 +368,10 @@ PrefabInstance:
     - target: {fileID: 5945992984796513696, guid: bbbb14410dac2304896abb21fcf40be9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235311607585232463, guid: bbbb14410dac2304896abb21fcf40be9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6577496467412706071, guid: bbbb14410dac2304896abb21fcf40be9, type: 3}
       propertyPath: m_AnchoredPosition.y

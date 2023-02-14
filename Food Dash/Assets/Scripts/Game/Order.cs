@@ -17,8 +17,8 @@ public class Order : MonoBehaviour
 	Score score;
 
 	// food or drinks in the order
-	public List <FoodTypes> items = new List <FoodTypes> ();
-	List <FoodTypes> currentItems = new List <FoodTypes> ();
+	List <FoodTypes> items = new ();
+	List <FoodTypes> currentItems = new ();
 
 	void Start ()
 	{
@@ -81,7 +81,7 @@ public class Order : MonoBehaviour
 	/*
 	*	attempt to fulfill an item in the order
 	*/
-	bool AddFood (Food newFood)
+	public bool AddFood (Food newFood)
 	{
 		for (int index = 0; index < currentItems.Count; index += 1)
 		{
@@ -89,6 +89,9 @@ public class Order : MonoBehaviour
 			{
 				// if the food is in the order, remove from the list
 				currentItems.RemoveAt (index);
+
+				// destroy gameobject associated with food
+				Destroy (newFood.gameObject);
 
 				return true;
 			}
@@ -99,6 +102,7 @@ public class Order : MonoBehaviour
 
 	/*
 	*	how close the order is to expectations (as a percent)
+	*	code just checks how many items are in the served order for now
 	*/
 	public float DetermineAccuracy ()
 	{
@@ -151,6 +155,16 @@ public class Order : MonoBehaviour
 	public int GetLifetime ()
 	{
 		return lifetime;
+	}
+
+	public List <FoodTypes> GetItems ()
+	{
+		return items;
+	}
+
+	public List <FoodTypes> GetCurrentItems ()
+	{
+		return currentItems;
 	}
 
 	public int Serve ()

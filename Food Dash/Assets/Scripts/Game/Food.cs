@@ -6,20 +6,40 @@ public class Food : MonoBehaviour
 {
     public FoodTypes type = FoodTypes.Pizza;
 
+	string originalName;
+
 	// stores the ingredients needed to prepare the food
-	List <IngredientTypes> ingredients = new List <IngredientTypes> ();
+	List <IngredientTypes> ingredients = new ();
 
 	// Start is called before the first frame update
 	void Start ()
 	{
-		defineIngredients ();
+		originalName = name;
+		// food starts invisible
+		GetComponent <MeshRenderer> ().enabled = false;
+		DefineIngredients ();
+
+		name = originalName + " (" + type.ToString() + ")";
+	}
+
+	/*
+	*	attempt to add the food to the order
+	*	when entering the customer trigger box
+	*/
+	void OnTriggerEnter (Collider other)
+	{
+		// might want to change this to "Plate" in the future
+		if (other.CompareTag ("Customer"))
+		{
+			other.gameObject.GetComponent <Order> ().AddFood (this);
+		}
 	}
 
 	/*
 	*   creates a food object of a given type
 	*   define the ingredients needed for each food
 	*/
-	void defineIngredients ()
+	void DefineIngredients ()
 	{
 		if (type == FoodTypes.Pizza)
 		{
@@ -51,7 +71,7 @@ public class Food : MonoBehaviour
 	/*
 	*   attempts to fulfill a food's ingredient
 	*/
-	bool AddIngredient (Ingredient newIngredient)
+	public bool AddIngredient (Ingredient newIngredient)
 	{
 		// search for ingredient in list
 		for (int index = 0; index < ingredients.Count; index += 1)
@@ -60,6 +80,16 @@ public class Food : MonoBehaviour
 			if (ingredients [index].Equals (newIngredient.type))
 			{
 				ingredients.RemoveAt (index);
+
+				/*
+				*	food is invisible until all ingredients are added
+				*	http://answers.unity.com/answers/7779/view.html
+				*	can change this code to show an empty plate in the future
+				*/
+				GetComponent <MeshRenderer> ().enabled = ingredients.Count == 0;
+
+				// destroy the gameobject associated with the ingredient
+				Destroy (newIngredient.gameObject);
 
 				return true;
 			}

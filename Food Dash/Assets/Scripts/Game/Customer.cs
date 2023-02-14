@@ -10,12 +10,14 @@ public class Customer : MonoBehaviour
 	public int strictness = 70;
 
 	float timePresent = 0;
+	string originalName;
 
 	Moods mood = Moods.Happy;
 	Order order;
 
 	void Start ()
 	{
+		originalName = name;
 		order = gameObject.GetComponent <Order> ();
 	}
 
@@ -32,6 +34,23 @@ public class Customer : MonoBehaviour
 		{
 			mood = Moods.Upset;
 		}
+
+		if (order.GetCurrentItems ().Count < 1)
+		{
+			Leave ();
+		}
+
+		name = originalName + " (" + mood.ToString() + ")";
+	}
+
+	public Moods GetMood ()
+	{
+		return mood;
+	}
+
+	public List <FoodTypes> GetOrderItems ()
+	{
+		return order.GetItems ();
 	}
 
 	/*
