@@ -5,12 +5,11 @@ using UnityEngine;
 public class RatTimer : MonoBehaviour
 {
     public GameObject ratObject;
-    public float spawnTime = 15;
-    public List<GameObject> spawns;
+    public float spawnTime = 45;
     // Start is called before the first frame update
     void Start()
     {
-        spawnTime = 1;
+        
     }
 
     // Update is called once per frame
@@ -21,22 +20,13 @@ public class RatTimer : MonoBehaviour
         if (spawnTime < 0)
         {
             //reset the time to 45 sec
-            spawnTime = 1f;
-            
-            int index = Random.Range(0, spawns.Count);
-            Debug.Log("index: "+index);
+            spawnTime = 45f;
+
             //give the rat a random pos.
-            var randPos = spawns[index].transform.position;
-            //var randPos = new Vector3(Random.Range(-4.96f, 0.04f), 0.19f, Random.Range(-3.18f, -0.7f));
+            var randPos = new Vector3(Random.Range(-4.96f, 0.04f), 0.19f, Random.Range(-3.18f, -0.7f));
             //create an object at the random positon calculated
             Instantiate (ratObject, randPos, Quaternion.identity);
-            //Debug.Log(spawnTime);
-            Debug.Log("List Size: " + spawns.Count.ToString());
-
-            for(int i =0; i < spawns.Count; i++)
-            {
-                Debug.Log (spawns[i]);
-            }
+            Debug.Log(spawnTime);
 
             //spawnTime = 45f;
             
