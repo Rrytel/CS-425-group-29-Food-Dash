@@ -16,10 +16,21 @@ public class SpawnPlayers : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        PhotonNetwork.AutomaticallySyncScene = true;
         Vector2 randomPosition = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
         //Will spawn player on the server so each player is visible within the game
         //Quaternion.identity = rotation
-        PhotonNetwork.Instantiate(playerPrefab.name, randomPosition, Quaternion.identity);
+        //if(PhotonNetwork.CountOfPlayers == 2)
+        //{
+            PhotonNetwork.Instantiate(playerPrefab.name, randomPosition, Quaternion.identity);
+        //}
+        //else
+        //{
+            //Debug.Log("Both players aren't in yet");
+        //}
+        //PhotonNetwork.Instantiate(playerPrefab.name, randomPosition, Quaternion.identity);
+
+
     }
 
  

@@ -17,6 +17,7 @@ TagManager:
   - Ingredient
   - Order
   - Customer
+  - plate
   layers:
   - Default
   - TransparentFX
