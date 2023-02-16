@@ -5,7 +5,7 @@ using UnityEngine;
 public class RatTimer : MonoBehaviour
 {
     public GameObject ratObject;
-    public float spawnTime = 15;
+    public float spawnTime = 45;
     public List<GameObject> spawns;
     // Start is called before the first frame update
     void Start()
@@ -17,15 +17,23 @@ public class RatTimer : MonoBehaviour
     //Every frame it will subtract the duration of the previous frame(delta time) from am.
     void Update()
     {
+        //after 2 min has passed into the game, every 20 sec have 1-2 rat spawns - w/ no more than 8 in the scene at a time
+        //After 1 min of spawning rats, have the inspector check and how many ever rats are left subtract points from their score and rating
+        SpawnRat();
+        
+    }
+    void SpawnRat()
+    {
+        
         spawnTime = spawnTime - Time.deltaTime;
         if (spawnTime < 0)
         {
             //reset the time to 45 sec
-            spawnTime = 1f;
+            spawnTime = 45f;
 
-            int index = Random.Range(0, spawns.Count);
+            int index = Random.Range(0, spawns.Count-1);
             Debug.Log("index: " + index);
-            //give the rat a random pos.
+            //give the rat a random pos. from one of the rat spawning areas
             var randPos = spawns[index].transform.position;
             //var randPos = new Vector3(Random.Range(-4.96f, 0.04f), 0.19f, Random.Range(-3.18f, -0.7f));
             //create an object at the random positon calculated
@@ -41,11 +49,15 @@ public class RatTimer : MonoBehaviour
             //spawnTime = 45f;
 
         }
-        else if (spawnTime == 0)
+        if (spawnTime == 0)
         {
             Debug.Log("Timer has run out!");
         }
+
+        Debug.Log("Time has passed game playing: " + Time.time);
     }
+
 }
+
 
 

@@ -13,6 +13,7 @@ TagManager:
   - floor
   - food
   - plate
+  - rat
   layers:
   - Default
   - TransparentFX
