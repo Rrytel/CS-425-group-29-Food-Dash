@@ -14,7 +14,7 @@ public class Order : MonoBehaviour
 	int lifetime = 0;
 	float timer;
 
-	Score score;
+	Score scoring;
 
 	// food or drinks in the order
 	List <FoodTypes> items = new ();
@@ -22,9 +22,10 @@ public class Order : MonoBehaviour
 
 	void Start ()
 	{
-		score = gameObject.GetComponent <Score> ();
+		scoring = GetComponentInParent <Score> ();
 
 		CreateOrder ();
+		UpdatePrice ();
 	}
 
 	void Update ()
@@ -124,29 +125,39 @@ public class Order : MonoBehaviour
 	*	get the price of the order
 	*	order price is the sum of food prices
 	*/
-	public int GetPrice()
+	void UpdatePrice ()
 	{
-		foreach (FoodTypes foodType in items)
+		for (int index = 0; index < items.Count; index += 1)
 		{
-			if (foodType == FoodTypes.Pizza)
+			//print ("Item " + index + ": " + items [index].ToString ());
+
+			if (items [index].Equals (FoodTypes.Pizza))
 			{
 				price += 3;
 			}
-			else if (foodType == FoodTypes.Burger)
+			else if (items [index].Equals (FoodTypes.Burger))
 			{
 				price += 5;
 			}
-			else if (foodType == FoodTypes.Fries)
+			else if (items [index].Equals (FoodTypes.Fries))
 			{
 				price += 1;
 			}
-			else if (foodType == FoodTypes.Drink)
+			else if (items [index].Equals (FoodTypes.Drink))
 			{
 				price += 1;
 			}
 		}
+	}
 
+	public int GetPrice ()
+	{
 		return price;
+	}
+
+	public bool GetServed ()
+	{
+		return served;
 	}
 
 	/*
@@ -167,11 +178,9 @@ public class Order : MonoBehaviour
 		return currentItems;
 	}
 
-	public int Serve ()
+	public void Serve ()
 	{
-		score.UpdateScore (this);
+		scoring.UpdateScore (this);
 		served = true;
-
-		return score.GetScore ();
 	}
 }

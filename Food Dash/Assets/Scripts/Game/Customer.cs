@@ -30,7 +30,7 @@ public class Customer : MonoBehaviour
 			mood = Moods.Impatient;
 		}
 
-		if (order.DetermineAccuracy () < strictness)
+		if (order.GetServed () && order.DetermineAccuracy () < strictness)
 		{
 			mood = Moods.Upset;
 		}
@@ -48,26 +48,28 @@ public class Customer : MonoBehaviour
 		return mood;
 	}
 
+	public Order GetOrder ()
+	{
+		return order;
+	}
+
 	public List <FoodTypes> GetOrderItems ()
 	{
-		return order.GetItems ();
+		return order.GetCurrentItems ();
 	}
 
 	/*
 	*	the process for leaving the restuarant
 	*/
-	public int Leave ()
+	public void Leave ()
 	{
 		/*
 		*	customer travels towards exit
 		*	maybe: leave a review depending on mood that affects score?
 		*/
 
-		int orderScore = order.Serve ();
-
+		order.Serve ();
 		Destroy (gameObject);
-
-		return orderScore;
 	}
 }
 
