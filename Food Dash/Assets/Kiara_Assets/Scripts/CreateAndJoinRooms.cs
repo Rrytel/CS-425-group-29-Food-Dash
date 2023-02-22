@@ -11,6 +11,10 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     public InputField createInput;
     public InputField joinInput;
 
+    //Have the timer run only on the host, ev. time when timer lapses send out a network message to all game clients, that notifies it and then - ASK RYAN about his timer script - have to put photon into his script
+    //RPC's - PHOTON
+    //Have the server be the authority for the shared state
+
     //Note: When you create a room, you're automatically joining that room
     //Calling it from the Create Button therefore needs to be public
     public void CreateRoom()
@@ -39,6 +43,6 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
      public override void OnJoinedRoom()
     {
         //Transition to actual game scene
-        PhotonNetwork.LoadLevel("food_dash");
+        PhotonNetwork.LoadLevel("food_dash_Kiara");
     }
 }

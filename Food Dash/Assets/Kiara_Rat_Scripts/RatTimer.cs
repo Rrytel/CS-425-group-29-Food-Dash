@@ -21,7 +21,7 @@ public class RatTimer : MonoBehaviour
         if (spawnTime < 0)
         {
             //reset the time to 45 sec
-            spawnTime = 1f;
+            spawnTime = 45f;
 
             int index = Random.Range(0, spawns.Count);
             Debug.Log("index: " + index);
@@ -41,11 +41,14 @@ public class RatTimer : MonoBehaviour
             //spawnTime = 45f;
 
         }
-        else if (spawnTime == 0)
+        if (spawnTime == 0)
         {
             Debug.Log("Timer has run out!");
         }
+
+        Debug.Log("Time has passed game playing: " + Time.time);
     }
 }
+
 
 
