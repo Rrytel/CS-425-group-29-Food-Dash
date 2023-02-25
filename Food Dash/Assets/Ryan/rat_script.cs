@@ -55,6 +55,11 @@ public class rat_script : MonoBehaviour
 
         seekingBait = false;
         baitGoal = FindClosestBait();
+        if(baitGoal == null)
+        {
+            //Debug.Log("Bait null");
+            return;
+        }
         if((baitGoal.transform.position - transform.position).sqrMagnitude < baitRaidus)
         {
             agent.destination = baitGoal.transform.position;
