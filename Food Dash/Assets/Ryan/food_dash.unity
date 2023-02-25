@@ -8844,7 +8844,7 @@ GameObject:
   - component: {fileID: 856019938}
   - component: {fileID: 856019937}
   - component: {fileID: 856019936}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grab Interactable (5)
   m_TagString: food
   m_Icon: {fileID: 0}
@@ -15293,7 +15293,7 @@ GameObject:
   - component: {fileID: 1385214845}
   - component: {fileID: 1385214844}
   - component: {fileID: 1385214851}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grab Interactable (2)
   m_TagString: food
   m_Icon: {fileID: 0}
@@ -19180,7 +19180,7 @@ GameObject:
   - component: {fileID: 2043828683}
   - component: {fileID: 2043828682}
   - component: {fileID: 2043828681}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grab Interactable (4)
   m_TagString: food
   m_Icon: {fileID: 0}
