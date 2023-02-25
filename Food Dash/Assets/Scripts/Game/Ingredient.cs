@@ -23,9 +23,9 @@ public class Ingredient : MonoBehaviour
 	*/
 	void OnTriggerEnter (Collider other)
 	{
-		if (other.CompareTag ("Plate"))
+		if (other.CompareTag ("plate"))
 		{
-			other.gameObject.GetComponent <Plate> ().AddIngredient (this);
+			other.transform.parent.GetComponent <Plate> ().AddIngredient (this);
 		}
 	}
 }
