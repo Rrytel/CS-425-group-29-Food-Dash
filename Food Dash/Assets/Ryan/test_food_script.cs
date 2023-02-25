@@ -30,7 +30,7 @@ public class test_food_script : MonoBehaviour
     Rigidbody m_Rigidbody;
     int chopState = 0;
     public bool active = false;
-    float throwPow = 1.5f;
+    public float throwPow = 1.5f;
     bool chargeUp = false;
     
 
@@ -56,12 +56,13 @@ public class test_food_script : MonoBehaviour
             //Remove controller bound rotation
             gameObject.GetComponent<XRGrabInteractable>().trackRotation = false;
             transform.Rotate(new Vector3(25, 12, 34));
-            gameObject.GetComponent<XRGrabInteractable>().throwVelocityScale = throwPow;
+            
         }
         else
         {
             gameObject.GetComponent<XRGrabInteractable>().trackRotation = true;
         }
+        gameObject.GetComponent<XRGrabInteractable>().throwVelocityScale = throwPow;
 
         //timer += .01f;
         //Update mesh based on stage in cooking process
