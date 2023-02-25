@@ -43,11 +43,11 @@ public class Plate : MonoBehaviour
 		}
 		else if (type == FoodTypes.Burger)
 		{
-			ingredients.Add (IngredientTypes.Bun);
+			//ingredients.Add (IngredientTypes.Bun);
 			ingredients.Add (IngredientTypes.Patty);
-			ingredients.Add (IngredientTypes.Cheese);
-			ingredients.Add (IngredientTypes.Lettuce);
-			ingredients.Add (IngredientTypes.Bun);
+			//ingredients.Add (IngredientTypes.Cheese);
+			//ingredients.Add (IngredientTypes.Lettuce);
+			//ingredients.Add (IngredientTypes.Bun);
 		}
 		else if (type == FoodTypes.Fries)
 		{
