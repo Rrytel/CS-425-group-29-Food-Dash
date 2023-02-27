@@ -18,6 +18,7 @@ TagManager:
   - Order
   - Customer
   - plate
+  - rat
   layers:
   - Default
   - TransparentFX
