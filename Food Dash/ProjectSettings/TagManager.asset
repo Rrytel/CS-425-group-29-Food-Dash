@@ -19,6 +19,7 @@ TagManager:
   - Customer
   - plate
   - rat
+  - Rat zone
   layers:
   - Default
   - TransparentFX

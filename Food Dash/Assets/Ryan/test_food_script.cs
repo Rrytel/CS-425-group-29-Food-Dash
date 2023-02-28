@@ -170,6 +170,18 @@ public class test_food_script : MonoBehaviour
                 //Play chop sound
 
                 break;
+
+            case "Rat zone":
+                //Get forward direction and apply magnitude
+                Vector3 forward = transform.forward * 90 * (1 / 1.5f);
+                //Get vertical component and combine
+                Vector3 vertical = new Vector3(0f, 500f, 0f);
+                Vector3 launchVec = forward + vertical;
+                //Launch food
+                
+                GO.GetComponent<Rigidbody>().AddForce(launchVec);
+                GO.GetComponent<Rigidbody>().AddRelativeTorque(5, 5, 5);
+                break;
         
         
         }

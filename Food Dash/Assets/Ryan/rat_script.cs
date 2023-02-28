@@ -49,7 +49,8 @@ public class rat_script : MonoBehaviour
             return;
         }
 
-
+        agent.destination = new Vector3(0, 0, 0);
+        return;
         //Bait
         //
 
