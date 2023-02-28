@@ -172,8 +172,12 @@ public class test_food_script : MonoBehaviour
                 break;
 
             case "Rat zone":
+                if(GO.tag == "Rat")
+                {
+                    break;
+                }
                 //Get forward direction and apply magnitude
-                Vector3 forward = transform.forward * 90 * (1 / 1.5f);
+                Vector3 forward = coll.transform.parent.transform.forward * 90 * (1 / 1.5f);
                 //Get vertical component and combine
                 Vector3 vertical = new Vector3(0f, 500f, 0f);
                 Vector3 launchVec = forward + vertical;
