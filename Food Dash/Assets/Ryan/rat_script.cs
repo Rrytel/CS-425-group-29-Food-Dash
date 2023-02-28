@@ -49,7 +49,7 @@ public class rat_script : MonoBehaviour
             return;
         }
 
-        //agent.destination = new Vector3(0, 0, 0);
+        //agent.destination = new Vector3(.409f, .598f, -0.425f);
         //return;
 
 
@@ -143,8 +143,8 @@ public class rat_script : MonoBehaviour
 
         NavMeshHit navHit;
         //Remove vertical component
-        randomDirection.y = 0;
-        NavMesh.SamplePosition(randomDirection, out navHit, 5, layermask);
+        //randomDirection.y = 0;
+        NavMesh.SamplePosition(randomDirection, out navHit, 10, layermask);
         return navHit.position;
     }
 
