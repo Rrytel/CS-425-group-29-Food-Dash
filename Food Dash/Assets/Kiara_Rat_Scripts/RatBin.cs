@@ -15,7 +15,7 @@ public class RatBin : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //check if the object colliding with it is a rat
-        if(collision.gameObject.tag == "rat")
+        if(collision.gameObject.tag == "Rat")
         {
             Debug.Log("A rat is touching the bin");
             RatTouching(collision);

@@ -30,7 +30,7 @@ MonoBehaviour:
     NetworkLogging: 1
   DevRegion: usw
   PunLogging: 0
-  EnableSupportLogger: 0
+  EnableSupportLogger: 1
   RunInBackground: 1
   StartInOfflineMode: 0
   RpcList:

@@ -17,14 +17,28 @@ public class RespawnFood : MonoBehaviour
     void spawnFood()
     {
         //if the text direction is active, and the user presses A then spawn food
-        if (direction.activeSelf == true && Input.GetKeyDown(KeyCode.A))
-        {
+        //if (direction.activeSelf == true && Input.GetKeyDown(KeyCode.A))
+        //{
             //create a copy of the desired food item that's passed in
-            Instantiate(food, transform);
+            Instantiate(food, new Vector3 (-.32f, 2.79f, .3f), Quaternion.identity);
+        //}
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        //check if the object colliding with it is a rat
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("A player is touching the crate");
+            spawnFood();
+        }
+        else
+        {
+            Debug.Log("It's not a player touching the crate");
         }
     }
 
-    void OnMouseOver()
+   /* void OnMouseOver()
     {
         //If your mouse hovers over the GameObject with the script attached, output this message
         Debug.Log("Mouse is over Crate.");
@@ -36,4 +50,5 @@ public class RespawnFood : MonoBehaviour
         Debug.Log("Mouse is not over Crate");
         direction.SetActive(false);
     }
+   */
 }

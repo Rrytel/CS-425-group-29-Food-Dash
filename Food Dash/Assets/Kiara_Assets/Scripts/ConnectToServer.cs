@@ -15,20 +15,30 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     //Connecting to Photon server
     private void Start()
     {
-        PhotonNetwork.ConnectUsingSettings();
+            //PhotonNetwork.AutomaticallySyncScene = true;
+            PhotonNetwork.ConnectUsingSettings();
+        
+       
+        //PhotonNetwork.AutomaticallySyncScene = true;
     }
 
     //Check when have successfully connected to our server
     //Anything in this fcn will get called when successfully connected to the server
     public override void OnConnectedToMaster()
     {
-        //Debug.Log("Connected to Master");
+        
+        Debug.Log("Connected to Master");
         PhotonNetwork.JoinLobby(); //power to create and join rooms if successfuly connected to server
+        PhotonNetwork.AutomaticallySyncScene = true;
     }
+
     //When have successfully joined the lobby, load Join Scene
     public override void OnJoinedLobby()
     {
         //Debug.Log("Joined the room");
         SceneManager.LoadScene("JoinScene");
+        
+
+        
     }
 }

@@ -18,7 +18,7 @@ public class SpawnPlayers : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        // PhotonNetwork.AutomaticallySyncScene = true;
+        //sPhotonNetwork.AutomaticallySyncScene = true;
 
         Scene currentScene = SceneManager.GetActiveScene();
         string scene = currentScene.name;
