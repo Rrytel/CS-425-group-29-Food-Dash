@@ -65,7 +65,7 @@ public class test_food_script : MonoBehaviour
 
         //timer += .01f;
         //Update mesh based on stage in cooking process
-        if (heat > cookThresh && cooked == false)
+        if(heat > cookThresh && cooked == false)
         {
             //Update variables
             cooked = true;
