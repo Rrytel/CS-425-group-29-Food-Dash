@@ -10,16 +10,16 @@ public class Score : MonoBehaviour
 	*	add to score after turning in an order
 	*	increment: the original price of the order
 	*	penalty: how long it took to serve the order
-	*	multiplier: how accurate the order is
 	*/
 	public void UpdateScore (Order served)
 	{
-		int increment = served.GetPrice () * 100;
+		int increment = served.GetPrice () * 10;
 		int penalty = served.GetLifetime ();
-		float multiplier = served.DetermineAccuracy ();
 
-		// (food price * 100 - time penalty) * accuracy
-		score = (int) ((increment - penalty) * (multiplier / 100));
+		score += increment - penalty;
+
+		//print ("Order value: " + served.GetPrice ());
+		//print ("Order penalty: " + served.GetLifetime ());
 	}
 
 	/*
@@ -28,5 +28,10 @@ public class Score : MonoBehaviour
 	public int GetScore ()
 	{
 		return score;
+	}
+
+	public void ResetScore ()
+	{
+		score = 0;
 	}
 }
