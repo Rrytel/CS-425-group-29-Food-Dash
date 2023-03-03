@@ -11,14 +11,15 @@ public class Customer : MonoBehaviour
 
 	float timePresent = 0;
 	string originalName;
-
 	Moods mood = Moods.Happy;
 	Order order;
+	GameObject gameController;
 
 	void Start ()
 	{
 		originalName = name;
 		order = gameObject.GetComponent <Order> ();
+		gameController = GameObject.Find ("Game Controller");
 	}
 
 	void Update ()
@@ -37,7 +38,7 @@ public class Customer : MonoBehaviour
 
 		if (order.GetCurrentItems ().Count < 1)
 		{
-			Leave ();
+			gameController.GetComponent <Round> ().RemoveCustomer (this);
 		}
 
 		name = originalName + " (" + mood.ToString() + ")";

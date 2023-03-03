@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using TMPro;
+
 public class Round : MonoBehaviour
 {
 	// day 0: tutorial
@@ -9,8 +11,10 @@ public class Round : MonoBehaviour
 	// how long each round will last (in seconds)
 	public int timeLimit = 300;
 
-	Score scoring;
 	public GameObject customerPrefab;
+	public GameObject victoryScreen;
+	public GameObject defeatScreen;
+	Score scoring;
 
 	// score needed to advance to the next day
 	int minScore;
@@ -21,7 +25,7 @@ public class Round : MonoBehaviour
 	int maxCustomers;
 	// how often customer spawn attempts occur
 	int spawnFrequency;
-
+	int timeLeft;
 	float spawnTimer = 0;
 	float roundTimer = 0;
 
@@ -34,36 +38,34 @@ public class Round : MonoBehaviour
 		*	http://answers.unity.com/answers/674316/view.html
 		*/
 		//customerPrefab = Resources.Load <GameObject> (@"..\Prefabs\Game\Customer");
-
+		//victoryScreen = GameObject.Find ("Victory");
+		//defeatScreen = GameObject.Find ("Defeat");
 		scoring = GetComponent <Score> ();
 
-		NewRound();
+		NewRound (false);
 	}
 
 	void Update ()
 	{
 		spawnTimer += Time.deltaTime;
 		roundTimer += Time.deltaTime;
+		timeLeft = (int) (timeLimit - roundTimer);
 
 		if (RoundIsOver ())
 		{
+			Time.timeScale = 0;
+
 			// if round was won
 			if (EndRound ())
 			{
-				/*
-				*	display victory screen
-				*	score, time elapsed, inspection rating
-				*	3 options: replay round, advance to next day, or go to main menu
-				*/
+				victoryScreen.GetComponentInChildren <TextMeshProUGUI> ().text = "Day " + day.ToString () + " success!";
+				victoryScreen.SetActive (true);
 			}
 			// if round was lost
 			else
 			{
-				/*
-				*	display round lost screen
-				*	score, time elapsed, inspection rating
-				*	2 options: replay round or go to main menu
-				*/
+				defeatScreen.GetComponentInChildren<TextMeshProUGUI> ().text = "Day " + day.ToString () + " fail!";
+				defeatScreen.SetActive (true);
 			}
 		}
 
@@ -75,8 +77,14 @@ public class Round : MonoBehaviour
 		}
 	}
 
-	void NewRound ()
+	public void NewRound (bool advance)
 	{
+		// if advancing to the next day
+		if (advance)
+		{
+			day += 1;
+		}
+
 		// remove customers from the previous round
 		while (currentCustomers.Count > 0)
 		{
@@ -93,7 +101,9 @@ public class Round : MonoBehaviour
 		maxCustomers = day;
 		spawnFrequency = timeLimit / 100;
 		// minimum score (needs tuning)
-		minScore = totalCustomers * 100;
+		minScore = totalCustomers * 10;
+
+		Time.timeScale = 1;
 	}
 
 	/*
@@ -161,5 +171,10 @@ public class Round : MonoBehaviour
 
 		// if minimum score is achieved
 		return scoring.GetScore () >= minScore;
+	}
+
+	public int GetTimeLeft ()
+	{
+		return timeLeft;
 	}
 }
