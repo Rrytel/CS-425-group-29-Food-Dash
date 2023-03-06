@@ -59,6 +59,11 @@ public class Customer : MonoBehaviour
 		return order.GetCurrentItems ();
 	}
 
+	public void SetOrder (Order newOrder)
+	{
+		order = newOrder;
+	}
+
 	/*
 	*	the process for leaving the restuarant
 	*/

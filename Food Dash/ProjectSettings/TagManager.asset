@@ -20,6 +20,7 @@ TagManager:
   - plate
   - rat
   - Rat zone
+  - Floor
   layers:
   - Default
   - TransparentFX
