@@ -20,7 +20,7 @@ public class RespawnFood : MonoBehaviour
         //if (direction.activeSelf == true && Input.GetKeyDown(KeyCode.A))
         //{
             //create a copy of the desired food item that's passed in
-            Instantiate(food, new Vector3 (-.32f, 2.79f, .3f), Quaternion.identity);
+            Instantiate(food, new Vector3 (4.32f, 1.179f, -8.41f), Quaternion.identity);
         //}
     }
 

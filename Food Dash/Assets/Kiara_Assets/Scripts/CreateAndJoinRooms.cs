@@ -8,6 +8,8 @@ using Photon.Realtime;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms;
 
+
+//Note: Network timer itself
 public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 {
     public InputField createInput;
@@ -93,7 +95,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     {
         
         //send the master to waiting for others scene - then check how many players are in the scene- if 2, then load the game scene with both of them in it
-        PhotonNetwork.LoadLevel("food_dash");
+        PhotonNetwork.LoadLevel("food_dash_Kiara");
         /*playersThere = PhotonNetwork.PlayerList.Length;
         if (playersThere == 2)
         {
@@ -135,7 +137,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     {
         if (readyToPlay)
         {
-            PhotonNetwork.LoadLevel("food_dash");
+            PhotonNetwork.LoadLevel("food_dash_Kiara");
         }
         else
         {

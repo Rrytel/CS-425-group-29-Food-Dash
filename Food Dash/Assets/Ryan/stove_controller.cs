@@ -87,6 +87,7 @@ public class stove_controller : MonoBehaviour
         CompleteMarker.enabled = true;
         CompleteMarker.color = Color.white;
         marker.enabled = true;
+        //value on the timer is equal to the heat value of the food - shows cooking process of the meal
         timerVal = food.GetComponent<test_food_script>().heat;
         
         //StartCoroutine(colorShiftCMark(CompleteMarker.color, Color.white));
@@ -119,6 +120,7 @@ public class stove_controller : MonoBehaviour
             //Update visual timer
             float burn = food.GetComponent<test_food_script>().burnThresh;
             float cook = food.GetComponent<test_food_script>().cookThresh;
+            //if the food isn't burnt, take time off the clock and start counting down
             if (timerVal < burn)
             {
                 timerVal += 5.0f * Time.deltaTime;

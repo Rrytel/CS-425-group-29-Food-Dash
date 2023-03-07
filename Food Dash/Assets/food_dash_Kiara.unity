@@ -6239,6 +6239,7 @@ MonoBehaviour:
   isHeld: 0
   cookTimeLeft: 100
   GO: {fileID: 422930579}
+  foodType: 
   cooked: 0
   burnt: 0
   heat: 0
@@ -6478,7 +6479,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422930579}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.154, y: 2.203, z: -15.695}
+  m_LocalPosition: {x: 3.7, y: 2.203, z: -15.695}
   m_LocalScale: {x: 0.14066, y: 0.14066, z: 0.14066}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6855,7 +6856,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624620911}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.467, y: -0.095, z: -17.118}
+  m_LocalPosition: {x: -5.409, y: -0.095, z: -16.544}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6974,6 +6975,7 @@ MonoBehaviour:
   isHeld: 0
   cookTimeLeft: 100
   GO: {fileID: 640263562}
+  foodType: 
   cooked: 0
   burnt: 0
   heat: 0
@@ -7186,6 +7188,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
   goal: {fileID: 1758168237}
+  baitGoal: {fileID: 0}
+  baitList: []
+  baitRaidus: 5
   wanderRad: 0
 --- !u!54 &640263567
 Rigidbody:
@@ -7376,6 +7381,7 @@ MonoBehaviour:
   isHeld: 0
   cookTimeLeft: 100
   GO: {fileID: 663286801}
+  foodType: 
   cooked: 0
   burnt: 0
   heat: 0
@@ -8203,7 +8209,7 @@ GameObject:
   - component: {fileID: 775496010}
   m_Layer: 0
   m_Name: ratTest
-  m_TagString: rat
+  m_TagString: Rat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8366,6 +8372,7 @@ MonoBehaviour:
   isHeld: 0
   cookTimeLeft: 100
   GO: {fileID: 780649194}
+  foodType: 
   cooked: 0
   burnt: 0
   heat: 0
@@ -8578,6 +8585,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
   goal: {fileID: 1758168237}
+  baitGoal: {fileID: 0}
+  baitList: []
+  baitRaidus: 5
   wanderRad: 0
 --- !u!54 &780649199
 Rigidbody:
@@ -13957,6 +13967,7 @@ MonoBehaviour:
   isHeld: 0
   cookTimeLeft: 100
   GO: {fileID: 885387655}
+  foodType: 
   cooked: 0
   burnt: 0
   heat: 0
@@ -14196,7 +14207,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885387655}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.148, y: 3.096, z: -15.726}
+  m_LocalPosition: {x: 2.96, y: 3.096, z: -15.726}
   m_LocalScale: {x: 0.14066, y: 0.14066, z: 0.14066}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14589,7 +14600,6 @@ GameObject:
   - component: {fileID: 1050669088}
   - component: {fileID: 1050669087}
   - component: {fileID: 1050669095}
-  - component: {fileID: 1050669096}
   m_Layer: 7
   m_Name: RatCapsule1
   m_TagString: Untagged
@@ -14796,6 +14806,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
   goal: {fileID: 1758168237}
+  baitGoal: {fileID: 0}
+  baitList: []
+  baitRaidus: 5
   wanderRad: 0
 --- !u!54 &1050669090
 Rigidbody:
@@ -14907,6 +14920,7 @@ MonoBehaviour:
   isHeld: 0
   cookTimeLeft: 100
   GO: {fileID: 1050669086}
+  foodType: 
   cooked: 0
   burnt: 0
   heat: 0
@@ -14920,21 +14934,6 @@ MonoBehaviour:
   activeAreas: []
   prevAreas: []
   active: 0
---- !u!114 &1050669096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1050669086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbdb62f4e6f36e749ac1eb79a9026f9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ratObject: {fileID: 1050669086}
-  spawnTime: 15
-  spawns: []
 --- !u!1 &1080761350 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
@@ -20441,6 +20440,7 @@ MonoBehaviour:
   isHeld: 0
   cookTimeLeft: 100
   GO: {fileID: 1385214843}
+  foodType: 
   cooked: 0
   burnt: 0
   heat: 0
@@ -20952,6 +20952,7 @@ MonoBehaviour:
   isHeld: 0
   cookTimeLeft: 100
   GO: {fileID: 1386965956}
+  foodType: 
   cooked: 0
   burnt: 0
   heat: 0
@@ -21400,7 +21401,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 55
+  m_RootOrder: 56
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1435508139
 MonoBehaviour:
@@ -22593,37 +22594,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1662649719 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 71dba5f8b9a67a5459c81163c273f120, type: 3}
-  m_PrefabInstance: {fileID: 897198753}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1662649720
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662649719}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5, y: 5.0006995, z: 5.00035}
-  m_Center: {x: 0, y: 0, z: -0.00017488003}
---- !u!114 &1662649725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662649719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bbe887796b8fc647a441864e4931521, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  food: {fileID: 0}
 --- !u!1 &1670692025
 GameObject:
   m_ObjectHideFlags: 0
@@ -23257,7 +23227,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1768155624}
-  - component: {fileID: 1768155623}
+  - component: {fileID: 1768155625}
   m_Layer: 0
   m_Name: RatSpawnObject
   m_TagString: Untagged
@@ -23265,23 +23235,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1768155623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1768155622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbdb62f4e6f36e749ac1eb79a9026f9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ratObject: {fileID: 640263562}
-  spawnTime: 15
-  spawns:
-  - {fileID: 624620911}
-  - {fileID: 1670692025}
 --- !u!4 &1768155624
 Transform:
   m_ObjectHideFlags: 0
@@ -23295,8 +23248,24 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 54
+  m_RootOrder: 55
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1768155625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768155622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbdb62f4e6f36e749ac1eb79a9026f9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ratObject: {fileID: 1050669086}
+  spawns:
+  - {fileID: 624620911}
+  - {fileID: 1670692025}
 --- !u!1 &1804123401 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5843497292548984443, guid: c116b7497ab8ca34c9188965d4295e27, type: 3}
@@ -23445,6 +23414,7 @@ MonoBehaviour:
   isHeld: 0
   cookTimeLeft: 100
   GO: {fileID: 1830562285}
+  foodType: 
   cooked: 0
   burnt: 0
   heat: 0
@@ -23657,6 +23627,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
   goal: {fileID: 1758168237}
+  baitGoal: {fileID: 0}
+  baitList: []
+  baitRaidus: 5
   wanderRad: 0
 --- !u!54 &1830562290
 Rigidbody:
@@ -24563,6 +24536,65 @@ Transform:
   m_Father: {fileID: 1080761355}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2059294380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2059294382}
+  - component: {fileID: 2059294381}
+  - component: {fileID: 2059294383}
+  m_Layer: 0
+  m_Name: CrateTriggerBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &2059294381
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059294380}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 3}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &2059294382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059294380}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.54, y: -0.42, z: -9.26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 54
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2059294383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059294380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bbe887796b8fc647a441864e4931521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  food: {fileID: 4777684476239810400, guid: a060e5a9206920440957a921406910c3, type: 3}
 --- !u!1 &2061897862
 GameObject:
   m_ObjectHideFlags: 0
