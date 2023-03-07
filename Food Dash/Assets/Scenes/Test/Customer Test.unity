@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 120929146}
   - component: {fileID: 120929147}
-  - component: {fileID: 120929149}
   - component: {fileID: 120929148}
   m_Layer: 0
   m_Name: Game Controller
@@ -169,8 +168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f1192225cd3e7428174149761e4e91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  day: 2
-  timeLimit: 300000
+  day: 1
+  timeLimit: 300
   customerPrefab: {fileID: 5488821722800851327, guid: e9435079ecd8582409aab6beb9992a55, type: 3}
   victoryScreen: {fileID: 2018595631}
   defeatScreen: {fileID: 242565951}
@@ -186,21 +185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08b364950f157d540817d193966c3e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &120929149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120929145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dac9171b9a58fb45b3020c2064dda79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serveDelay: 4
-  customerPrefab: {fileID: 5488821722800851327, guid: e9435079ecd8582409aab6beb9992a55, type: 3}
-  foodPrefab: {fileID: 8342797233150160617, guid: 7341999a553972243a99afa4f3a23e7d, type: 3}
 --- !u!1 &174131923
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,6 +554,10 @@ PrefabInstance:
       propertyPath: gameController
       value: 
       objectReference: {fileID: 120929145}
+    - target: {fileID: 3861993231717013385, guid: a25e54b9543b13740a741ada3d9f8b42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3871665467970822821, guid: a25e54b9543b13740a741ada3d9f8b42, type: 3}
       propertyPath: m_Layer
       value: 5
@@ -585,6 +573,10 @@ PrefabInstance:
     - target: {fileID: 4432010509520470043, guid: a25e54b9543b13740a741ada3d9f8b42, type: 3}
       propertyPath: m_fontSize
       value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432010509520470043, guid: a25e54b9543b13740a741ada3d9f8b42, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4616442716088681410, guid: a25e54b9543b13740a741ada3d9f8b42, type: 3}
       propertyPath: m_RootOrder
@@ -620,11 +612,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5386520189195861329, guid: a25e54b9543b13740a741ada3d9f8b42, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -960
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5386520189195861329, guid: a25e54b9543b13740a741ada3d9f8b42, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -540
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5386520189195861329, guid: a25e54b9543b13740a741ada3d9f8b42, type: 3}
       propertyPath: m_LocalPosition.z
@@ -681,6 +673,14 @@ PrefabInstance:
     - target: {fileID: 8399206709542745824, guid: a25e54b9543b13740a741ada3d9f8b42, type: 3}
       propertyPath: m_fontSize
       value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 8399206709542745824, guid: a25e54b9543b13740a741ada3d9f8b42, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977607489171218802, guid: a25e54b9543b13740a741ada3d9f8b42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8986012941985207390, guid: a25e54b9543b13740a741ada3d9f8b42, type: 3}
       propertyPath: m_Layer
