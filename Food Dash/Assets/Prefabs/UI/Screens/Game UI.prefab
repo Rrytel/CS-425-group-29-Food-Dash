@@ -260,6 +260,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7439311516018930932, guid: 2fce62ea9ec9aee46b06666ca3eab8a3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8008695477798658918, guid: 2fce62ea9ec9aee46b06666ca3eab8a3, type: 3}
       propertyPath: m_text
       value: Round Timer
@@ -413,6 +417,10 @@ PrefabInstance:
     - target: {fileID: 7241079915075208986, guid: 2fce62ea9ec9aee46b06666ca3eab8a3, type: 3}
       propertyPath: m_SizeDelta.y
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439311516018930932, guid: 2fce62ea9ec9aee46b06666ca3eab8a3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8008695477798658918, guid: 2fce62ea9ec9aee46b06666ca3eab8a3, type: 3}
       propertyPath: m_text
