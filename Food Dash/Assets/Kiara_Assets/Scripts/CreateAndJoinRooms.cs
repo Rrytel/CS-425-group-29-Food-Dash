@@ -95,7 +95,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     {
         
         //send the master to waiting for others scene - then check how many players are in the scene- if 2, then load the game scene with both of them in it
-        PhotonNetwork.LoadLevel("food_dash_Kiara");
+        PhotonNetwork.LoadLevel("food_dash");
         /*playersThere = PhotonNetwork.PlayerList.Length;
         if (playersThere == 2)
         {
