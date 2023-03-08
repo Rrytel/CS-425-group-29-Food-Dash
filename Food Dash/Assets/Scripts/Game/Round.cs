@@ -14,6 +14,7 @@ public class Round : MonoBehaviour
 	public GameObject customerPrefab;
 	public GameObject victoryScreen;
 	public GameObject defeatScreen;
+	public GameObject rayInteractor;
 	Score scoring;
 
 	// score needed to advance to the next day
@@ -60,12 +61,14 @@ public class Round : MonoBehaviour
 			{
 				victoryScreen.GetComponentInChildren <TextMeshProUGUI> ().text = "Day " + day.ToString () + " success!";
 				victoryScreen.SetActive (true);
+				rayInteractor.SetActive (true);
 			}
 			// if round was lost
 			else
 			{
 				defeatScreen.GetComponentInChildren<TextMeshProUGUI> ().text = "Day " + day.ToString () + " fail!";
 				defeatScreen.SetActive (true);
+				rayInteractor.SetActive (true);
 			}
 		}
 
