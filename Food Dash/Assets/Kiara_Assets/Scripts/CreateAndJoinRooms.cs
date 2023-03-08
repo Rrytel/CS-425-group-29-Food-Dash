@@ -7,16 +7,19 @@ using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms;
-
+using TMPro;
 
 //Note: Network timer itself
 public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 {
-    public InputField createInput;
-    public InputField joinInput;
-    float time = 30;
+    //public InputField createInput;
+    //public InputField joinInput;
+    public TMP_InputField createInput;
+    public TMP_InputField joinInput;
+    //float time = 30;
     public int playersThere;
     bool readyToPlay = false;
+    private List<string> roomNames = new List<string>();
     //checks if all players are connected before syncing them up and sending them to the created room
     //bool allConnected = false;
 
@@ -68,7 +71,9 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
         //Note: ADD where to make sure input field isn't empty before creating room
         //need string input for room name-> name of room will be whatever we write in the "createInput" input field
-        PhotonNetwork.CreateRoom(createInput.text, roomOptions); //automatically calls OnJoinedRoom
+        PhotonNetwork.CreateRoom("progress", roomOptions); //automatically calls OnJoinedRoom
+        roomNames.Add("progress");
+
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
@@ -86,8 +91,16 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     //if client has successfully connected to the room
     public void JoinRoom()
     {
+        if(roomNames.Contains("progress"))
+        {
+            PhotonNetwork.JoinRoom("progress");
+        }
+        else
+        {
+
+        }
         //Joining the room of whatever is in the joinINput text field
-        PhotonNetwork.JoinRoom(joinInput.text);
+        
     }
    
      //using callback fcn that's automatically called once joined a room

@@ -5,7 +5,7 @@ using UnityEngine;
 //Gives access to all multiplayer tools that Photon provides
 //Callback = a fcn that gets automatically called by Photon when a certain event happens
 using Photon.Pun;
-
+using Photon.Realtime; //New
 //To switch/load scenes
 using UnityEngine.SceneManagement;
 //MonoBehaviourPunCallbacks gives us access to different Pun fcn
@@ -17,7 +17,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     {
             //PhotonNetwork.AutomaticallySyncScene = true;
             PhotonNetwork.ConnectUsingSettings();
-        
+        Debug.Log("Trying to Connect to server...");
        
         //PhotonNetwork.AutomaticallySyncScene = true;
     }
@@ -29,7 +29,8 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
         
         Debug.Log("Connected to Master");
         PhotonNetwork.JoinLobby(); //power to create and join rooms if successfuly connected to server
-        PhotonNetwork.AutomaticallySyncScene = true;
+        //PhotonNetwork.AutomaticallySyncScene = true;
+
     }
 
     //When have successfully joined the lobby, load Join Scene
@@ -41,4 +42,6 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
 
         
     }
+
+
 }

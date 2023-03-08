@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 482253194224077905}
   m_Layer: 0
   m_Name: ratTestUnit
-  m_TagString: ratTest
+  m_TagString: Rat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

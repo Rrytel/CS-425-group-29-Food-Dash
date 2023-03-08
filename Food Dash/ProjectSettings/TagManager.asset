@@ -21,6 +21,7 @@ TagManager:
   - rat
   - Rat zone
   - ratTest
+  - PlayerTextOutput
   layers:
   - Default
   - TransparentFX

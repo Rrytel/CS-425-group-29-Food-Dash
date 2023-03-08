@@ -6,11 +6,13 @@ public class RatTimer : MonoBehaviour
 {
     public GameObject ratObject;
     float spawnTime = 15;
+    float gameSpawn = 5;
     public List<GameObject> spawns;
     // Start is called before the first frame update
     void Start()
     {
         spawnTime = 15;
+        gameSpawn = 5;
     }
 
     // Update is called once per frame
@@ -31,7 +33,14 @@ public class RatTimer : MonoBehaviour
             var randPos = spawns[index].transform.position; 
             //var randPos = new Vector3(Random.Range(-4.96f, 0.04f), 0.19f, Random.Range(-3.18f, -0.7f));
             //create an object at the random positon calculated
-            Instantiate(ratObject, randPos, Quaternion.identity);
+            if(gameSpawn > 0)
+            {
+               
+               Instantiate(ratObject, randPos, Quaternion.identity);
+                
+                gameSpawn--;
+            }
+            //Instantiate(ratObject, randPos, Quaternion.identity);
             //Debug.Log(spawnTime);
             Debug.Log("List Size: " + spawns.Count.ToString());
 
