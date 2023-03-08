@@ -178,6 +178,11 @@ public class Order : MonoBehaviour
 		return currentItems;
 	}
 
+	public void SetItems (List <FoodTypes> newItems)
+	{
+		items = newItems;
+	}
+
 	public void Serve ()
 	{
 		scoring.UpdateScore (this);
