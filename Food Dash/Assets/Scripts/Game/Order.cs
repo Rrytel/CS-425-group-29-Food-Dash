@@ -45,35 +45,40 @@ public class Order : MonoBehaviour
 	*/
 	void CreateOrder ()
 	{
-		// how many items will be in the order
-		int itemCount = Random.Range (minItems, maxItems + 1);
+		/*
+			// how many items will be in the order
+			int itemCount = Random.Range (minItems, maxItems + 1);
 
-		// temporary code for variety in orders
-		while (itemCount >= 0)
-		{
-			switch (itemCount)
+			// temporary code for variety in orders
+			while (itemCount >= 0)
 			{
-				case 0:
-					items.Add (FoodTypes.Fries);
-					break;
+				switch (itemCount)
+				{
+					case 0:
+						items.Add (FoodTypes.Fries);
+						break;
 
-				case 1:
-					items.Add (FoodTypes.Drink);
-					break;
+					case 1:
+						items.Add (FoodTypes.Drink);
+						break;
 
-				case 2:
-					items.Add (FoodTypes.Burger);
-					break;
+					case 2:
+						items.Add (FoodTypes.Burger);
+						break;
 
-				case 3:
-					items.Add (FoodTypes.Pizza);
-					// if you order pizza, do not order a burger
-					itemCount -= 1;
-					break;
+					case 3:
+						items.Add (FoodTypes.Pizza);
+						// if you order pizza, do not order a burger
+						itemCount -= 1;
+						break;
+				}
+
+				itemCount -= 1;
 			}
+		*/
 
-			itemCount -= 1;
-		}
+		// for demo: customers only ask for a burger
+		items.Add (FoodTypes.Burger);
 
 		// copy list for comparison later
 		currentItems = items;

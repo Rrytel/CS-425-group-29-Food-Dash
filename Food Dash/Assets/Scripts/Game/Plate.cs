@@ -10,6 +10,7 @@ public class Plate : MonoBehaviour
 	public FoodTypes type = FoodTypes.Pizza;
 	public GameObject foodPrefab;
 
+	bool spawnedFood = false;
 	List <IngredientTypes> ingredients = new ();
 
 	// Start is called before the first frame update
@@ -22,10 +23,11 @@ public class Plate : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
-        if (ingredients.Count == 0)
+        if (ingredients.Count == 0 && spawnedFood == false)
 		{
-			Instantiate (foodPrefab);
-			Destroy (this.gameObject);
+			Instantiate (foodPrefab, this.gameObject.transform);
+			spawnedFood = true;
+			//Destroy (this.gameObject);
 		}
     }
 
@@ -43,11 +45,11 @@ public class Plate : MonoBehaviour
 		}
 		else if (type == FoodTypes.Burger)
 		{
-			//ingredients.Add (IngredientTypes.Bun);
+			ingredients.Add (IngredientTypes.Bun);
 			ingredients.Add (IngredientTypes.Patty);
 			//ingredients.Add (IngredientTypes.Cheese);
 			//ingredients.Add (IngredientTypes.Lettuce);
-			//ingredients.Add (IngredientTypes.Bun);
+			ingredients.Add (IngredientTypes.Bun);
 		}
 		else if (type == FoodTypes.Fries)
 		{
