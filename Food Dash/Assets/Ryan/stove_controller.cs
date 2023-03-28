@@ -9,6 +9,7 @@ public class stove_controller : MonoBehaviour
     ParticleSystem ps;
     public Image LoadingBar;
     public Image marker;
+    public Image endMarker;
     public Image CompleteMarker;
     public AudioSource audioSource;
     public AudioClip ignitionSound;
@@ -30,6 +31,7 @@ public class stove_controller : MonoBehaviour
     void Start()
     {
          marker.enabled = false;
+         endMarker.enabled = false;
          CompleteMarker.enabled = false;
          ps = GetComponent<ParticleSystem>();
          LoadingBar.fillAmount = 0;
@@ -81,12 +83,20 @@ public class stove_controller : MonoBehaviour
     IEnumerator cookProcess(GameObject food)
     {
         //Initialize variables
+
+        float burn = food.GetComponent<test_food_script>().burnThresh;
+        float cook = food.GetComponent<test_food_script>().cookThresh;
+
         StopCoroutine("markerFade");
         int indicatorStatus = 0;
         occupied = true;
         CompleteMarker.enabled = true;
         CompleteMarker.color = Color.white;
         marker.enabled = true;
+
+        //Set marker that shows when cooking is complete
+        endMarker.enabled = true;
+        endMarker.rectTransform.rotation = Quaternion.Euler(0f, 180f, (cook / burn) * 360);
         //value on the timer is equal to the heat value of the food - shows cooking process of the meal
         timerVal = food.GetComponent<test_food_script>().heat;
         
@@ -118,8 +128,8 @@ public class stove_controller : MonoBehaviour
             transform.Find("pan").position += new Vector3(0f, deltaPan, 0f);
 
             //Update visual timer
-            float burn = food.GetComponent<test_food_script>().burnThresh;
-            float cook = food.GetComponent<test_food_script>().cookThresh;
+            //float burn = food.GetComponent<test_food_script>().burnThresh;
+            //float cook = food.GetComponent<test_food_script>().cookThresh;
             //if the food isn't burnt, take time off the clock and start counting down
             if (timerVal < burn)
             {
@@ -137,7 +147,7 @@ public class stove_controller : MonoBehaviour
             {
                 //Second half of timer
                 //lerpedColor = Color.Lerp(Color.green, Color.red, ((timerVal / burn) -.5f) * 2);
-                lerpedColor = Color.Lerp(Color.green, Color.red, ((timerVal / burn) - (cook/burn))*2);
+                lerpedColor = Color.Lerp(Color.green, Color.red, ((timerVal / burn) - (cook/burn))*(1/(1-(cook/burn))));
 
                 //Mark food as done cooking
                 if(indicatorStatus == 0)
@@ -201,6 +211,7 @@ public class stove_controller : MonoBehaviour
         }while(timer < .5f) ;
         
         marker.enabled = false;
+        endMarker.enabled = false;
         CompleteMarker.enabled = false;
         LoadingBar.fillAmount = 0;
     }
