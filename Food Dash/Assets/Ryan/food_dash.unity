@@ -8471,7 +8471,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 847762627}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 20b27a2b09cf5470e866c2708f9f9dc8, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -16628,10 +16628,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 1804123403}
-  m_MoveSpeed: 1
+  m_MoveSpeed: 2
   m_EnableStrafe: 1
   m_UseGravity: 1
-  m_GravityApplicationMode: 0
+  m_GravityApplicationMode: 1
   m_ForwardSource: {fileID: 1519113255}
   m_InputBinding: 0
   m_Controllers:
@@ -16671,7 +16671,7 @@ CharacterController:
   m_SlopeLimit: 0
   m_StepOffset: 0
   m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.000001
+  m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &1836230392
 GameObject:
