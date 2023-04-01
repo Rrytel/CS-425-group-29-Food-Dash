@@ -13936,11 +13936,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3494856239839707552, guid: c116b7497ab8ca34c9188965d4295e27, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.36
       objectReference: {fileID: 0}
     - target: {fileID: 4789619294268497533, guid: c116b7497ab8ca34c9188965d4295e27, type: 3}
       propertyPath: m_CameraYOffset
-      value: 0
+      value: -0.36
       objectReference: {fileID: 0}
     - target: {fileID: 4789619294268497533, guid: c116b7497ab8ca34c9188965d4295e27, type: 3}
       propertyPath: m_TrackingSpace
@@ -16654,7 +16654,7 @@ MonoBehaviour:
   m_OriginBaseGameObject: {fileID: 1804123401}
   m_CameraFloorOffsetObject: {fileID: 510194544}
   m_RequestedTrackingOriginMode: 1
-  m_CameraYOffset: -0.43
+  m_CameraYOffset: -0.36
 --- !u!143 &1804123408
 CharacterController:
   m_ObjectHideFlags: 0
