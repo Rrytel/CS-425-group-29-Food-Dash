@@ -6,9 +6,10 @@ using UnityEngine.XR;
 public class player_move : MonoBehaviour
 {
     // Start is called before the first frame update
+    Rigidbody m_rig;
     void Start()
     {
-        
+        m_rig = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -26,13 +27,14 @@ public class player_move : MonoBehaviour
         }
         
         Vector2 input;
-        inputDevices[2].TryGetFeatureValue(UnityEngine.XR.CommonUsages.primary2DAxis, out input);
+        inputDevices[1].TryGetFeatureValue(UnityEngine.XR.CommonUsages.primary2DAxis, out input);
         //Debug.Log(translation);
         //translation.As();
         //gameObject.transform.position = new Vector3(gameObject.transform.position.x, .28f, gameObject.transform.position.z);
         //float rotation = Input.GetAxis("Horizontal");
         Vector3 moveDirection = new Vector3(input.x, 0f, input.y);
-       // Debug.Log(moveDirection);
-        gameObject.GetComponent<CharacterController>().Move(moveDirection * Time.deltaTime);
+        Debug.Log(moveDirection);
+        //gameObject.GetComponent<CharacterController>().Move(moveDirection * Time.deltaTime);
+        m_rig.velocity = (moveDirection * 10f);
     }
 }
