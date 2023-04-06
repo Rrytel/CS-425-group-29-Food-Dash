@@ -11,6 +11,7 @@ public class stove_controller : MonoBehaviour
     public Image marker;
     public Image endMarker;
     public Image CompleteMarker;
+    public Image centerCircle;
     public AudioSource audioSource;
     public AudioClip ignitionSound;
     float timerVal;
@@ -32,6 +33,7 @@ public class stove_controller : MonoBehaviour
     {
          marker.enabled = false;
          endMarker.enabled = false;
+         centerCircle.enabled = false;
          CompleteMarker.enabled = false;
          ps = GetComponent<ParticleSystem>();
          LoadingBar.fillAmount = 0;
@@ -93,6 +95,7 @@ public class stove_controller : MonoBehaviour
         CompleteMarker.enabled = true;
         CompleteMarker.color = Color.white;
         marker.enabled = true;
+        centerCircle.enabled = true;
 
         //Set marker that shows when cooking is complete
         endMarker.enabled = true;
@@ -212,6 +215,7 @@ public class stove_controller : MonoBehaviour
         
         marker.enabled = false;
         endMarker.enabled = false;
+        centerCircle.enabled = false;
         CompleteMarker.enabled = false;
         LoadingBar.fillAmount = 0;
     }
