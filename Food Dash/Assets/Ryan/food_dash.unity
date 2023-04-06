@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1346922696}
-  m_IndirectSpecularColor: {r: 0.55916256, g: 0.8082825, b: 0.99096864, a: 1}
+  m_IndirectSpecularColor: {r: 0.5610777, g: 0.81156224, b: 0.9834126, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14140,7 +14140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3494856239839707552, guid: c116b7497ab8ca34c9188965d4295e27, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.36
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4789619294268497533, guid: c116b7497ab8ca34c9188965d4295e27, type: 3}
       propertyPath: m_CameraYOffset
@@ -14148,11 +14148,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4789619294268497533, guid: c116b7497ab8ca34c9188965d4295e27, type: 3}
       propertyPath: m_TrackingSpace
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4789619294268497533, guid: c116b7497ab8ca34c9188965d4295e27, type: 3}
       propertyPath: m_RequestedTrackingMode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5113664386210071967, guid: c116b7497ab8ca34c9188965d4295e27, type: 3}
       propertyPath: m_Layer
@@ -17050,7 +17050,7 @@ MonoBehaviour:
   m_Camera: {fileID: 1519113257}
   m_OriginBaseGameObject: {fileID: 1804123401}
   m_CameraFloorOffsetObject: {fileID: 510194544}
-  m_RequestedTrackingOriginMode: 1
+  m_RequestedTrackingOriginMode: 2
   m_CameraYOffset: -0.36
 --- !u!143 &1804123408
 CharacterController:
@@ -17063,13 +17063,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 0.96
-  m_Radius: 0.15
+  m_Height: 0.56
+  m_Radius: 0.3
   m_SlopeLimit: 0
   m_StepOffset: 0
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 0.2, z: 0}
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!114 &1804123410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17106,7 +17106,7 @@ MonoBehaviour:
   m_EnableStrafe: 1
   m_EnableFly: 0
   m_UseGravity: 1
-  m_GravityApplicationMode: 0
+  m_GravityApplicationMode: 1
   m_ForwardSource: {fileID: 0}
   m_InputBinding: 0
   m_Controllers:
