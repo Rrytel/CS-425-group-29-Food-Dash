@@ -32,14 +32,17 @@ public class test_food_script : MonoBehaviour
     public bool active = false;
     float throwPow = 1.5f;
     bool chargeUp = false;
-    
 
-    
+    public Material Material1;
+    public Mesh mesh1;
+
     void Start()
     {
         
         meshF = GO.GetComponent<MeshFilter>();
         m_Rigidbody = GetComponent<Rigidbody>();
+        //gameObject.GetComponent<MeshRenderer>().material = Material1;
+        //meshF.sharedMesh = mesh1;
     }
 
     // Update is called once per frame
