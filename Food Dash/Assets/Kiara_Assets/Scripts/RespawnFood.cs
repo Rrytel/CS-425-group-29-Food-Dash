@@ -27,7 +27,7 @@ public class RespawnFood : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //check if the object colliding with it is a rat
-        if (collision.gameObject.tag == "Player")
+        /*if (collision.gameObject.tag == "Player")
         {
             Debug.Log("A player is touching the crate");
             spawnFood();
@@ -35,20 +35,34 @@ public class RespawnFood : MonoBehaviour
         else
         {
             Debug.Log("It's not a player touching the crate");
+        }*/
+        if(collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Player touching");
+        }
+        //if ((transform.position - collision.position))
+    }
+
+    private void Update()
+    {
+        float distance = 100;
+        if((transform.position - GameObject.FindGameObjectWithTag("Player").transform.position ).sqrMagnitude > distance * distance)
+        {
+            spawnFood();
         }
     }
 
-   /* void OnMouseOver()
-    {
-        //If your mouse hovers over the GameObject with the script attached, output this message
-        Debug.Log("Mouse is over Crate.");
-        direction.SetActive(true); //makes the direction text visible
-    }
+    /* void OnMouseOver()
+     {
+         //If your mouse hovers over the GameObject with the script attached, output this message
+         Debug.Log("Mouse is over Crate.");
+         direction.SetActive(true); //makes the direction text visible
+     }
 
-    private void OnMouseExit()
-    {
-        Debug.Log("Mouse is not over Crate");
-        direction.SetActive(false);
-    }
-   */
+     private void OnMouseExit()
+     {
+         Debug.Log("Mouse is not over Crate");
+         direction.SetActive(false);
+     }
+    */
 }
