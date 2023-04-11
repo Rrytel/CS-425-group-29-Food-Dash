@@ -7,6 +7,7 @@ public class RespawnFood : MonoBehaviour
     // Start is called before the first frame update
     GameObject direction;
     public GameObject food;
+    public Transform IPoint;
     //private void OnTriggerEnter(Collider other)
     /*{
         OnMouseOver();
@@ -39,8 +40,18 @@ public class RespawnFood : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             Debug.Log("Player touching");
+            
         }
         //if ((transform.position - collision.position))
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("Player touching");
+            Instantiate(food, IPoint.position, Quaternion.identity);
+        }
     }
 
     private void Update()

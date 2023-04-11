@@ -33,7 +33,9 @@ public class test_food_script : MonoBehaviour
     float throwPow = 1.5f;
     bool chargeUp = false;
 
-    public Material Material1;
+    public TrailRenderer TR;
+    public Material cookedMat;
+    public Material burntMat;
     public Mesh mesh1;
 
     void Start()
@@ -48,6 +50,14 @@ public class test_food_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!isHeld && m_Rigidbody.velocity.magnitude < 5)
+        {
+            //throwPow -= 1 * Time.deltaTime;
+            TR.enabled = false;
+            throwPow = 1.5f;
+        }
+
+
         //Spin charge
         if(chargeUp)
         {
@@ -59,21 +69,37 @@ public class test_food_script : MonoBehaviour
             //Remove controller bound rotation
             gameObject.GetComponent<XRGrabInteractable>().trackRotation = false;
             transform.Rotate(new Vector3(25, 12, 34));
-            gameObject.GetComponent<XRGrabInteractable>().throwVelocityScale = throwPow;
+            
         }
         else
         {
             gameObject.GetComponent<XRGrabInteractable>().trackRotation = true;
         }
+        gameObject.GetComponent<XRGrabInteractable>().throwVelocityScale = throwPow;
+
+        if(throwPow>5)
+        {
+            TR.enabled = true;
+        }
+        else
+        {
+            TR.enabled = false;
+        }
+
 
         //timer += .01f;
         //Update mesh based on stage in cooking process
-        if(heat > cookThresh && cooked == false)
+        if (heat > cookThresh && cooked == false)
         {
             //Update variables
             cooked = true;
-            //Swap for cooked mesh
-            meshF.sharedMesh = Resources.Load<Mesh>("heat_lamp");
+            //Swap for cooked mesh and material
+
+            gameObject.GetComponent<MeshRenderer>().material = cookedMat;
+            //meshF.sharedMesh = Resources.Load<Mesh>("heat_lamp");
+
+
+
             //Play sound for cooked food
             audioSource.PlayOneShot(cookedSound, .3f);
         }
@@ -81,8 +107,10 @@ public class test_food_script : MonoBehaviour
         {
             //Update variables
             burnt = true;
-            //Swap for burnt mesh
-            meshF.sharedMesh = Resources.Load<Mesh>("sink_handwash");
+            //Swap for burnt mesh and material
+
+            gameObject.GetComponent<MeshRenderer>().material = burntMat;
+            //meshF.sharedMesh = Resources.Load<Mesh>("sink_handwash"); 
             //Play sound for burnt food
             audioSource.PlayOneShot(burntSound, .3f);
 
