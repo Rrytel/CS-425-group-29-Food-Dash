@@ -39,7 +39,7 @@ public class RespawnFood : MonoBehaviour
         }*/
         if(collision.gameObject.tag == "Player")
         {
-            Debug.Log("Player touching");
+            Debug.Log("Player touching collision");
             
         }
         //if ((transform.position - collision.position))
