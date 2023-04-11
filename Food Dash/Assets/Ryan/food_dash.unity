@@ -1796,6 +1796,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda371e3eef76dd4eb7d401db9b97bdd, type: 3}
+--- !u!1 &501111544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 501111545}
+  m_Layer: 0
+  m_Name: IPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &501111545
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501111544}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.55, y: 2.7200007, z: 0.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1920136798}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &510194544 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 905446930833842387, guid: c116b7497ab8ca34c9188965d4295e27, type: 3}
@@ -4187,6 +4218,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &839585347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 839585348}
+  m_Layer: 0
+  m_Name: IPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &839585348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839585347}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.1, y: 2.7200003, z: 0.42}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1977397524}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &845021344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4923,7 +4985,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1072010222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.38, z: 0}
+  m_LocalPosition: {x: 0, y: 2.43, z: 0.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6391,8 +6453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bbe887796b8fc647a441864e4931521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food: {fileID: 4777684476239810400, guid: a060e5a9206920440957a921406910c3, type: 3}
-  IPoint: {fileID: 0}
+  food: {fileID: 3618607133075569311, guid: 02a297d6cde55f54ab363e8c98ca622f, type: 3}
+  IPoint: {fileID: 501111545}
 --- !u!65 &1484616616
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6430,7 +6492,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487659574}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.467, y: 0.1632, z: -15.31}
+  m_LocalPosition: {x: -7.468, y: 0.1632, z: -15.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6467,8 +6529,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bbe887796b8fc647a441864e4931521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food: {fileID: 4777684476239810400, guid: a060e5a9206920440957a921406910c3, type: 3}
-  IPoint: {fileID: 0}
+  food: {fileID: 1576208876812468077, guid: 65aa399d59c354a41b7345506f6277a3, type: 3}
+  IPoint: {fileID: 839585348}
 --- !u!65 &1497685340
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7342,7 +7404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bbe887796b8fc647a441864e4931521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food: {fileID: 4777684476239810400, guid: a060e5a9206920440957a921406910c3, type: 3}
+  food: {fileID: 5690116455688104723, guid: 7d041924eda7c8245b905b65593fbe0c, type: 3}
   IPoint: {fileID: 1194568421}
 --- !u!65 &1742486688
 BoxCollider:
@@ -9470,8 +9532,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bbe887796b8fc647a441864e4931521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food: {fileID: 4777684476239810400, guid: a060e5a9206920440957a921406910c3, type: 3}
-  IPoint: {fileID: 0}
+  food: {fileID: 8549722659845815899, guid: e4a80de083d218b4fa7f2c0f43a4bfc8, type: 3}
+  IPoint: {fileID: 1072010223}
 --- !u!65 &2074478241
 BoxCollider:
   m_ObjectHideFlags: 0

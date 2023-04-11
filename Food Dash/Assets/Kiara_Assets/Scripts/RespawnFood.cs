@@ -20,9 +20,10 @@ public class RespawnFood : MonoBehaviour
         //if the text direction is active, and the user presses A then spawn food
         //if (direction.activeSelf == true && Input.GetKeyDown(KeyCode.A))
         //{
-            //create a copy of the desired food item that's passed in
-            Instantiate(food, new Vector3 (4.32f, 1.179f, -8.41f), Quaternion.identity);
+        //create a copy of the desired food item that's passed in
+        //Instantiate(food, new Vector3 (4.32f, 1.179f, -8.41f), Quaternion.identity);
         //}
+        Instantiate(food, IPoint.position, Quaternion.identity);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -50,18 +51,19 @@ public class RespawnFood : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("Player touching");
-            Instantiate(food, IPoint.position, Quaternion.identity);
+            //Instantiate(food, IPoint.position, Quaternion.identity);
+            spawnFood();
         }
     }
 
-    private void Update()
+   /* private void Update()
     {
         float distance = 100;
         if((transform.position - GameObject.FindGameObjectWithTag("Player").transform.position ).sqrMagnitude > distance * distance)
         {
             spawnFood();
         }
-    }
+    }*/
 
     /* void OnMouseOver()
      {
