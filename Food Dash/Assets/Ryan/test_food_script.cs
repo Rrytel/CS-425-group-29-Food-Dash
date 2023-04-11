@@ -36,7 +36,9 @@ public class test_food_script : MonoBehaviour
     public TrailRenderer TR;
     public Material cookedMat;
     public Material burntMat;
-    public Mesh mesh1;
+    public Mesh choppedMesh;
+    public bool isChoppable;
+    public bool isCookable;
 
     void Start()
     {
@@ -125,13 +127,15 @@ public class test_food_script : MonoBehaviour
 
         }
 
+        
         //Update mesh based on stage in chopping process
         if(chopState > chopThresh)
         {
             //Update variables
 
             //Swap for chopped mesh
-            meshF.sharedMesh = Resources.Load<Mesh>("sink_handwash");
+            //meshF.sharedMesh = Resources.Load<Mesh>("sink_handwash");
+            meshF.sharedMesh = choppedMesh;
         }
     }
 
@@ -142,6 +146,8 @@ public class test_food_script : MonoBehaviour
         switch (coll.tag)
         {
             case "Test":
+                if (!isCookable)
+                    return;
                 activeAreas.Add(coll);
                 if(isHeld)
                 {
@@ -196,9 +202,14 @@ public class test_food_script : MonoBehaviour
                 break;
 
             case "Knife":
-                //Increment chop counter
-                chopState += 1;
-                //Play chop sound
+                
+                if(isChoppable)
+                {
+                    //Increment chop counter
+                    chopState += 1;
+                    //Play chop sound
+                }
+
 
                 break;
 
@@ -231,6 +242,8 @@ public class test_food_script : MonoBehaviour
         switch (coll.tag)
         {
             case "Test":
+                if (!isCookable)
+                    return;
                 activeArea = coll;
                 //Check to see if stove is busy
                 if (coll.transform.parent.parent.GetComponent<stove_controller>().occupied == false && active == false)
