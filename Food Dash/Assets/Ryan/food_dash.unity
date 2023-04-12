@@ -1176,7 +1176,9 @@ MonoBehaviour:
   TR: {fileID: 422930588}
   cookedMat: {fileID: 2100000, guid: 8d8accd05df1b84468a7b1feae50c68e, type: 2}
   burntMat: {fileID: 2100000, guid: bb82f3a2983f24f4d80bedf1473dc6bf, type: 2}
-  mesh1: {fileID: 0}
+  choppedMesh: {fileID: 0}
+  isChoppable: 0
+  isCookable: 1
 --- !u!114 &422930581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2852,7 +2854,9 @@ MonoBehaviour:
   TR: {fileID: 0}
   cookedMat: {fileID: 0}
   burntMat: {fileID: 0}
-  mesh1: {fileID: 0}
+  choppedMesh: {fileID: 0}
+  isChoppable: 0
+  isCookable: 0
 --- !u!114 &663286803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3547,7 +3551,7 @@ MonoBehaviour:
   isHeld: 0
   cookTimeLeft: 100
   GO: {fileID: 735303474}
-  foodType: 
+  foodType: patty
   cooked: 0
   burnt: 0
   heat: 0
@@ -3564,7 +3568,9 @@ MonoBehaviour:
   TR: {fileID: 735303475}
   cookedMat: {fileID: 2100000, guid: 8d8accd05df1b84468a7b1feae50c68e, type: 2}
   burntMat: {fileID: 2100000, guid: bb82f3a2983f24f4d80bedf1473dc6bf, type: 2}
-  mesh1: {fileID: 0}
+  choppedMesh: {fileID: 0}
+  isChoppable: 0
+  isCookable: 1
 --- !u!114 &735303478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6208,7 +6214,9 @@ MonoBehaviour:
   TR: {fileID: 0}
   cookedMat: {fileID: 0}
   burntMat: {fileID: 0}
-  mesh1: {fileID: 0}
+  choppedMesh: {fileID: 0}
+  isChoppable: 0
+  isCookable: 0
 --- !u!135 &1386965961
 SphereCollider:
   m_ObjectHideFlags: 0
