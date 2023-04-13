@@ -37,8 +37,10 @@ public class test_food_script : MonoBehaviour
     public Material cookedMat;
     public Material burntMat;
     public Mesh choppedMesh;
+    public Material choppedMat;
     public bool isChoppable;
     public bool isCookable;
+    public ParticleSystem chopParticle;
 
     void Start()
     {
@@ -56,7 +58,7 @@ public class test_food_script : MonoBehaviour
         {
             //throwPow -= 1 * Time.deltaTime;
             TR.enabled = false;
-            throwPow = 1.5f;
+            //throwPow = 1.5f;
         }
 
 
@@ -66,7 +68,7 @@ public class test_food_script : MonoBehaviour
             if(throwPow < 10)
             {
                 //Scale up throwing power
-                throwPow += 1f * Time.fixedDeltaTime;
+                throwPow += 3f * Time.fixedDeltaTime;
             }
             //Remove controller bound rotation
             gameObject.GetComponent<XRGrabInteractable>().trackRotation = false;
@@ -136,6 +138,9 @@ public class test_food_script : MonoBehaviour
             //Swap for chopped mesh
             //meshF.sharedMesh = Resources.Load<Mesh>("sink_handwash");
             meshF.sharedMesh = choppedMesh;
+            gameObject.GetComponent<MeshRenderer>().material = choppedMat;
+            
+
         }
     }
 
@@ -208,6 +213,9 @@ public class test_food_script : MonoBehaviour
                     //Increment chop counter
                     chopState += 1;
                     //Play chop sound
+
+                    //Play chop animation
+                    chopParticle.Emit(1);
                 }
 
 

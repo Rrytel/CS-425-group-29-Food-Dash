@@ -91,6 +91,16 @@ public class stove_controller : MonoBehaviour
 
         StopCoroutine("markerFade");
         int indicatorStatus = 0;
+        if (food.GetComponent<test_food_script>().cooked == true)
+        {
+            indicatorStatus = 0;
+        }
+        if (food.GetComponent<test_food_script>().burnt == true)
+        {
+            indicatorStatus = 1;
+        }
+
+
         occupied = true;
         CompleteMarker.enabled = true;
         CompleteMarker.color = Color.white;
@@ -162,13 +172,14 @@ public class stove_controller : MonoBehaviour
             else
             {
                 //Mark food as burnt
-                if(indicatorStatus == 1)
+                if (indicatorStatus == 1)
                 {
                     StopCoroutine(colorShift);
                     colorShift = StartCoroutine(colorShiftCMark(Color.green, Color.red));
                     lerpedColor = Color.Lerp(Color.green, Color.red, ((timerVal / burn) - (cook / burn)) * 2);
                     indicatorStatus = 2;
                 }
+               
                
             }
             //Set loading bar color
