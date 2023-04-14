@@ -103,7 +103,7 @@ public class stove_controller : MonoBehaviour
 
         occupied = true;
         CompleteMarker.enabled = true;
-        CompleteMarker.color = Color.white;
+        //CompleteMarker.color = Color.white;
         marker.enabled = true;
         centerCircle.enabled = true;
 
@@ -165,7 +165,10 @@ public class stove_controller : MonoBehaviour
                 //Mark food as done cooking
                 if(indicatorStatus == 0)
                 {
-                    colorShift = StartCoroutine(colorShiftCMark(Color.white, Color.green));
+                    if(colorShift!=null)
+                        StopCoroutine(colorShift);
+                    //colorShift = StartCoroutine(colorShiftCMark(Color.white, Color.green));
+                    colorShift = StartCoroutine(colorShiftCMark(CompleteMarker.color, Color.green));
                     indicatorStatus = 1;
                 }
             }
@@ -174,8 +177,10 @@ public class stove_controller : MonoBehaviour
                 //Mark food as burnt
                 if (indicatorStatus == 1)
                 {
-                    StopCoroutine(colorShift);
-                    colorShift = StartCoroutine(colorShiftCMark(Color.green, Color.red));
+                    if (colorShift != null)
+                        StopCoroutine(colorShift);
+                    //colorShift = StartCoroutine(colorShiftCMark(Color.green, Color.red));
+                    colorShift = StartCoroutine(colorShiftCMark(CompleteMarker.color, Color.red));
                     lerpedColor = Color.Lerp(Color.green, Color.red, ((timerVal / burn) - (cook / burn)) * 2);
                     indicatorStatus = 2;
                 }
@@ -208,7 +213,12 @@ public class stove_controller : MonoBehaviour
         occupied = false;
         //marker.enabled = false;
         //CompleteMarker.enabled = false;
-        CompleteMarker.color = Color.white;
+
+        //CompleteMarker.color = Color.white;
+        if (colorShift != null)
+            StopCoroutine(colorShift);
+        colorShift = StartCoroutine(colorShiftCMark(CompleteMarker.color, Color.white));
+
         ps.Stop(true);
         //LoadingBar.fillAmount = 0;
         timerVal = 0;
@@ -271,20 +281,22 @@ public class stove_controller : MonoBehaviour
 
     public void ResetCook()
     {
-        //gameObject.GetComponent<stove_controller>().StopAllCoroutines();
         gameObject.GetComponent<stove_controller>().StopCoroutine(CC);
         if (colorShift != null)
         {
-            StopCoroutine(colorShift);
+            //StopCoroutine(colorShift);
         }
         StartCoroutine("markerFade");
         //Reset values 
         audioSource.Stop();
         transform.Find("pan").localPosition = new Vector3(0f, 0f, 0f);
         occupied = false;
+        if (colorShift != null)
+            StopCoroutine(colorShift);
+        colorShift = StartCoroutine(colorShiftCMark(CompleteMarker.color, Color.white));
         //marker.enabled = false;
         //CompleteMarker.enabled = false;
-        CompleteMarker.color = Color.white;
+        //CompleteMarker.color = Color.white;
         ps.Stop(true);
         //LoadingBar.fillAmount = 0;
         timerVal = 0;

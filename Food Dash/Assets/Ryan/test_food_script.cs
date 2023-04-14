@@ -174,7 +174,7 @@ public class test_food_script : MonoBehaviour
                         GameObject tempFood = coll.transform.parent.parent.GetComponent<stove_controller>().activeItems[0];
 
                         coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(tempFood.gameObject);
-                        coll.transform.parent.parent.GetComponent<stove_controller>().ResetCook();
+                        //coll.transform.parent.parent.GetComponent<stove_controller>().ResetCook();
 
                         coll.transform.parent.parent.GetComponent<stove_controller>().EjectFood(tempFood, throwPow);
 
