@@ -8,14 +8,15 @@ using Photon.Realtime;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms;
 using TMPro;
+using System.Linq;
 
 //Note: Network timer itself
 public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 {
-    //public InputField createInput;
-    //public InputField joinInput;
-    public TMP_InputField createInput;
-    public TMP_InputField joinInput;
+    public InputField createInput;
+    public InputField joinInput;
+    //public TMP_InputField createInput;
+    //public TMP_InputField joinInput;
     //float time = 30;
     public int playersThere;
     bool readyToPlay = false;
@@ -71,8 +72,9 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
         //Note: ADD where to make sure input field isn't empty before creating room
         //need string input for room name-> name of room will be whatever we write in the "createInput" input field
-        PhotonNetwork.CreateRoom("progress", roomOptions); //automatically calls OnJoinedRoom
-        roomNames.Add("progress");
+        //PhotonNetwork.CreateRoom("progress", roomOptions); //automatically calls OnJoinedRoom
+        //roomNames.Add("progress");
+        PhotonNetwork.CreateRoom(createInput.text, roomOptions);
 
     }
 
@@ -91,14 +93,16 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     //if client has successfully connected to the room
     public void JoinRoom()
     {
-        if(roomNames.Contains("progress"))
+        /*if(roomNames.Contains("progress"))
         {
             PhotonNetwork.JoinRoom("progress");
         }
         else
         {
 
-        }
+        }*/
+
+        PhotonNetwork.JoinRoom(joinInput.text);
         //Joining the room of whatever is in the joinINput text field
         
     }
@@ -106,13 +110,25 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
      //using callback fcn that's automatically called once joined a room
      public override void OnJoinedRoom()
     {
+
+        if (PhotonNetwork.PlayerList.Length == 1)
+        {
+            Debug.Log("Only one player joined/created a room");
+            PhotonNetwork.LoadLevel("WaitingForPlayer");
+        }
+        else
+        {
+
+
+            PhotonNetwork.LoadLevel("food_dash");
+        }
         
         //send the master to waiting for others scene - then check how many players are in the scene- if 2, then load the game scene with both of them in it
-        PhotonNetwork.LoadLevel("food_dash");
+        //PhotonNetwork.LoadLevel("food_dash");
         /*playersThere = PhotonNetwork.PlayerList.Length;
         if (playersThere == 2)
         {
-            Debug.Log("All players are in the room!");
+            Debug.Log("All players are in the room!"
             //restart time in kitchen
             //return true;
             PhotonNetwork.CurrentRoom.IsOpen = false;

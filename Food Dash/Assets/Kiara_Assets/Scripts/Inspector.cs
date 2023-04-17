@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Inspector : MonoBehaviour
 {
+	string previousGrade = "";
     private float time;
     private string grade = "";
     TextMeshProUGUI inspectorText;
@@ -25,9 +26,16 @@ public class Inspector : MonoBehaviour
             giveInspection();
         }
 
-        //if giveInspection
-        inspectorText.text = "Inspection: " + grade;
+		// if inspection grade has changed
+		if (grade != previousGrade)
+		{
+			StartCoroutine (DisplayGradeUpdate ());
+		}
 
+        //if giveInspection
+        inspectorText.text = grade;
+
+		previousGrade = grade;
     }
 
     string giveInspection()
@@ -54,5 +62,22 @@ public class Inspector : MonoBehaviour
         }
         return grade;
     }
-  
+
+	/*
+	*	displays the updated inspection grading and fades out
+	*	(persistent ui elements are not good for vr)
+	*/
+	IEnumerator DisplayGradeUpdate ()
+	{
+		float fadeSpeed = 1f;
+		float transparency = 1;
+
+		while (transparency > 0)
+		{
+			transparency -= fadeSpeed * Time.deltaTime;
+			inspectorText.alpha = transparency;
+
+			yield return null;
+		}
+	}
 }

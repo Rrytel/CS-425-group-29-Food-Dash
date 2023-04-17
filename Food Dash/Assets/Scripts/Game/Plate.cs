@@ -23,11 +23,13 @@ public class Plate : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
-        if (ingredients.Count == 0 && spawnedFood == false)
+		foodPrefab.transform.position = this.gameObject.transform.position;
+
+		if (ingredients.Count == 0 && spawnedFood == false)
 		{
-			Instantiate (foodPrefab, this.gameObject.transform);
+			Instantiate (foodPrefab);
 			spawnedFood = true;
-			//Destroy (this.gameObject);
+			Destroy (this.gameObject);
 		}
     }
 

@@ -32,45 +32,78 @@ public class test_food_script : MonoBehaviour
     public bool active = false;
     float throwPow = 1.5f;
     bool chargeUp = false;
-    
 
-    
+    public TrailRenderer TR;
+    public Material cookedMat;
+    public Material burntMat;
+    public Mesh choppedMesh;
+    public Material choppedMat;
+    public bool isChoppable;
+    public bool isCookable;
+    public ParticleSystem chopParticle;
+
     void Start()
     {
         
         meshF = GO.GetComponent<MeshFilter>();
         m_Rigidbody = GetComponent<Rigidbody>();
+        //gameObject.GetComponent<MeshRenderer>().material = Material1;
+        //meshF.sharedMesh = mesh1;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(!isHeld && m_Rigidbody.velocity.magnitude < 5)
+        {
+            //throwPow -= 1 * Time.deltaTime;
+            TR.enabled = false;
+            //throwPow = 1.5f;
+        }
+
+
         //Spin charge
         if(chargeUp)
         {
             if(throwPow < 10)
             {
                 //Scale up throwing power
-                throwPow += 1f * Time.fixedDeltaTime;
+                throwPow += 3f * Time.fixedDeltaTime;
             }
             //Remove controller bound rotation
             gameObject.GetComponent<XRGrabInteractable>().trackRotation = false;
             transform.Rotate(new Vector3(25, 12, 34));
-            gameObject.GetComponent<XRGrabInteractable>().throwVelocityScale = throwPow;
+            
         }
         else
         {
             gameObject.GetComponent<XRGrabInteractable>().trackRotation = true;
         }
+        gameObject.GetComponent<XRGrabInteractable>().throwVelocityScale = throwPow;
+
+        if(throwPow>5)
+        {
+            TR.enabled = true;
+        }
+        else
+        {
+            TR.enabled = false;
+        }
+
 
         //timer += .01f;
         //Update mesh based on stage in cooking process
-        if(heat > cookThresh && cooked == false)
+        if (heat > cookThresh && cooked == false)
         {
             //Update variables
             cooked = true;
-            //Swap for cooked mesh
-            meshF.sharedMesh = Resources.Load<Mesh>("heat_lamp");
+            //Swap for cooked mesh and material
+
+            gameObject.GetComponent<MeshRenderer>().material = cookedMat;
+            //meshF.sharedMesh = Resources.Load<Mesh>("heat_lamp");
+
+
+
             //Play sound for cooked food
             audioSource.PlayOneShot(cookedSound, .3f);
         }
@@ -78,8 +111,10 @@ public class test_food_script : MonoBehaviour
         {
             //Update variables
             burnt = true;
-            //Swap for burnt mesh
-            meshF.sharedMesh = Resources.Load<Mesh>("sink_handwash");
+            //Swap for burnt mesh and material
+
+            gameObject.GetComponent<MeshRenderer>().material = burntMat;
+            //meshF.sharedMesh = Resources.Load<Mesh>("sink_handwash"); 
             //Play sound for burnt food
             audioSource.PlayOneShot(burntSound, .3f);
 
@@ -94,13 +129,18 @@ public class test_food_script : MonoBehaviour
 
         }
 
+        
         //Update mesh based on stage in chopping process
         if(chopState > chopThresh)
         {
             //Update variables
 
             //Swap for chopped mesh
-            meshF.sharedMesh = Resources.Load<Mesh>("sink_handwash");
+            //meshF.sharedMesh = Resources.Load<Mesh>("sink_handwash");
+            meshF.sharedMesh = choppedMesh;
+            gameObject.GetComponent<MeshRenderer>().material = choppedMat;
+            
+
         }
     }
 
@@ -111,6 +151,8 @@ public class test_food_script : MonoBehaviour
         switch (coll.tag)
         {
             case "Test":
+                if (!isCookable)
+                    return;
                 activeAreas.Add(coll);
                 if(isHeld)
                 {
@@ -132,7 +174,7 @@ public class test_food_script : MonoBehaviour
                         GameObject tempFood = coll.transform.parent.parent.GetComponent<stove_controller>().activeItems[0];
 
                         coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(tempFood.gameObject);
-                        coll.transform.parent.parent.GetComponent<stove_controller>().ResetCook();
+                        //coll.transform.parent.parent.GetComponent<stove_controller>().ResetCook();
 
                         coll.transform.parent.parent.GetComponent<stove_controller>().EjectFood(tempFood, throwPow);
 
@@ -165,9 +207,17 @@ public class test_food_script : MonoBehaviour
                 break;
 
             case "Knife":
-                //Increment chop counter
-                chopState += 1;
-                //Play chop sound
+                
+                if(isChoppable)
+                {
+                    //Increment chop counter
+                    chopState += 1;
+                    //Play chop sound
+
+                    //Play chop animation
+                    chopParticle.Emit(1);
+                }
+
 
                 break;
 
@@ -200,6 +250,8 @@ public class test_food_script : MonoBehaviour
         switch (coll.tag)
         {
             case "Test":
+                if (!isCookable)
+                    return;
                 activeArea = coll;
                 //Check to see if stove is busy
                 if (coll.transform.parent.parent.GetComponent<stove_controller>().occupied == false && active == false)

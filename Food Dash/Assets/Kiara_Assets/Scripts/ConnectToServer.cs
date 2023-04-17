@@ -8,7 +8,7 @@ using Photon.Pun;
 using Photon.Realtime; //New
 //To switch/load scenes
 using UnityEngine.SceneManagement;
-//MonoBehaviourPunCallbacks gives us access to different Pun fcn
+//MonoBehaviourPunCallbacks gives us access to different Pun fcn - gets automatically called by Photon when something happens
 public class ConnectToServer : MonoBehaviourPunCallbacks
 {
     // Start is called before the first frame update
@@ -22,7 +22,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
         //PhotonNetwork.AutomaticallySyncScene = true;
     }
 
-    //Check when have successfully connected to our server
+    //Check when have successfully connected to our server-join lobby
     //Anything in this fcn will get called when successfully connected to the server
     public override void OnConnectedToMaster()
     {

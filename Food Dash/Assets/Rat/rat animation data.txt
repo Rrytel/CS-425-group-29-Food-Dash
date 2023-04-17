@@ -1,0 +1,5 @@
+walk 1-17
+idle_1 20-185
+idle_2 190-275
+death 280-306
+attack 310-335

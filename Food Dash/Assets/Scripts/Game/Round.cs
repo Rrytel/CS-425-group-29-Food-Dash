@@ -101,10 +101,13 @@ public class Round : MonoBehaviour
 
 		// set new round properties
 		totalCustomers = day + Random.Range (0, day);
-		maxCustomers = day;
+		maxCustomers = 1;
 		spawnFrequency = timeLimit / 100;
 		// minimum score (needs tuning)
 		minScore = totalCustomers * 10;
+
+		// disable ray interactor (ui controller)
+		rayInteractor.SetActive (false);
 
 		Time.timeScale = 1;
 	}
