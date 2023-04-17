@@ -737,7 +737,6 @@ IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass10_0_t58047F5D4A67ED159B5C612
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass9_0_t5C59B7F311D4803C1127F0159B2BC7AF828178A2_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t428B95F22B12C42F05233DE02507635B55BBBF98_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t8C36E23C9C0C40F44C3E4FA3E5DC1F45EC7B3C4F_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* UnityOpenXR_tBE61966A5EA8E0DA3190F5309575D0B3EF7ECB3E_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C_il2cpp_TypeInfo_var;
@@ -1890,17 +1889,6 @@ struct OVRP_1_9_0_tE024F320C743B461665537D1265523FA119AE17A_StaticFields
 {
 	// System.Version OVRPlugin/OVRP_1_9_0::version
 	Version_tE426DB5655D0F22920AE16A2AA9AB7781B8255A7* ___version_0;
-};
-
-// OVRPlugin/UnityOpenXR
-struct UnityOpenXR_tBE61966A5EA8E0DA3190F5309575D0B3EF7ECB3E  : public RuntimeObject
-{
-};
-
-struct UnityOpenXR_tBE61966A5EA8E0DA3190F5309575D0B3EF7ECB3E_StaticFields
-{
-	// System.Boolean OVRPlugin/UnityOpenXR::Enabled
-	bool ___Enabled_0;
 };
 
 // Unity.Collections.NativeArray`1<System.UInt64>
@@ -13122,26 +13110,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVROverlay_InitOVROverlay_m8B089AEF56625
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&OVRManager_t21429E69CA88C5E9C6EE3AAB75EAFBE6E1B129D4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&OVROverlay_t236C8597A48845938E1DE1D591224817058AC43D_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityOpenXR_tBE61966A5EA8E0DA3190F5309575D0B3EF7ECB3E_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	CVROverlay_tEEC15D8EE0BB588983281A0C78C889B018546C0D* V_0 = NULL;
 	{
-		// if (!OVRPlugin.UnityOpenXR.Enabled)
-		bool L_0 = ((UnityOpenXR_tBE61966A5EA8E0DA3190F5309575D0B3EF7ECB3E_StaticFields*)il2cpp_codegen_static_fields_for(UnityOpenXR_tBE61966A5EA8E0DA3190F5309575D0B3EF7ECB3E_il2cpp_TypeInfo_var))->___Enabled_0;
-		if (L_0)
-		{
-			goto IL_0016;
-		}
-	}
-	{
 		// if (!OVRManager.isHmdPresent)
 		il2cpp_codegen_runtime_class_init_inline(OVRManager_t21429E69CA88C5E9C6EE3AAB75EAFBE6E1B129D4_il2cpp_TypeInfo_var);
-		bool L_1;
-		L_1 = OVRManager_get_isHmdPresent_m098F56E4E9C2ECAC87EAB61C7680F0FBD2A2C445(NULL);
-		if (L_1)
+		bool L_0;
+		L_0 = OVRManager_get_isHmdPresent_m098F56E4E9C2ECAC87EAB61C7680F0FBD2A2C445(NULL);
+		if (L_0)
 		{
-			goto IL_0016;
+			goto IL_000f;
 		}
 	}
 	{
@@ -13151,56 +13130,56 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVROverlay_InitOVROverlay_m8B089AEF56625
 		return;
 	}
 
-IL_0016:
+IL_000f:
 	{
 		// constructedOverlayXRDevice = OVRManager.XRDevice.Unknown;
 		__this->___constructedOverlayXRDevice_57 = 0;
 		// if (OVRManager.loadedXRDevice == OVRManager.XRDevice.OpenVR)
 		il2cpp_codegen_runtime_class_init_inline(OVRManager_t21429E69CA88C5E9C6EE3AAB75EAFBE6E1B129D4_il2cpp_TypeInfo_var);
-		int32_t L_2 = ((OVRManager_t21429E69CA88C5E9C6EE3AAB75EAFBE6E1B129D4_StaticFields*)il2cpp_codegen_static_fields_for(OVRManager_t21429E69CA88C5E9C6EE3AAB75EAFBE6E1B129D4_il2cpp_TypeInfo_var))->___loadedXRDevice_85;
-		if ((!(((uint32_t)L_2) == ((uint32_t)2))))
+		int32_t L_1 = ((OVRManager_t21429E69CA88C5E9C6EE3AAB75EAFBE6E1B129D4_StaticFields*)il2cpp_codegen_static_fields_for(OVRManager_t21429E69CA88C5E9C6EE3AAB75EAFBE6E1B129D4_il2cpp_TypeInfo_var))->___loadedXRDevice_85;
+		if ((!(((uint32_t)L_1) == ((uint32_t)2))))
 		{
-			goto IL_006c;
+			goto IL_0065;
 		}
 	}
 	{
 		// OVR.OpenVR.CVROverlay overlay = OVR.OpenVR.OpenVR.Overlay;
-		CVROverlay_tEEC15D8EE0BB588983281A0C78C889B018546C0D* L_3;
-		L_3 = OpenVR_get_Overlay_m5EC60FDA4DA7BEC8A260FF9BA611F437E0953672(NULL);
-		V_0 = L_3;
+		CVROverlay_tEEC15D8EE0BB588983281A0C78C889B018546C0D* L_2;
+		L_2 = OpenVR_get_Overlay_m5EC60FDA4DA7BEC8A260FF9BA611F437E0953672(NULL);
+		V_0 = L_2;
 		// if (overlay != null)
-		CVROverlay_tEEC15D8EE0BB588983281A0C78C889B018546C0D* L_4 = V_0;
-		if (!L_4)
+		CVROverlay_tEEC15D8EE0BB588983281A0C78C889B018546C0D* L_3 = V_0;
+		if (!L_3)
 		{
-			goto IL_0064;
+			goto IL_005d;
 		}
 	}
 	{
 		// OVR.OpenVR.EVROverlayError error = overlay.CreateOverlay(OpenVROverlayKey + transform.name, gameObject.name, ref OpenVROverlayHandle);
-		CVROverlay_tEEC15D8EE0BB588983281A0C78C889B018546C0D* L_5 = V_0;
+		CVROverlay_tEEC15D8EE0BB588983281A0C78C889B018546C0D* L_4 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(OVROverlay_t236C8597A48845938E1DE1D591224817058AC43D_il2cpp_TypeInfo_var);
-		String_t* L_6;
-		L_6 = OVROverlay_get_OpenVROverlayKey_mA6EFD0D14077D0B125F7EAC089FB07DA6B461C27(NULL);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
-		L_7 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_7);
+		String_t* L_5;
+		L_5 = OVROverlay_get_OpenVROverlayKey_mA6EFD0D14077D0B125F7EAC089FB07DA6B461C27(NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6;
+		L_6 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_6);
+		String_t* L_7;
+		L_7 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_6, NULL);
 		String_t* L_8;
-		L_8 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_7, NULL);
-		String_t* L_9;
-		L_9 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_6, L_8, NULL);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10;
-		L_10 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
-		NullCheck(L_10);
-		String_t* L_11;
-		L_11 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_10, NULL);
-		uint64_t* L_12 = (&__this->___OpenVROverlayHandle_54);
-		NullCheck(L_5);
-		int32_t L_13;
-		L_13 = CVROverlay_CreateOverlay_m971CF579F222B3D7CB64C28AB6CF543883BD49C9(L_5, L_9, L_11, L_12, NULL);
+		L_8 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_5, L_7, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9;
+		L_9 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_9);
+		String_t* L_10;
+		L_10 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_9, NULL);
+		uint64_t* L_11 = (&__this->___OpenVROverlayHandle_54);
+		NullCheck(L_4);
+		int32_t L_12;
+		L_12 = CVROverlay_CreateOverlay_m971CF579F222B3D7CB64C28AB6CF543883BD49C9(L_4, L_8, L_10, L_11, NULL);
 		// if (error != OVR.OpenVR.EVROverlayError.None)
-		if (!L_13)
+		if (!L_12)
 		{
-			goto IL_006c;
+			goto IL_0065;
 		}
 	}
 	{
@@ -13210,7 +13189,7 @@ IL_0016:
 		return;
 	}
 
-IL_0064:
+IL_005d:
 	{
 		// enabled = false;
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(__this, (bool)0, NULL);
@@ -13218,12 +13197,12 @@ IL_0064:
 		return;
 	}
 
-IL_006c:
+IL_0065:
 	{
 		// constructedOverlayXRDevice = OVRManager.loadedXRDevice;
 		il2cpp_codegen_runtime_class_init_inline(OVRManager_t21429E69CA88C5E9C6EE3AAB75EAFBE6E1B129D4_il2cpp_TypeInfo_var);
-		int32_t L_14 = ((OVRManager_t21429E69CA88C5E9C6EE3AAB75EAFBE6E1B129D4_StaticFields*)il2cpp_codegen_static_fields_for(OVRManager_t21429E69CA88C5E9C6EE3AAB75EAFBE6E1B129D4_il2cpp_TypeInfo_var))->___loadedXRDevice_85;
-		__this->___constructedOverlayXRDevice_57 = L_14;
+		int32_t L_13 = ((OVRManager_t21429E69CA88C5E9C6EE3AAB75EAFBE6E1B129D4_StaticFields*)il2cpp_codegen_static_fields_for(OVRManager_t21429E69CA88C5E9C6EE3AAB75EAFBE6E1B129D4_il2cpp_TypeInfo_var))->___loadedXRDevice_85;
+		__this->___constructedOverlayXRDevice_57 = L_13;
 		// xrDeviceConstructed = true;
 		__this->___xrDeviceConstructed_58 = (bool)1;
 		// }

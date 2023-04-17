@@ -1122,8 +1122,6 @@ struct ISubmitHandler_t284A0ACB300A060611C40F4E200B378CED930B75;
 struct IUpdateSelectedHandler_tBBACEC3A6478F7DA4B682AFDA8CF59C6C3FCC9CC;
 // System.Reflection.MemberFilter
 struct MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553;
-// Meta.XR.MetaXRFeature
-struct MetaXRFeature_tC11EFE3887B7C014E9942C403EC4F6AEC5A19B6D;
 // System.Reflection.MethodInfo
 struct MethodInfo_t;
 // OVRCameraRig
@@ -1144,8 +1142,6 @@ struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C;
 struct OpenVR_tD6A11EE014C48512C9048D3B1D02260B69B4847E;
 // OVR.OpenVR.OpenVRInterop
 struct OpenVRInterop_t908D436EB30BBBE86CCB2E87E05A9523579F3E59;
-// UnityEngine.XR.OpenXR.Features.OpenXRFeature
-struct OpenXRFeature_tC2F8F480D62C277B2ECDD605F64E45053CD85143;
 // System.OperatingSystem
 struct OperatingSystem_t08A94435A5C7D999B5553B6C58763A6F2E3C8557;
 // UnityEngine.EventSystems.PointerEventData
@@ -1850,7 +1846,6 @@ IL2CPP_EXTERN_C RuntimeClass* CVRSpatialAnchors_t8E126D6724183A251E6649E32BB1149
 IL2CPP_EXTERN_C RuntimeClass* CVRSystem_tD199D16B8A7CC7F19E6E0B5D9AE59156C2312B1A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* CVRTrackedCamera_t78C04DB15BA3010BD4E482D2714C70E8E76B219D_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Comparison_1_t5A3269D71CFF48B1462FED00091AE93BBABC91E7_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_t9422155976AA5669B953F2FA792954DC4DFD250B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* EIOBufferMode_t41FA83145E96D2B6AFDF80DBD274B04E41749508_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ETrackingUniverseOrigin_tF70CF1A8A052BE25D4E8E3614C4C7C4AD470D2CF_il2cpp_TypeInfo_var;
@@ -1914,7 +1909,6 @@ IL2CPP_EXTERN_C RuntimeClass* Type_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t682782D0E83E1C6EAB4F75B276D4EC4DFEF13B1D_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UInt32_t1833D51FFA667B18A5AA4B8D34DE284F8495D29B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* UnityOpenXR_tBE61966A5EA8E0DA3190F5309575D0B3EF7ECB3E_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* VRControllerState_t_Packed_tA47E12879BEB2EC3B71C6FD98D323B82FB0CFB1D_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* VRControllerState_t_t50475AF703AB39117DE2C6CE266154309CD9BD4D_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* VREvent_t_Packed_t8AA2D8A5BD65A607F6540FEB55D6A1E1D4C27939_il2cpp_TypeInfo_var;
@@ -2011,36 +2005,25 @@ IL2CPP_EXTERN_C String_t* _stringLiteral1AC7A6AADEE9F4144302CCF4A8EA733455CCA310
 IL2CPP_EXTERN_C String_t* _stringLiteral1EC5A90CC65C8BDA58643C956BA4E6F8E4436A5A;
 IL2CPP_EXTERN_C String_t* _stringLiteral1FF1E10A290EC11AB4C6B8CA7BD71BA07C515124;
 IL2CPP_EXTERN_C String_t* _stringLiteral265E15F1F86F1C766555899D5771CF29055DE75A;
-IL2CPP_EXTERN_C String_t* _stringLiteral38D4303DAB31C0B46AD6FEA71AE3015604BBFFCB;
 IL2CPP_EXTERN_C String_t* _stringLiteral3B504484310EE713CED878912EAABC43761A6A94;
-IL2CPP_EXTERN_C String_t* _stringLiteral4F8FB92F9A7623BBED6D312A6048883060D75AAB;
 IL2CPP_EXTERN_C String_t* _stringLiteral5AD2F46BEB210D9D86A73F04E249F587A2D5C7EF;
-IL2CPP_EXTERN_C String_t* _stringLiteral68D7334B328E9233B67476A69217C796D0012E9B;
-IL2CPP_EXTERN_C String_t* _stringLiteral69B113727E0D936C93A74FF172AA5CD6A0A7FFA4;
 IL2CPP_EXTERN_C String_t* _stringLiteral6B1D394BA1E10CCEFFAE406CCEE946FCD85707C8;
 IL2CPP_EXTERN_C String_t* _stringLiteral709C1BE385364BF7215290F6C80B9E13ED6C07AB;
 IL2CPP_EXTERN_C String_t* _stringLiteral7F8C014BD4810CC276D0F9F81A1E759C7B098B1E;
-IL2CPP_EXTERN_C String_t* _stringLiteral7F8F4E1B8373DF6DEFF0CA227D126CD0F2969274;
-IL2CPP_EXTERN_C String_t* _stringLiteral8547198FCD4CBEF1644DE037D71CAB719C5682EB;
-IL2CPP_EXTERN_C String_t* _stringLiteral8CC90267359228BBF3FD4EFA7C6B63E4F4D4C76E;
 IL2CPP_EXTERN_C String_t* _stringLiteral93717CD8FCD45BAB4F15D3BACC989A6A93BA2674;
 IL2CPP_EXTERN_C String_t* _stringLiteral97949C809FAE8AD49BF4DA35A46951F99B00E5E1;
 IL2CPP_EXTERN_C String_t* _stringLiteral9A080EA79123FB1699656F259E9714E227AA0674;
 IL2CPP_EXTERN_C String_t* _stringLiteral9C5CA5F3D440697E7CE47F45B0AE3B6DB74C2054;
-IL2CPP_EXTERN_C String_t* _stringLiteralAA84FE0643CDCFA240F65110401D6C5BFA23CA16;
 IL2CPP_EXTERN_C String_t* _stringLiteralAAD329BEE4AA4299DC498EF86EE4D802F5F77951;
 IL2CPP_EXTERN_C String_t* _stringLiteralB4705CCB6B015DADE9B7063D15E59D6BAE057C37;
 IL2CPP_EXTERN_C String_t* _stringLiteralBC250738CF6553169DE970EACBEDFB060B58A41B;
 IL2CPP_EXTERN_C String_t* _stringLiteralBCD92AA05C77719824EAA3FACEBE1B405BF8B7C1;
-IL2CPP_EXTERN_C String_t* _stringLiteralC1DB26724C2C52E64A4139D74063E4F6F9F5AD0E;
 IL2CPP_EXTERN_C String_t* _stringLiteralC329DDB1444A0B2400D046076774E23B4E59914E;
-IL2CPP_EXTERN_C String_t* _stringLiteralC3B58AE8DE14B5638FD59D9E4695BD116DC49871;
 IL2CPP_EXTERN_C String_t* _stringLiteralC5E069394931E8E0955FD9C8114C74F9F13FBDEC;
 IL2CPP_EXTERN_C String_t* _stringLiteralC90919371B2B89DEA9D88530D18C91F93A2B7F2C;
 IL2CPP_EXTERN_C String_t* _stringLiteralD8B26D2E49ED1906CB08D5EAA595ADF035C65C70;
 IL2CPP_EXTERN_C String_t* _stringLiteralDAEB7B8940990F9109863DC8E84D57775C55E0B6;
 IL2CPP_EXTERN_C String_t* _stringLiteralDB1334B07CE2A0153E77054CF8FA3829A2097735;
-IL2CPP_EXTERN_C String_t* _stringLiteralE73EEE9D297AB0D06F89C521B58BA8DD8209C55C;
 IL2CPP_EXTERN_C String_t* _stringLiteralE9A60084C1546F7084A6B054A0BB5F950E25B26C;
 IL2CPP_EXTERN_C const RuntimeMethod* Array_Sort_TisRaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5_mFD3F5417D4D2204CE375C95CC2288AB4F5B8E673_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisOVRCameraRig_t7FC2BB0D30DED2B7F0C8914AF2B66E9F4CF891A9_m077B7F6A5755E612BD0ACA0BAD8F8FCAA9FB6E62_RuntimeMethod_var;
@@ -2380,17 +2363,6 @@ struct U3CU3Ec_t682782D0E83E1C6EAB4F75B276D4EC4DFEF13B1D_StaticFields
 	Comparison_1_t5A3269D71CFF48B1462FED00091AE93BBABC91E7* ___U3CU3E9__15_0_1;
 	// System.Comparison`1<UnityEngine.RaycastHit> UnityEngine.EventSystems.OVRPhysicsRaycaster/<>c::<>9__16_0
 	Comparison_1_t5A3269D71CFF48B1462FED00091AE93BBABC91E7* ___U3CU3E9__16_0_2;
-};
-
-// OVRPlugin/UnityOpenXR
-struct UnityOpenXR_tBE61966A5EA8E0DA3190F5309575D0B3EF7ECB3E  : public RuntimeObject
-{
-};
-
-struct UnityOpenXR_tBE61966A5EA8E0DA3190F5309575D0B3EF7ECB3E_StaticFields
-{
-	// System.Boolean OVRPlugin/UnityOpenXR::Enabled
-	bool ___Enabled_0;
 };
 
 // OVR.OpenVR.OpenVR/COpenVRContext
@@ -6891,19 +6863,6 @@ struct PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB  : public Base
 	bool ___U3CreenteredU3Ek__BackingField_32;
 };
 
-// UnityEngine.ScriptableObject
-struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
-{
-};
-// Native definition for P/Invoke marshalling of UnityEngine.ScriptableObject
-struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A_marshaled_pinvoke : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_pinvoke
-{
-};
-// Native definition for COM marshalling of UnityEngine.ScriptableObject
-struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A_marshaled_com : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_com
-{
-};
-
 // System.SystemException
 struct SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295  : public Exception_t
 {
@@ -7082,37 +7041,6 @@ struct OVRPointerEventData_t16F6545720F0956B5AAA7A38FA81CF02E7F37B6D  : public P
 	Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 ___worldSpaceRay_33;
 	// UnityEngine.Vector2 UnityEngine.EventSystems.OVRPointerEventData::swipeStart
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___swipeStart_34;
-};
-
-// UnityEngine.XR.OpenXR.Features.OpenXRFeature
-struct OpenXRFeature_tC2F8F480D62C277B2ECDD605F64E45053CD85143  : public ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A
-{
-	// System.Boolean UnityEngine.XR.OpenXR.Features.OpenXRFeature::m_enabled
-	bool ___m_enabled_4;
-	// System.Boolean UnityEngine.XR.OpenXR.Features.OpenXRFeature::<failedInitialization>k__BackingField
-	bool ___U3CfailedInitializationU3Ek__BackingField_5;
-	// System.String UnityEngine.XR.OpenXR.Features.OpenXRFeature::nameUi
-	String_t* ___nameUi_7;
-	// System.String UnityEngine.XR.OpenXR.Features.OpenXRFeature::version
-	String_t* ___version_8;
-	// System.String UnityEngine.XR.OpenXR.Features.OpenXRFeature::featureIdInternal
-	String_t* ___featureIdInternal_9;
-	// System.String UnityEngine.XR.OpenXR.Features.OpenXRFeature::openxrExtensionStrings
-	String_t* ___openxrExtensionStrings_10;
-	// System.String UnityEngine.XR.OpenXR.Features.OpenXRFeature::company
-	String_t* ___company_11;
-	// System.Int32 UnityEngine.XR.OpenXR.Features.OpenXRFeature::priority
-	int32_t ___priority_12;
-	// System.Boolean UnityEngine.XR.OpenXR.Features.OpenXRFeature::required
-	bool ___required_13;
-	// System.Boolean UnityEngine.XR.OpenXR.Features.OpenXRFeature::internalFieldsUpdated
-	bool ___internalFieldsUpdated_14;
-};
-
-struct OpenXRFeature_tC2F8F480D62C277B2ECDD605F64E45053CD85143_StaticFields
-{
-	// System.Boolean UnityEngine.XR.OpenXR.Features.OpenXRFeature::<requiredFeatureFailed>k__BackingField
-	bool ___U3CrequiredFeatureFailedU3Ek__BackingField_6;
 };
 
 // UnityEngine.Transform
@@ -8765,11 +8693,6 @@ struct Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184_StaticFields
 
 // System.EntryPointNotFoundException
 struct EntryPointNotFoundException_t15F4C4ABBCF00C39FC1C2C903F15DF41055C1743  : public TypeLoadException_t6333E3083F7BFF1A582969E6F67ACBA8B0035C32
-{
-};
-
-// Meta.XR.MetaXRFeature
-struct MetaXRFeature_tC11EFE3887B7C014E9942C403EC4F6AEC5A19B6D  : public OpenXRFeature_tC2F8F480D62C277B2ECDD605F64E45053CD85143
 {
 };
 
@@ -10888,36 +10811,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringBuilder_t* StringBuilder_AppendLine_mF7
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Boolean_ToString_m6646C8026B1DF381A1EE8CD13549175E9703CC63 (bool* __this, const RuntimeMethod* method) ;
 // System.String UnityEngine.Ray::ToString()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Ray_ToString_m06274331D92120539B4C6E0D3747EE620DB468E5 (Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00* __this, const RuntimeMethod* method) ;
-// System.String System.String::Format(System.String,System.Object)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8 (String_t* ___format0, RuntimeObject* ___arg01, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Debug::Log(System.Object)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB (RuntimeObject* ___message0, const RuntimeMethod* method) ;
-// System.Void OVRPlugin/UnityOpenXR::SetClientVersion()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityOpenXR_SetClientVersion_m4090E8C9C4B6DCE29E0B4947BCEB6F943C1E14A5 (const RuntimeMethod* method) ;
-// System.IntPtr OVRPlugin/UnityOpenXR::HookGetInstanceProcAddr(System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t UnityOpenXR_HookGetInstanceProcAddr_m47D995F8D369E3C5128B927468F0ABD95352EFD4 (intptr_t ___func0, const RuntimeMethod* method) ;
-// System.Boolean OVRPlugin/UnityOpenXR::OnInstanceCreate(System.UInt64)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UnityOpenXR_OnInstanceCreate_mD8C51F81DF5B66595890F4D53FD5C11B066E3AF5 (uint64_t ___xrInstance0, const RuntimeMethod* method) ;
-// System.Void OVRPlugin/UnityOpenXR::OnInstanceDestroy(System.UInt64)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityOpenXR_OnInstanceDestroy_m434D377978F23755AEA67D5A447614023E0802CF (uint64_t ___xrInstance0, const RuntimeMethod* method) ;
-// System.Void OVRPlugin/UnityOpenXR::OnSessionCreate(System.UInt64)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityOpenXR_OnSessionCreate_m1AC2B5B77ACF1FD2BDB44AD92902B86724284D1F (uint64_t ___xrSession0, const RuntimeMethod* method) ;
-// System.Void OVRPlugin/UnityOpenXR::OnAppSpaceChange(System.UInt64)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityOpenXR_OnAppSpaceChange_m75150D53FE36E1F1063AB0C95AB5418BF155AD06 (uint64_t ___xrSpace0, const RuntimeMethod* method) ;
-// System.String System.String::Format(System.String,System.Object,System.Object)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987 (String_t* ___format0, RuntimeObject* ___arg01, RuntimeObject* ___arg12, const RuntimeMethod* method) ;
-// System.Void OVRPlugin/UnityOpenXR::OnSessionStateChange(System.Int32,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityOpenXR_OnSessionStateChange_m0C99770FA4B4B984958C15BB609D093A8C9B0F46 (int32_t ___oldState0, int32_t ___newState1, const RuntimeMethod* method) ;
-// System.Void OVRPlugin/UnityOpenXR::OnSessionBegin(System.UInt64)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityOpenXR_OnSessionBegin_m0422580F20229CC217DB02155FC2DC0D867F74CE (uint64_t ___xrSession0, const RuntimeMethod* method) ;
-// System.Void OVRPlugin/UnityOpenXR::OnSessionEnd(System.UInt64)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityOpenXR_OnSessionEnd_mEC2BB76CD260EC200996264B816F8715C04EA755 (uint64_t ___xrSession0, const RuntimeMethod* method) ;
-// System.Void OVRPlugin/UnityOpenXR::OnSessionExiting(System.UInt64)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityOpenXR_OnSessionExiting_m5A219E00988AF17792094B9D1E4B31F8FBC50DB1 (uint64_t ___xrSession0, const RuntimeMethod* method) ;
-// System.Void OVRPlugin/UnityOpenXR::OnSessionDestroy(System.UInt64)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityOpenXR_OnSessionDestroy_mE22528F3A18F2409377CD0862CC005D7F07442BD (uint64_t ___xrSession0, const RuntimeMethod* method) ;
-// System.Void UnityEngine.XR.OpenXR.Features.OpenXRFeature::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OpenXRFeature__ctor_m120460E34ECC22ED2DB96797A6DCB5C870E78852 (OpenXRFeature_tC2F8F480D62C277B2ECDD605F64E45053CD85143* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Vector2::.ctor(System.Single,System.Single)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___x0, float ___y1, const RuntimeMethod* method) ;
 // System.Single UnityEngine.Mathf::Max(System.Single,System.Single)
@@ -38714,304 +38607,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PointerEventDataExtension_SetSwipeStart_
 		NullCheck(((OVRPointerEventData_t16F6545720F0956B5AAA7A38FA81CF02E7F37B6D*)IsInstClass((RuntimeObject*)L_0, OVRPointerEventData_t16F6545720F0956B5AAA7A38FA81CF02E7F37B6D_il2cpp_TypeInfo_var)));
 		((OVRPointerEventData_t16F6545720F0956B5AAA7A38FA81CF02E7F37B6D*)IsInstClass((RuntimeObject*)L_0, OVRPointerEventData_t16F6545720F0956B5AAA7A38FA81CF02E7F37B6D_il2cpp_TypeInfo_var))->___swipeStart_34 = L_1;
 		// }
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.IntPtr Meta.XR.MetaXRFeature::HookGetInstanceProcAddr(System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t MetaXRFeature_HookGetInstanceProcAddr_mAA15F1B6D4239073F1909897B2CB400107A91A0E (MetaXRFeature_tC11EFE3887B7C014E9942C403EC4F6AEC5A19B6D* __this, intptr_t ___func0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IntPtr_t_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityOpenXR_tBE61966A5EA8E0DA3190F5309575D0B3EF7ECB3E_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4F8FB92F9A7623BBED6D312A6048883060D75AAB);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral7F8F4E1B8373DF6DEFF0CA227D126CD0F2969274);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// OVRPlugin.UnityOpenXR.Enabled = true;
-		((UnityOpenXR_tBE61966A5EA8E0DA3190F5309575D0B3EF7ECB3E_StaticFields*)il2cpp_codegen_static_fields_for(UnityOpenXR_tBE61966A5EA8E0DA3190F5309575D0B3EF7ECB3E_il2cpp_TypeInfo_var))->___Enabled_0 = (bool)1;
-		// Debug.Log($"[MetaXRFeature] HookGetInstanceProcAddr: {func}");
-		intptr_t L_0 = ___func0;
-		intptr_t L_1 = L_0;
-		RuntimeObject* L_2 = Box(IntPtr_t_il2cpp_TypeInfo_var, &L_1);
-		String_t* L_3;
-		L_3 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral4F8FB92F9A7623BBED6D312A6048883060D75AAB, L_2, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_3, NULL);
-		// Debug.Log($"[MetaXRFeature] SetClientVersion");
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral7F8F4E1B8373DF6DEFF0CA227D126CD0F2969274, NULL);
-		// OVRPlugin.UnityOpenXR.SetClientVersion();
-		UnityOpenXR_SetClientVersion_m4090E8C9C4B6DCE29E0B4947BCEB6F943C1E14A5(NULL);
-		// return OVRPlugin.UnityOpenXR.HookGetInstanceProcAddr(func);
-		intptr_t L_4 = ___func0;
-		intptr_t L_5;
-		L_5 = UnityOpenXR_HookGetInstanceProcAddr_m47D995F8D369E3C5128B927468F0ABD95352EFD4(L_4, NULL);
-		return L_5;
-	}
-}
-// System.Boolean Meta.XR.MetaXRFeature::OnInstanceCreate(System.UInt64)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MetaXRFeature_OnInstanceCreate_m21A5A294E099796307A195F6B59A130F57BCA311 (MetaXRFeature_tC11EFE3887B7C014E9942C403EC4F6AEC5A19B6D* __this, uint64_t ___xrInstance0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE73EEE9D297AB0D06F89C521B58BA8DD8209C55C);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// Debug.Log($"[MetaXRFeature] OnInstanceCreate: {xrInstance}");
-		uint64_t L_0 = ___xrInstance0;
-		uint64_t L_1 = L_0;
-		RuntimeObject* L_2 = Box(UInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF_il2cpp_TypeInfo_var, &L_1);
-		String_t* L_3;
-		L_3 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralE73EEE9D297AB0D06F89C521B58BA8DD8209C55C, L_2, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_3, NULL);
-		// return OVRPlugin.UnityOpenXR.OnInstanceCreate(xrInstance);
-		uint64_t L_4 = ___xrInstance0;
-		bool L_5;
-		L_5 = UnityOpenXR_OnInstanceCreate_mD8C51F81DF5B66595890F4D53FD5C11B066E3AF5(L_4, NULL);
-		return L_5;
-	}
-}
-// System.Void Meta.XR.MetaXRFeature::OnInstanceDestroy(System.UInt64)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaXRFeature_OnInstanceDestroy_mCC36B68F5CD5114410F7E0019054C7CDFDB87E99 (MetaXRFeature_tC11EFE3887B7C014E9942C403EC4F6AEC5A19B6D* __this, uint64_t ___xrInstance0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8547198FCD4CBEF1644DE037D71CAB719C5682EB);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// Debug.Log($"[MetaXRFeature] OnInstanceDestroy: {xrInstance}");
-		uint64_t L_0 = ___xrInstance0;
-		uint64_t L_1 = L_0;
-		RuntimeObject* L_2 = Box(UInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF_il2cpp_TypeInfo_var, &L_1);
-		String_t* L_3;
-		L_3 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral8547198FCD4CBEF1644DE037D71CAB719C5682EB, L_2, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_3, NULL);
-		// OVRPlugin.UnityOpenXR.OnInstanceDestroy(xrInstance);
-		uint64_t L_4 = ___xrInstance0;
-		UnityOpenXR_OnInstanceDestroy_m434D377978F23755AEA67D5A447614023E0802CF(L_4, NULL);
-		// }
-		return;
-	}
-}
-// System.Void Meta.XR.MetaXRFeature::OnSessionCreate(System.UInt64)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaXRFeature_OnSessionCreate_m56C121A18F3DF9CCAF6194C7007E21E79BBB7930 (MetaXRFeature_tC11EFE3887B7C014E9942C403EC4F6AEC5A19B6D* __this, uint64_t ___xrSession0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral69B113727E0D936C93A74FF172AA5CD6A0A7FFA4);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// Debug.Log($"[MetaXRFeature] OnSessionCreate: {xrSession}");
-		uint64_t L_0 = ___xrSession0;
-		uint64_t L_1 = L_0;
-		RuntimeObject* L_2 = Box(UInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF_il2cpp_TypeInfo_var, &L_1);
-		String_t* L_3;
-		L_3 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral69B113727E0D936C93A74FF172AA5CD6A0A7FFA4, L_2, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_3, NULL);
-		// OVRPlugin.UnityOpenXR.OnSessionCreate(xrSession);
-		uint64_t L_4 = ___xrSession0;
-		UnityOpenXR_OnSessionCreate_m1AC2B5B77ACF1FD2BDB44AD92902B86724284D1F(L_4, NULL);
-		// }
-		return;
-	}
-}
-// System.Void Meta.XR.MetaXRFeature::OnAppSpaceChange(System.UInt64)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaXRFeature_OnAppSpaceChange_m797E87D002609C1C320B4C848E17042576944EC6 (MetaXRFeature_tC11EFE3887B7C014E9942C403EC4F6AEC5A19B6D* __this, uint64_t ___xrSpace0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC3B58AE8DE14B5638FD59D9E4695BD116DC49871);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// Debug.Log($"[MetaXRFeature] OnAppSpaceChange: {xrSpace}");
-		uint64_t L_0 = ___xrSpace0;
-		uint64_t L_1 = L_0;
-		RuntimeObject* L_2 = Box(UInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF_il2cpp_TypeInfo_var, &L_1);
-		String_t* L_3;
-		L_3 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralC3B58AE8DE14B5638FD59D9E4695BD116DC49871, L_2, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_3, NULL);
-		// OVRPlugin.UnityOpenXR.OnAppSpaceChange(xrSpace);
-		uint64_t L_4 = ___xrSpace0;
-		UnityOpenXR_OnAppSpaceChange_m75150D53FE36E1F1063AB0C95AB5418BF155AD06(L_4, NULL);
-		// }
-		return;
-	}
-}
-// System.Void Meta.XR.MetaXRFeature::OnSessionStateChange(System.Int32,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaXRFeature_OnSessionStateChange_m2243FE75EDC0BDDFF62F0DE307EDD48D5A539DBB (MetaXRFeature_tC11EFE3887B7C014E9942C403EC4F6AEC5A19B6D* __this, int32_t ___oldState0, int32_t ___newState1, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral38D4303DAB31C0B46AD6FEA71AE3015604BBFFCB);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// Debug.Log($"[MetaXRFeature] OnSessionStateChange: {oldState} -> {newState}");
-		int32_t L_0 = ___oldState0;
-		int32_t L_1 = L_0;
-		RuntimeObject* L_2 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_1);
-		int32_t L_3 = ___newState1;
-		int32_t L_4 = L_3;
-		RuntimeObject* L_5 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_4);
-		String_t* L_6;
-		L_6 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral38D4303DAB31C0B46AD6FEA71AE3015604BBFFCB, L_2, L_5, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_6, NULL);
-		// OVRPlugin.UnityOpenXR.OnSessionStateChange(oldState, newState);
-		int32_t L_7 = ___oldState0;
-		int32_t L_8 = ___newState1;
-		UnityOpenXR_OnSessionStateChange_m0C99770FA4B4B984958C15BB609D093A8C9B0F46(L_7, L_8, NULL);
-		// }
-		return;
-	}
-}
-// System.Void Meta.XR.MetaXRFeature::OnSessionBegin(System.UInt64)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaXRFeature_OnSessionBegin_mB65D042BD49F1B4753A1127AB7DF0BABAFA6359B (MetaXRFeature_tC11EFE3887B7C014E9942C403EC4F6AEC5A19B6D* __this, uint64_t ___xrSession0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral68D7334B328E9233B67476A69217C796D0012E9B);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// Debug.Log($"[MetaXRFeature] OnSessionBegin: {xrSession}");
-		uint64_t L_0 = ___xrSession0;
-		uint64_t L_1 = L_0;
-		RuntimeObject* L_2 = Box(UInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF_il2cpp_TypeInfo_var, &L_1);
-		String_t* L_3;
-		L_3 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral68D7334B328E9233B67476A69217C796D0012E9B, L_2, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_3, NULL);
-		// OVRPlugin.UnityOpenXR.OnSessionBegin(xrSession);
-		uint64_t L_4 = ___xrSession0;
-		UnityOpenXR_OnSessionBegin_m0422580F20229CC217DB02155FC2DC0D867F74CE(L_4, NULL);
-		// }
-		return;
-	}
-}
-// System.Void Meta.XR.MetaXRFeature::OnSessionEnd(System.UInt64)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaXRFeature_OnSessionEnd_mFA57212690BE6BFE667064BEC498801BF5A16BE7 (MetaXRFeature_tC11EFE3887B7C014E9942C403EC4F6AEC5A19B6D* __this, uint64_t ___xrSession0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8CC90267359228BBF3FD4EFA7C6B63E4F4D4C76E);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// Debug.Log($"[MetaXRFeature] OnSessionEnd: {xrSession}");
-		uint64_t L_0 = ___xrSession0;
-		uint64_t L_1 = L_0;
-		RuntimeObject* L_2 = Box(UInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF_il2cpp_TypeInfo_var, &L_1);
-		String_t* L_3;
-		L_3 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral8CC90267359228BBF3FD4EFA7C6B63E4F4D4C76E, L_2, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_3, NULL);
-		// OVRPlugin.UnityOpenXR.OnSessionEnd(xrSession);
-		uint64_t L_4 = ___xrSession0;
-		UnityOpenXR_OnSessionEnd_mEC2BB76CD260EC200996264B816F8715C04EA755(L_4, NULL);
-		// }
-		return;
-	}
-}
-// System.Void Meta.XR.MetaXRFeature::OnSessionExiting(System.UInt64)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaXRFeature_OnSessionExiting_mCCDA171A30336B3CCEF2E0A540C5FC00DAF7F42C (MetaXRFeature_tC11EFE3887B7C014E9942C403EC4F6AEC5A19B6D* __this, uint64_t ___xrSession0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC1DB26724C2C52E64A4139D74063E4F6F9F5AD0E);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// Debug.Log($"[MetaXRFeature] OnSessionExiting: {xrSession}");
-		uint64_t L_0 = ___xrSession0;
-		uint64_t L_1 = L_0;
-		RuntimeObject* L_2 = Box(UInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF_il2cpp_TypeInfo_var, &L_1);
-		String_t* L_3;
-		L_3 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralC1DB26724C2C52E64A4139D74063E4F6F9F5AD0E, L_2, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_3, NULL);
-		// OVRPlugin.UnityOpenXR.OnSessionExiting(xrSession);
-		uint64_t L_4 = ___xrSession0;
-		UnityOpenXR_OnSessionExiting_m5A219E00988AF17792094B9D1E4B31F8FBC50DB1(L_4, NULL);
-		// }
-		return;
-	}
-}
-// System.Void Meta.XR.MetaXRFeature::OnSessionDestroy(System.UInt64)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaXRFeature_OnSessionDestroy_m232B8E2FCC785F002CD181AE2B36DF52018AE473 (MetaXRFeature_tC11EFE3887B7C014E9942C403EC4F6AEC5A19B6D* __this, uint64_t ___xrSession0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralAA84FE0643CDCFA240F65110401D6C5BFA23CA16);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// Debug.Log($"[MetaXRFeature] OnSessionDestroy: {xrSession}");
-		uint64_t L_0 = ___xrSession0;
-		uint64_t L_1 = L_0;
-		RuntimeObject* L_2 = Box(UInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF_il2cpp_TypeInfo_var, &L_1);
-		String_t* L_3;
-		L_3 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralAA84FE0643CDCFA240F65110401D6C5BFA23CA16, L_2, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_3, NULL);
-		// OVRPlugin.UnityOpenXR.OnSessionDestroy(xrSession);
-		uint64_t L_4 = ___xrSession0;
-		UnityOpenXR_OnSessionDestroy_mE22528F3A18F2409377CD0862CC005D7F07442BD(L_4, NULL);
-		// }
-		return;
-	}
-}
-// System.Void Meta.XR.MetaXRFeature::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MetaXRFeature__ctor_mCC8D3701561523559B7D5A0FB37F491BE3AB3DF5 (MetaXRFeature_tC11EFE3887B7C014E9942C403EC4F6AEC5A19B6D* __this, const RuntimeMethod* method) 
-{
-	{
-		OpenXRFeature__ctor_m120460E34ECC22ED2DB96797A6DCB5C870E78852(__this, NULL);
 		return;
 	}
 }

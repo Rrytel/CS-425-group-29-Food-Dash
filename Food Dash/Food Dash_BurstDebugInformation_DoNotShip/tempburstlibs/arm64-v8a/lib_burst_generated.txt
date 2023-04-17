@@ -155,7 +155,6 @@ Library: lib_burst_generated
 --compilation-defines=MODULE_PARTICLE_SYSTEM_EXISTS
 --compilation-defines=UNITY_INPUT_SYSTEM
 --compilation-defines=XR_MGMT_GTE_320
---compilation-defines=USING_XR_SDK_OPENXR
 --compilation-defines=USING_COMPATIBLE_OCULUS_XR_PLUGIN_VERSION
 --compilation-defines=USING_URP
 --compilation-defines=USING_MRC_COMPATIBLE_URP_VERSION
@@ -172,7 +171,6 @@ Library: lib_burst_generated
 --compilation-defines=INCLUDE_UGUI
 --compilation-defines=INCLUDE_INPUT_SYSTEM
 --compilation-defines=INCLUDE_LEGACY_INPUT_HELPERS
---compilation-defines=UNITY_ANALYTICS
 --compilation-defines=TIMELINE_FRAMEACCURATE
 --compilation-defines=VFX_HAS_TIMELINE
 --compilation-defines=VFX_HAS_TERRAINMODULE
@@ -180,6 +178,7 @@ Library: lib_burst_generated
 --compilation-defines=VFX_HAS_PHYSICS
 --compilation-defines=VFX_HAS_AUDIO
 --compilation-defines=VFX_HAS_INPUT_SYSTEM_PACKAGE
+--compilation-defines=UNITY_ANALYTICS
 --generate-link-xml=Temp\burst.link.xml
 --output=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\tempburstlibs\arm64-v8a\lib_burst_generated
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\UnityEngine.UI.dll
@@ -211,7 +210,6 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\PhotonUnityNetworking.Utilities.dll
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Unity.Services.Core.Internal.dll
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Unity.XR.CoreUtils.dll
---root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.dll
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Unity.Timeline.dll
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Oculus.Interaction.OVR.Samples.dll
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
@@ -241,16 +239,12 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Unity.Services.Core.dll
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Unity.Services.Core.Networking.dll
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Meta.WitAi.TTS.dll
---root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.Features.ConformanceAutomation.dll
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Unity.Services.Core.Registration.dll
---root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.Features.MockRuntime.dll
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Unity.Subsystem.Registration.dll
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll
---root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.Features.RuntimeDebugger.dll
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Unity.Recorder.Base.dll
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Universal.Shaders.dll
---root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.Features.OculusQuestSupport.dll
 --assembly-folder=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\
 --pdb-search-paths=Temp/ManagedSymbols/
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10

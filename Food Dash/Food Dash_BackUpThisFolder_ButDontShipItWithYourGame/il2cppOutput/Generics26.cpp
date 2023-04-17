@@ -2649,17 +2649,6 @@ struct NativeArray_1_t81F55263465517B73C455D3400CF67B4BADD85CF
 	int32_t ___m_AllocatorLabel_2;
 };
 
-// Unity.Collections.NativeArray`1<UnityEngine.Rendering.Universal.DecalEntity>
-struct NativeArray_1_t83F02282C33BAD818D67110F7760483208880311 
-{
-	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
-	void* ___m_Buffer_0;
-	// System.Int32 Unity.Collections.NativeArray`1::m_Length
-	int32_t ___m_Length_1;
-	// Unity.Collections.Allocator Unity.Collections.NativeArray`1::m_AllocatorLabel
-	int32_t ___m_AllocatorLabel_2;
-};
-
 // Unity.Collections.NativeArray`1<UnityEngine.Rendering.Universal.DecalSubDrawCall>
 struct NativeArray_1_t197AED29D4CF7A6BC8C6C69B7BABD82BDC8475E2 
 {
@@ -3141,15 +3130,6 @@ struct Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B
 			uint8_t ___a_4_forAlignmentOnly;
 		};
 	};
-};
-
-// UnityEngine.Rendering.Universal.DecalEntity
-struct DecalEntity_t8CAF09C65939503449C4138ADCDC4907196293FD 
-{
-	// System.Int32 UnityEngine.Rendering.Universal.DecalEntity::index
-	int32_t ___index_0;
-	// System.Int32 UnityEngine.Rendering.Universal.DecalEntity::version
-	int32_t ___version_1;
 };
 
 // UnityEngine.Rendering.Universal.DecalSubDrawCall
@@ -4927,15 +4907,6 @@ struct CallbackArray_1_t1A72A00347540C99C2A4BF0488E37A8C1B45C1BE
 	InlinedArray_1_t89D09048674475F5C319FE41264ED79405A8209D ___m_CallbacksToAdd_2;
 	// UnityEngine.InputSystem.Utilities.InlinedArray`1<TDelegate> UnityEngine.InputSystem.Utilities.CallbackArray`1::m_CallbacksToRemove
 	InlinedArray_1_t89D09048674475F5C319FE41264ED79405A8209D ___m_CallbacksToRemove_3;
-};
-
-// Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalEntity>
-struct Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD 
-{
-	// Unity.Collections.NativeArray`1<T> Unity.Collections.NativeArray`1/Enumerator::m_Array
-	NativeArray_1_t83F02282C33BAD818D67110F7760483208880311 ___m_Array_0;
-	// System.Int32 Unity.Collections.NativeArray`1/Enumerator::m_Index
-	int32_t ___m_Index_1;
 };
 
 // Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalSubDrawCall>
@@ -9993,18 +9964,6 @@ struct UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F  : public Runtim
 };
 
 
-// System.Void Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalEntity>::.ctor(Unity.Collections.NativeArray`1<T>&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator__ctor_m831DC660425C8D233879F69742D383DB59E1FACC_gshared (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* __this, NativeArray_1_t83F02282C33BAD818D67110F7760483208880311* ___array0, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalEntity>::Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_m68C5819CBD6C732EBA3C60A54D8E2A099DBB54B2_gshared (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* __this, const RuntimeMethod* method) ;
-// System.Boolean Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalEntity>::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mB3C8CEDF9144A61DFD9CC34396AE30CFD9A4139A_gshared (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* __this, const RuntimeMethod* method) ;
-// System.Void Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalEntity>::Reset()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Reset_m285148AFDCE2B845CA7356806795125FB40884BB_gshared (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* __this, const RuntimeMethod* method) ;
-// T Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalEntity>::get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DecalEntity_t8CAF09C65939503449C4138ADCDC4907196293FD Enumerator_get_Current_m7ADDBB2DAD4006BC8105C8B66288F2F553B50C39_gshared (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* __this, const RuntimeMethod* method) ;
-// System.Object Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalEntity>::System.Collections.IEnumerator.get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_System_Collections_IEnumerator_get_Current_m901CB982A8C99491744F5A8428B01CF60C81E971_gshared (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* __this, const RuntimeMethod* method) ;
 // System.Void Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalSubDrawCall>::.ctor(Unity.Collections.NativeArray`1<T>&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator__ctor_m5338DA4A477239C6F3E5B12E5058CEC3ED577380_gshared (Enumerator_t61C4E56FF8C39ECB64B9A42612E54598FE470B38* __this, NativeArray_1_t197AED29D4CF7A6BC8C6C69B7BABD82BDC8475E2* ___array0, const RuntimeMethod* method) ;
 // System.Void Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalSubDrawCall>::Dispose()
@@ -11536,36 +11495,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_System_Collections_
 // System.Void System.Collections.Generic.List`1/Enumerator<UnityEngine.UIVertex>::System.Collections.IEnumerator.Reset()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_System_Collections_IEnumerator_Reset_mC17E6C00100773F0D0594E2E8E685457ACCAA58A_gshared (Enumerator_t2A3825EA72200C0EE83D19C6B3493626FA1B45B4* __this, const RuntimeMethod* method) ;
 
-// System.Void Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalEntity>::.ctor(Unity.Collections.NativeArray`1<T>&)
-inline void Enumerator__ctor_m831DC660425C8D233879F69742D383DB59E1FACC (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* __this, NativeArray_1_t83F02282C33BAD818D67110F7760483208880311* ___array0, const RuntimeMethod* method)
-{
-	((  void (*) (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD*, NativeArray_1_t83F02282C33BAD818D67110F7760483208880311*, const RuntimeMethod*))Enumerator__ctor_m831DC660425C8D233879F69742D383DB59E1FACC_gshared)(__this, ___array0, method);
-}
-// System.Void Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalEntity>::Dispose()
-inline void Enumerator_Dispose_m68C5819CBD6C732EBA3C60A54D8E2A099DBB54B2 (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* __this, const RuntimeMethod* method)
-{
-	((  void (*) (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD*, const RuntimeMethod*))Enumerator_Dispose_m68C5819CBD6C732EBA3C60A54D8E2A099DBB54B2_gshared)(__this, method);
-}
-// System.Boolean Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalEntity>::MoveNext()
-inline bool Enumerator_MoveNext_mB3C8CEDF9144A61DFD9CC34396AE30CFD9A4139A (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* __this, const RuntimeMethod* method)
-{
-	return ((  bool (*) (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD*, const RuntimeMethod*))Enumerator_MoveNext_mB3C8CEDF9144A61DFD9CC34396AE30CFD9A4139A_gshared)(__this, method);
-}
-// System.Void Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalEntity>::Reset()
-inline void Enumerator_Reset_m285148AFDCE2B845CA7356806795125FB40884BB (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* __this, const RuntimeMethod* method)
-{
-	((  void (*) (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD*, const RuntimeMethod*))Enumerator_Reset_m285148AFDCE2B845CA7356806795125FB40884BB_gshared)(__this, method);
-}
-// T Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalEntity>::get_Current()
-inline DecalEntity_t8CAF09C65939503449C4138ADCDC4907196293FD Enumerator_get_Current_m7ADDBB2DAD4006BC8105C8B66288F2F553B50C39 (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* __this, const RuntimeMethod* method)
-{
-	return ((  DecalEntity_t8CAF09C65939503449C4138ADCDC4907196293FD (*) (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD*, const RuntimeMethod*))Enumerator_get_Current_m7ADDBB2DAD4006BC8105C8B66288F2F553B50C39_gshared)(__this, method);
-}
-// System.Object Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalEntity>::System.Collections.IEnumerator.get_Current()
-inline RuntimeObject* Enumerator_System_Collections_IEnumerator_get_Current_m901CB982A8C99491744F5A8428B01CF60C81E971 (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* __this, const RuntimeMethod* method)
-{
-	return ((  RuntimeObject* (*) (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD*, const RuntimeMethod*))Enumerator_System_Collections_IEnumerator_get_Current_m901CB982A8C99491744F5A8428B01CF60C81E971_gshared)(__this, method);
-}
 // System.Void Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalSubDrawCall>::.ctor(Unity.Collections.NativeArray`1<T>&)
 inline void Enumerator__ctor_m5338DA4A477239C6F3E5B12E5058CEC3ED577380 (Enumerator_t61C4E56FF8C39ECB64B9A42612E54598FE470B38* __this, NativeArray_1_t197AED29D4CF7A6BC8C6C69B7BABD82BDC8475E2* ___array0, const RuntimeMethod* method)
 {
@@ -15411,131 +15340,6 @@ inline void Enumerator_System_Collections_IEnumerator_Reset_mC17E6C00100773F0D05
 {
 	((  void (*) (Enumerator_t2A3825EA72200C0EE83D19C6B3493626FA1B45B4*, const RuntimeMethod*))Enumerator_System_Collections_IEnumerator_Reset_mC17E6C00100773F0D0594E2E8E685457ACCAA58A_gshared)(__this, method);
 }
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalEntity>::.ctor(Unity.Collections.NativeArray`1<T>&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator__ctor_m831DC660425C8D233879F69742D383DB59E1FACC_gshared (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* __this, NativeArray_1_t83F02282C33BAD818D67110F7760483208880311* ___array0, const RuntimeMethod* method) 
-{
-	{
-		NativeArray_1_t83F02282C33BAD818D67110F7760483208880311* L_0 = ___array0;
-		NativeArray_1_t83F02282C33BAD818D67110F7760483208880311 L_1 = (*(NativeArray_1_t83F02282C33BAD818D67110F7760483208880311*)L_0);
-		__this->___m_Array_0 = L_1;
-		__this->___m_Index_1 = (-1);
-		return;
-	}
-}
-IL2CPP_EXTERN_C  void Enumerator__ctor_m831DC660425C8D233879F69742D383DB59E1FACC_AdjustorThunk (RuntimeObject* __this, NativeArray_1_t83F02282C33BAD818D67110F7760483208880311* ___array0, const RuntimeMethod* method)
-{
-	Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* _thisAdjusted;
-	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD*>(__this + _offset);
-	Enumerator__ctor_m831DC660425C8D233879F69742D383DB59E1FACC(_thisAdjusted, ___array0, method);
-}
-// System.Void Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalEntity>::Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_m68C5819CBD6C732EBA3C60A54D8E2A099DBB54B2_gshared (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* __this, const RuntimeMethod* method) 
-{
-	{
-		return;
-	}
-}
-IL2CPP_EXTERN_C  void Enumerator_Dispose_m68C5819CBD6C732EBA3C60A54D8E2A099DBB54B2_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
-{
-	Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* _thisAdjusted;
-	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD*>(__this + _offset);
-	Enumerator_Dispose_m68C5819CBD6C732EBA3C60A54D8E2A099DBB54B2(_thisAdjusted, method);
-}
-// System.Boolean Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalEntity>::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mB3C8CEDF9144A61DFD9CC34396AE30CFD9A4139A_gshared (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* __this, const RuntimeMethod* method) 
-{
-	bool V_0 = false;
-	{
-		int32_t L_0 = (int32_t)__this->___m_Index_1;
-		__this->___m_Index_1 = ((int32_t)il2cpp_codegen_add(L_0, 1));
-		int32_t L_1 = (int32_t)__this->___m_Index_1;
-		NativeArray_1_t83F02282C33BAD818D67110F7760483208880311* L_2 = (NativeArray_1_t83F02282C33BAD818D67110F7760483208880311*)(&__this->___m_Array_0);
-		int32_t L_3;
-		L_3 = IL2CPP_NATIVEARRAY_GET_LENGTH((L_2)->___m_Length_1);
-		V_0 = (bool)((((int32_t)L_1) < ((int32_t)L_3))? 1 : 0);
-		goto IL_0025;
-	}
-
-IL_0025:
-	{
-		bool L_4 = V_0;
-		return L_4;
-	}
-}
-IL2CPP_EXTERN_C  bool Enumerator_MoveNext_mB3C8CEDF9144A61DFD9CC34396AE30CFD9A4139A_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
-{
-	Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* _thisAdjusted;
-	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD*>(__this + _offset);
-	bool _returnValue;
-	_returnValue = Enumerator_MoveNext_mB3C8CEDF9144A61DFD9CC34396AE30CFD9A4139A(_thisAdjusted, method);
-	return _returnValue;
-}
-// System.Void Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalEntity>::Reset()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Reset_m285148AFDCE2B845CA7356806795125FB40884BB_gshared (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* __this, const RuntimeMethod* method) 
-{
-	{
-		__this->___m_Index_1 = (-1);
-		return;
-	}
-}
-IL2CPP_EXTERN_C  void Enumerator_Reset_m285148AFDCE2B845CA7356806795125FB40884BB_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
-{
-	Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* _thisAdjusted;
-	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD*>(__this + _offset);
-	Enumerator_Reset_m285148AFDCE2B845CA7356806795125FB40884BB(_thisAdjusted, method);
-}
-// T Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalEntity>::get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DecalEntity_t8CAF09C65939503449C4138ADCDC4907196293FD Enumerator_get_Current_m7ADDBB2DAD4006BC8105C8B66288F2F553B50C39_gshared (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* __this, const RuntimeMethod* method) 
-{
-	{
-		NativeArray_1_t83F02282C33BAD818D67110F7760483208880311* L_0 = (NativeArray_1_t83F02282C33BAD818D67110F7760483208880311*)(&__this->___m_Array_0);
-		int32_t L_1 = (int32_t)__this->___m_Index_1;
-		DecalEntity_t8CAF09C65939503449C4138ADCDC4907196293FD L_2;
-		L_2 = IL2CPP_NATIVEARRAY_GET_ITEM(DecalEntity_t8CAF09C65939503449C4138ADCDC4907196293FD, (L_0)->___m_Buffer_0, L_1);
-		return L_2;
-	}
-}
-IL2CPP_EXTERN_C  DecalEntity_t8CAF09C65939503449C4138ADCDC4907196293FD Enumerator_get_Current_m7ADDBB2DAD4006BC8105C8B66288F2F553B50C39_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
-{
-	Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* _thisAdjusted;
-	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD*>(__this + _offset);
-	DecalEntity_t8CAF09C65939503449C4138ADCDC4907196293FD _returnValue;
-	_returnValue = Enumerator_get_Current_m7ADDBB2DAD4006BC8105C8B66288F2F553B50C39(_thisAdjusted, method);
-	return _returnValue;
-}
-// System.Object Unity.Collections.NativeArray`1/Enumerator<UnityEngine.Rendering.Universal.DecalEntity>::System.Collections.IEnumerator.get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_System_Collections_IEnumerator_get_Current_m901CB982A8C99491744F5A8428B01CF60C81E971_gshared (Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* __this, const RuntimeMethod* method) 
-{
-	{
-		DecalEntity_t8CAF09C65939503449C4138ADCDC4907196293FD L_0;
-		L_0 = Enumerator_get_Current_m7ADDBB2DAD4006BC8105C8B66288F2F553B50C39(__this, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 0));
-		DecalEntity_t8CAF09C65939503449C4138ADCDC4907196293FD L_1 = L_0;
-		RuntimeObject* L_2 = Box(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1), &L_1);
-		return L_2;
-	}
-}
-IL2CPP_EXTERN_C  RuntimeObject* Enumerator_System_Collections_IEnumerator_get_Current_m901CB982A8C99491744F5A8428B01CF60C81E971_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
-{
-	Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD* _thisAdjusted;
-	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<Enumerator_t2DB015DB5AD178F3C350158C978F5A384461B3FD*>(__this + _offset);
-	RuntimeObject* _returnValue;
-	_returnValue = Enumerator_System_Collections_IEnumerator_get_Current_m901CB982A8C99491744F5A8428B01CF60C81E971(_thisAdjusted, method);
-	return _returnValue;
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
