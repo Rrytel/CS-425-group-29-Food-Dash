@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4980331068544172791}
   - component: {fileID: 4980331068544172792}
   - component: {fileID: 4980331068544172793}
+  - component: {fileID: 4522498860137559309}
   m_Layer: 7
   m_Name: lettuce_ingrident_prefab
   m_TagString: Untagged
@@ -534,6 +535,19 @@ TrailRenderer:
   m_MinVertexDistance: 0.001
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &4522498860137559309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4980331068544172794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c630b5bdee76b3944a81d696abf906e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 5
 --- !u!1001 &4980331068358914522
 PrefabInstance:
   m_ObjectHideFlags: 0
