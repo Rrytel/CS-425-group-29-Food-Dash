@@ -42,5 +42,6 @@ public enum IngredientTypes
 	Salt,
 	Beverage,
 	Ice,
-	Cup
+	Cup,
+	Tomato
 }
