@@ -22,6 +22,8 @@ public class rat_script : MonoBehaviour
 
     private float wanderTimer = 0f;
 
+    GameObject baitController;
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,7 @@ public class rat_script : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         mesh = GetComponent<MeshFilter>().mesh;
         mr = GetComponent<Renderer>();
+        baitController = GameObject.FindGameObjectWithTag("BaitController");
     }
 
     // Update is called once per frame
@@ -58,15 +61,15 @@ public class rat_script : MonoBehaviour
 
         seekingBait = false;
         baitGoal = FindClosestBait();
-        if(baitGoal ==null)
+        if(baitGoal != null)
         {
-            return;
+            if ((baitGoal.transform.position - transform.position).sqrMagnitude < baitRaidus)
+            {
+                agent.destination = baitGoal.transform.position;
+                seekingBait = true;
+            }
         }
-        if((baitGoal.transform.position - transform.position).sqrMagnitude < baitRaidus)
-        {
-            agent.destination = baitGoal.transform.position;
-            seekingBait = true;
-        }
+        
         
         //agent.destination = goal.position;
 
@@ -104,7 +107,11 @@ public class rat_script : MonoBehaviour
         float curDist;
         float minDist = Mathf.Infinity;
         
-        foreach (GameObject bait in baitList)
+        if(baitController.GetComponent<bait_controller>().baitList.Count == 0)
+        {
+            return null;
+        }
+        foreach (GameObject bait in baitController.GetComponent<bait_controller>().baitList)
         {
             diff = gameObject.transform.position - bait.transform.position;
             curDist = diff.sqrMagnitude;
