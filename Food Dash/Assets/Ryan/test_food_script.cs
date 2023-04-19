@@ -57,7 +57,11 @@ public class test_food_script : MonoBehaviour
         if(!isHeld && m_Rigidbody.velocity.magnitude < 5)
         {
             //throwPow -= 1 * Time.deltaTime;
-            TR.enabled = false;
+		if(TR!=null)
+		{
+			TR.enabled = false;
+		}
+            
             //throwPow = 1.5f;
         }
 
@@ -81,14 +85,19 @@ public class test_food_script : MonoBehaviour
         }
         gameObject.GetComponent<XRGrabInteractable>().throwVelocityScale = throwPow;
 
-        if(throwPow>5)
-        {
-            TR.enabled = true;
-        }
-        else
-        {
-            TR.enabled = false;
-        }
+
+	  if(TR!=null)
+	  {
+		if(throwPow>5)
+        	{
+            	TR.enabled = true;
+        	}
+        	else
+        	{
+            	TR.enabled = false;
+        	}
+	  }
+
 
 
         //timer += .01f;
