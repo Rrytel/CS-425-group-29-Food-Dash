@@ -40,6 +40,7 @@ public class rat_script : MonoBehaviour
     void Update()
     {
         
+        
         if(agent.hasPath)
         {
             //Rat notices food, anime eyes
@@ -49,8 +50,10 @@ public class rat_script : MonoBehaviour
         //Set goal
         if (!agent.enabled)
         {
+            gameObject.GetComponent<SingularityPullable>().pullable = true;
             return;
         }
+        gameObject.GetComponent<SingularityPullable>().pullable = false ;
 
         //agent.destination = new Vector3(.409f, .598f, -0.425f);
         //return;
@@ -163,6 +166,9 @@ public class rat_script : MonoBehaviour
                 m_Rigidbody.drag = 1;
                 inVaccum = true;
                 break;
+            case "black hole":
+                inVaccum = true;
+                break;
         }
     }
 
@@ -186,6 +192,18 @@ public class rat_script : MonoBehaviour
                 m_Rigidbody.AddForce(moveDir * 10000 * Time.fixedDeltaTime);
                 agent.enabled = false;
                 break;
+
+            case "black hole":
+                if(coll.gameObject.GetComponent<blackHoleController_scr>().active == true)
+                {
+                    
+                    agent.enabled = false;
+                }
+                if (coll.gameObject.GetComponent<blackHoleController_scr>().active == false)
+                {
+                    agent.enabled = true;
+                }
+                break;
         }
     }
 
@@ -198,6 +216,11 @@ public class rat_script : MonoBehaviour
                 StartCoroutine(wakeUp());
                 break;
 
+            case "black hole":
+                inVaccum = false;
+                StartCoroutine(wakeUp());
+                //agent.enabled = true;
+                break;
         }
     }
 
@@ -222,10 +245,14 @@ public class rat_script : MonoBehaviour
 
         if (breakOutTimer > 19f || floorTimer > 4f)
         {
-            //Wake up if not interacted with for a time threshold
-            agent.enabled = true;
-            m_Rigidbody.drag = 10;
-            Debug.Log("wakeup");
+            if(!isHeld && !inVaccum)
+            {
+                //Wake up if not interacted with for a time threshold
+                agent.enabled = true;
+                m_Rigidbody.drag = 10;
+                Debug.Log("wakeup");
+            }
+            
         }
     }
 
