@@ -22,47 +22,23 @@ public class IngredientSpawner : MonoBehaviour
 			switch (iteration)
 			{
 				case 0:
-					ingredientPrefab.GetComponent<Ingredient> ().type = IngredientTypes.Dough;
-					break;
-
-				case 1:
-					ingredientPrefab.GetComponent<Ingredient> ().type = IngredientTypes.Sauce;
-					break;
-
-				case 2:
 					ingredientPrefab.GetComponent<Ingredient> ().type = IngredientTypes.Bun;
 					break;
 
-				case 3:
+				case 1:
 					ingredientPrefab.GetComponent<Ingredient> ().type = IngredientTypes.Patty;
 					break;
 
-				case 4:
+				case 2:
 					ingredientPrefab.GetComponent<Ingredient> ().type = IngredientTypes.Cheese;
 					break;
 
-				case 5:
+				case 3:
 					ingredientPrefab.GetComponent<Ingredient> ().type = IngredientTypes.Lettuce;
 					break;
 
-				case 6:
-					ingredientPrefab.GetComponent<Ingredient> ().type = IngredientTypes.Potato;
-					break;
-
-				case 7:
-					ingredientPrefab.GetComponent<Ingredient> ().type = IngredientTypes.Salt;
-					break;
-
-				case 8:
-					ingredientPrefab.GetComponent<Ingredient> ().type = IngredientTypes.Beverage;
-					break;
-
-				case 9:
-					ingredientPrefab.GetComponent<Ingredient> ().type = IngredientTypes.Ice;
-					break;
-
-				case 10:
-					ingredientPrefab.GetComponent<Ingredient> ().type = IngredientTypes.Cup;
+				case 4:
+					ingredientPrefab.GetComponent<Ingredient> ().type = IngredientTypes.Tomato;
 					break;
 			}
 
@@ -70,7 +46,7 @@ public class IngredientSpawner : MonoBehaviour
 
 			iteration += 1;
 
-			if (iteration > 10)
+			if (iteration > 4)
 			{
 				iteration = 0;
 			}	

@@ -83,6 +83,7 @@ static Il2CppMethodPointer s_methodPointers[22] =
 };
 static const int32_t s_InvokerIndices[22] = 
 {
+<<<<<<< Updated upstream
 	9517,
 	9319,
 	9517,
@@ -105,6 +106,30 @@ static const int32_t s_InvokerIndices[22] =
 	9517,
 	9517,
 	9517,
+=======
+	9540,
+	9341,
+	9540,
+	9540,
+	9540,
+	9540,
+	9540,
+	9540,
+	9540,
+	9540,
+	9540,
+	9540,
+	9540,
+	9540,
+	9540,
+	9540,
+	9540,
+	9540,
+	7545,
+	9540,
+	9540,
+	9540,
+>>>>>>> Stashed changes
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Meta_WitAi_TTS_Samples_CodeGenModule;
 const Il2CppCodeGenModule g_Meta_WitAi_TTS_Samples_CodeGenModule = 

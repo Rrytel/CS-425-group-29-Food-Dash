@@ -560,6 +560,10 @@ IL2CPP_EXTERN_C RuntimeClass* Type_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t428B95F22B12C42F05233DE02507635B55BBBF98_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UInt64_t8F12534CC8FC4B5860F2A2CD1EE79D322E7A41AF_il2cpp_TypeInfo_var;
+<<<<<<< Updated upstream
+=======
+IL2CPP_EXTERN_C RuntimeClass* UnityOpenXR_tBE61966A5EA8E0DA3190F5309575D0B3EF7ECB3E_il2cpp_TypeInfo_var;
+>>>>>>> Stashed changes
 IL2CPP_EXTERN_C RuntimeClass* Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Version_tE426DB5655D0F22920AE16A2AA9AB7781B8255A7_il2cpp_TypeInfo_var;
@@ -593,6 +597,10 @@ IL2CPP_EXTERN_C String_t* _stringLiteral4481EB4F8B6BEF5D863C23DACE5D92E1C6603258
 IL2CPP_EXTERN_C String_t* _stringLiteral4D4229E0C147BE8C7321C97D16DA6567C7CC7385;
 IL2CPP_EXTERN_C String_t* _stringLiteral588B8CAF579C3071462D21957C92A405CE7A5FA1;
 IL2CPP_EXTERN_C String_t* _stringLiteral5AC0D3D4D36181576B50E4AA23AD0D9503DC7809;
+<<<<<<< Updated upstream
+=======
+IL2CPP_EXTERN_C String_t* _stringLiteral5B18830FFFE6BD51C72FE2FEDDC95FA3B7BF888B;
+>>>>>>> Stashed changes
 IL2CPP_EXTERN_C String_t* _stringLiteral5E48FB0EE174BD6AAFEB32AF96DDA6901B776752;
 IL2CPP_EXTERN_C String_t* _stringLiteral6093CF95875C05DE3109742296262213D3EFB135;
 IL2CPP_EXTERN_C String_t* _stringLiteral61890C9111848030046E81DB6B67572678ADB6E8;
@@ -608,6 +616,10 @@ IL2CPP_EXTERN_C String_t* _stringLiteral7D612383984721A96F4EC02A755EEDF86152260F
 IL2CPP_EXTERN_C String_t* _stringLiteral8056EF217D555787C1F04ECE7927A2323D1D2AEA;
 IL2CPP_EXTERN_C String_t* _stringLiteral812FAFBBC880731B5FC0ABD9009768693FE806C9;
 IL2CPP_EXTERN_C String_t* _stringLiteral81CAC178337D7DB2DE46BA16AA1C0CBA34FA4277;
+<<<<<<< Updated upstream
+=======
+IL2CPP_EXTERN_C String_t* _stringLiteral8492E72FD492148021A921D852729AD1B2D18127;
+>>>>>>> Stashed changes
 IL2CPP_EXTERN_C String_t* _stringLiteral88BEE283254D7094E258B3A88730F4CC4F1E4AC7;
 IL2CPP_EXTERN_C String_t* _stringLiteral90976408DD45FD6617A1CA11E8C4DBBA408E7456;
 IL2CPP_EXTERN_C String_t* _stringLiteral961EF7AEB27DE3B713816701CD90839814BE303D;
@@ -632,6 +644,10 @@ IL2CPP_EXTERN_C String_t* _stringLiteralD51A5F81179392C785765556663B36E28DBF8E5F
 IL2CPP_EXTERN_C String_t* _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 IL2CPP_EXTERN_C String_t* _stringLiteralDA480199DC2D7E93700F1B1FE80DED08B369ABB3;
 IL2CPP_EXTERN_C String_t* _stringLiteralDED689386F73A7C43A44AAE858DB1A6629E49B63;
+<<<<<<< Updated upstream
+=======
+IL2CPP_EXTERN_C String_t* _stringLiteralE228AB76360D732126AF51A79C6935C66E6E9CDE;
+>>>>>>> Stashed changes
 IL2CPP_EXTERN_C String_t* _stringLiteralE302AA9BECF9F1CB69CF2A3E5B33E0716BEA97F6;
 IL2CPP_EXTERN_C String_t* _stringLiteralEB4165285C60D41020FC1659B2ABB1D5BF5252BE;
 IL2CPP_EXTERN_C String_t* _stringLiteralEE25EB25AA74DA323C4A0C2C18E0921705443848;
@@ -1170,6 +1186,20 @@ struct PassthroughCapabilities_t3B338539A7E4125FE79381628715BDC608471F9F  : publ
 	bool ___U3CSupportsColorPassthroughU3Ek__BackingField_1;
 };
 
+<<<<<<< Updated upstream
+=======
+// OVRPlugin/UnityOpenXR
+struct UnityOpenXR_tBE61966A5EA8E0DA3190F5309575D0B3EF7ECB3E  : public RuntimeObject
+{
+};
+
+struct UnityOpenXR_tBE61966A5EA8E0DA3190F5309575D0B3EF7ECB3E_StaticFields
+{
+	// System.Boolean OVRPlugin/UnityOpenXR::Enabled
+	bool ___Enabled_0;
+};
+
+>>>>>>> Stashed changes
 // OVRHaptics/OVRHapticsOutput/ClipPlaybackTracker
 struct ClipPlaybackTracker_tE311D8396BEABBFDE613AAB1A13FE30D1A6FA75B  : public RuntimeObject
 {
@@ -5075,6 +5105,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_rotation_m61340DE74726CF0F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OculusXRPlugin_SetSpaceWarp_m591EA7747C0C944877CE8350AEA763560E46E7F1 (int32_t ___on0, const RuntimeMethod* method) ;
 // OVRPlugin/TrackingOrigin OVRPlugin::GetTrackingOriginType()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t OVRPlugin_GetTrackingOriginType_m2EDAA913509E615DD626803932B8CE16955F961A (const RuntimeMethod* method) ;
+<<<<<<< Updated upstream
+=======
+// UnityEngine.XR.XRInputSubsystem OVRManager::GetCurrentInputSubsystem()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XRInputSubsystem_tFECE6683FCAEBF05BAD05E5D612690095D8BAD34* OVRManager_GetCurrentInputSubsystem_m6343BBB6BBB22C59B70C2502CCFF5D0073B7272D (const RuntimeMethod* method) ;
+// System.Boolean UnityEngine.XR.XRInputSubsystem::TrySetTrackingOriginMode(UnityEngine.XR.TrackingOriginModeFlags)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRInputSubsystem_TrySetTrackingOriginMode_m132C190CEAE4403A381BF1C1C4B5FF349F2A3FA7 (XRInputSubsystem_tFECE6683FCAEBF05BAD05E5D612690095D8BAD34* __this, int32_t ___origin0, const RuntimeMethod* method) ;
+>>>>>>> Stashed changes
 // System.Boolean OVRPlugin::SetTrackingOriginType(OVRPlugin/TrackingOrigin)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool OVRPlugin_SetTrackingOriginType_mC03CEE60AF8A00DE01E5071C8CCBE8C366ED2105 (int32_t ___originType0, const RuntimeMethod* method) ;
 // System.Boolean OVRPlugin::get_userPresent()
@@ -25579,10 +25616,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRManager_set_trackingOriginType_mDDB79
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+<<<<<<< Updated upstream
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&OVRManager_t21429E69CA88C5E9C6EE3AAB75EAFBE6E1B129D4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&OVRPlugin_t0BF53CAD10A7503BB132A303469F2E0A639E696B_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
+=======
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&OVRManager_t21429E69CA88C5E9C6EE3AAB75EAFBE6E1B129D4_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&OVRPlugin_t0BF53CAD10A7503BB132A303469F2E0A639E696B_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityOpenXR_tBE61966A5EA8E0DA3190F5309575D0B3EF7ECB3E_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral5B18830FFFE6BD51C72FE2FEDDC95FA3B7BF888B);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8492E72FD492148021A921D852729AD1B2D18127);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE228AB76360D732126AF51A79C6935C66E6E9CDE);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+>>>>>>> Stashed changes
 	{
 		// if (!isHmdPresent)
 		il2cpp_codegen_runtime_class_init_inline(OVRManager_t21429E69CA88C5E9C6EE3AAB75EAFBE6E1B129D4_il2cpp_TypeInfo_var);
@@ -25602,6 +25653,7 @@ IL_0008:
 	{
 		// OVRPlugin.TrackingOrigin newOrigin = (OVRPlugin.TrackingOrigin)value;
 		int32_t L_1 = ___value0;
+<<<<<<< Updated upstream
 		// if (OVRPlugin.SetTrackingOriginType(newOrigin))
 		il2cpp_codegen_runtime_class_init_inline(OVRPlugin_t0BF53CAD10A7503BB132A303469F2E0A639E696B_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -25609,15 +25661,141 @@ IL_0008:
 		if (!L_2)
 		{
 			goto IL_0017;
+=======
+		V_0 = L_1;
+		// if (OVRPlugin.UnityOpenXR.Enabled)
+		bool L_2 = ((UnityOpenXR_tBE61966A5EA8E0DA3190F5309575D0B3EF7ECB3E_StaticFields*)il2cpp_codegen_static_fields_for(UnityOpenXR_tBE61966A5EA8E0DA3190F5309575D0B3EF7ECB3E_il2cpp_TypeInfo_var))->___Enabled_0;
+		if (!L_2)
+		{
+			goto IL_0062;
+		}
+	}
+	{
+		// if (GetCurrentInputSubsystem() == null)
+		il2cpp_codegen_runtime_class_init_inline(OVRManager_t21429E69CA88C5E9C6EE3AAB75EAFBE6E1B129D4_il2cpp_TypeInfo_var);
+		XRInputSubsystem_tFECE6683FCAEBF05BAD05E5D612690095D8BAD34* L_3;
+		L_3 = OVRManager_GetCurrentInputSubsystem_m6343BBB6BBB22C59B70C2502CCFF5D0073B7272D(NULL);
+		if (L_3)
+		{
+			goto IL_0023;
+		}
+	}
+	{
+		// Debug.LogError("InputSubsystem not found");
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralE228AB76360D732126AF51A79C6935C66E6E9CDE, NULL);
+		// return;
+		return;
+	}
+
+IL_0023:
+	{
+		// TrackingOriginModeFlags mode = TrackingOriginModeFlags.Unknown;
+		V_1 = 0;
+		// if (newOrigin == OVRPlugin.TrackingOrigin.EyeLevel)
+		int32_t L_4 = V_0;
+		if (L_4)
+		{
+			goto IL_002c;
+		}
+	}
+	{
+		// mode = TrackingOriginModeFlags.Device;
+		V_1 = 1;
+		goto IL_0042;
+	}
+
+IL_002c:
+	{
+		// else if (newOrigin == OVRPlugin.TrackingOrigin.FloorLevel || newOrigin == OVRPlugin.TrackingOrigin.Stage)
+		int32_t L_5 = V_0;
+		if ((((int32_t)L_5) == ((int32_t)1)))
+		{
+			goto IL_0034;
+		}
+	}
+	{
+		int32_t L_6 = V_0;
+		if ((!(((uint32_t)L_6) == ((uint32_t)2))))
+		{
+			goto IL_0038;
+		}
+	}
+
+IL_0034:
+	{
+		// mode = TrackingOriginModeFlags.Floor; // Stage in OpenXR
+		V_1 = 2;
+		goto IL_0042;
+	}
+
+IL_0038:
+	{
+		// Debug.LogError("Unable to map TrackingOrigin {0} in Unity OpenXR");
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral5B18830FFFE6BD51C72FE2FEDDC95FA3B7BF888B, NULL);
+	}
+
+IL_0042:
+	{
+		// bool success = GetCurrentInputSubsystem().TrySetTrackingOriginMode(mode);
+		il2cpp_codegen_runtime_class_init_inline(OVRManager_t21429E69CA88C5E9C6EE3AAB75EAFBE6E1B129D4_il2cpp_TypeInfo_var);
+		XRInputSubsystem_tFECE6683FCAEBF05BAD05E5D612690095D8BAD34* L_7;
+		L_7 = OVRManager_GetCurrentInputSubsystem_m6343BBB6BBB22C59B70C2502CCFF5D0073B7272D(NULL);
+		int32_t L_8 = V_1;
+		NullCheck(L_7);
+		bool L_9;
+		L_9 = XRInputSubsystem_TrySetTrackingOriginMode_m132C190CEAE4403A381BF1C1C4B5FF349F2A3FA7(L_7, L_8, NULL);
+		// if (!success)
+		if (L_9)
+		{
+			goto IL_005a;
+		}
+	}
+	{
+		// Debug.LogError("Unable to set TrackingOrigin {0} to Unity Input Subsystem");
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral8492E72FD492148021A921D852729AD1B2D18127, NULL);
+		return;
+	}
+
+IL_005a:
+	{
+		// _trackingOriginType = value;
+		int32_t L_10 = ___value0;
+		__this->____trackingOriginType_94 = L_10;
+		// return;
+		return;
+	}
+
+IL_0062:
+	{
+		// if (OVRPlugin.SetTrackingOriginType(newOrigin))
+		int32_t L_11 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(OVRPlugin_t0BF53CAD10A7503BB132A303469F2E0A639E696B_il2cpp_TypeInfo_var);
+		bool L_12;
+		L_12 = OVRPlugin_SetTrackingOriginType_mC03CEE60AF8A00DE01E5071C8CCBE8C366ED2105(L_11, NULL);
+		if (!L_12)
+		{
+			goto IL_0071;
+>>>>>>> Stashed changes
 		}
 	}
 	{
 		// _trackingOriginType = value;
+<<<<<<< Updated upstream
 		int32_t L_3 = ___value0;
 		__this->____trackingOriginType_94 = L_3;
 	}
 
 IL_0017:
+=======
+		int32_t L_13 = ___value0;
+		__this->____trackingOriginType_94 = L_13;
+	}
+
+IL_0071:
+>>>>>>> Stashed changes
 	{
 		// }
 		return;

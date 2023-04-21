@@ -134,6 +134,7 @@ static Il2CppMethodPointer s_methodPointers[39] =
 };
 static const int32_t s_InvokerIndices[39] = 
 {
+<<<<<<< Updated upstream
 	9517,
 	16149,
 	13005,
@@ -173,6 +174,47 @@ static const int32_t s_InvokerIndices[39] =
 	6256,
 	5313,
 	9517,
+=======
+	9540,
+	16208,
+	13059,
+	12824,
+	13059,
+	16208,
+	9341,
+	7501,
+	9341,
+	7501,
+	2725,
+	9386,
+	7545,
+	1982,
+	9341,
+	7501,
+	9341,
+	7501,
+	9253,
+	7414,
+	9401,
+	7560,
+	9540,
+	9540,
+	9540,
+	9540,
+	9540,
+	9540,
+	9540,
+	9540,
+	9540,
+	2491,
+	6822,
+	9253,
+	9540,
+	9540,
+	6270,
+	5324,
+	9540,
+>>>>>>> Stashed changes
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_SpatialTracking_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_SpatialTracking_CodeGenModule = 

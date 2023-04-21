@@ -22,6 +22,7 @@ IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes* g_Il2CppTypeDefinitionSizesTabl
 IL2CPP_EXTERN_C const Il2CppMetadataRegistration g_MetadataRegistration;
 const Il2CppMetadataRegistration g_MetadataRegistration = 
 {
+<<<<<<< Updated upstream
 	8069,
 	g_Il2CppGenericTypes,
 	5152,
@@ -35,6 +36,21 @@ const Il2CppMetadataRegistration g_MetadataRegistration =
 	11011,
 	g_FieldOffsetTable,
 	11011,
+=======
+	8134,
+	g_Il2CppGenericTypes,
+	5204,
+	g_Il2CppGenericInstTable,
+	65418,
+	g_Il2CppGenericMethodFunctions,
+	31169,
+	g_Il2CppTypeTable,
+	79875,
+	g_Il2CppMethodSpecTable,
+	11108,
+	g_FieldOffsetTable,
+	11108,
+>>>>>>> Stashed changes
 	g_Il2CppTypeDefinitionSizesTable,
 	0,
 	NULL,

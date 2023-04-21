@@ -5,7 +5,7 @@ using UnityEngine;
 public class Order : MonoBehaviour
 {
 	public int minItems = 1;
-	public int maxItems = 3;
+	public int maxItems = 2;
 
 	// if the order has been served to the customer
 	bool served = false;
@@ -54,20 +54,16 @@ public class Order : MonoBehaviour
 			switch (itemCount)
 			{
 				case 0:
-					items.Add (FoodTypes.Fries);
-					break;
-
-				case 1:
 					items.Add (FoodTypes.Drink);
 					break;
 
-				case 2:
+				case 1:
 					items.Add (FoodTypes.Burger);
 					break;
 
-				case 3:
-					items.Add (FoodTypes.Pizza);
-					// if you order pizza, do not order a burger
+				case 2:
+					items.Add (FoodTypes.Cheeseburger);
+					// if you order cheeseburger, do not order a burger
 					itemCount -= 1;
 					break;
 			}
@@ -131,17 +127,13 @@ public class Order : MonoBehaviour
 		{
 			//print ("Item " + index + ": " + items [index].ToString ());
 
-			if (items [index].Equals (FoodTypes.Pizza))
-			{
-				price += 3;
-			}
-			else if (items [index].Equals (FoodTypes.Burger))
+			if (items [index].Equals (FoodTypes.Burger))
 			{
 				price += 5;
 			}
-			else if (items [index].Equals (FoodTypes.Fries))
+			else if (items [index].Equals (FoodTypes.Cheeseburger))
 			{
-				price += 1;
+				price += 6;
 			}
 			else if (items [index].Equals (FoodTypes.Drink))
 			{

@@ -162,6 +162,7 @@ static const int32_t s_InvokerIndices[53] =
 	0,
 	0,
 	0,
+<<<<<<< Updated upstream
 	7528,
 	7528,
 	7528,
@@ -195,6 +196,41 @@ static const int32_t s_InvokerIndices[53] =
 	9517,
 	9517,
 	9517,
+=======
+	7545,
+	7545,
+	7545,
+	7545,
+	7545,
+	7545,
+	7545,
+	7545,
+	9253,
+	7414,
+	9253,
+	9253,
+	9386,
+	7545,
+	9540,
+	7501,
+	6763,
+	9540,
+	9540,
+	7501,
+	9540,
+	9253,
+	9386,
+	9540,
+	9386,
+	9540,
+	9540,
+	9540,
+	9540,
+	2297,
+	9540,
+	9540,
+	9540,
+>>>>>>> Stashed changes
 	0,
 	0,
 	0,
@@ -209,8 +245,13 @@ static const int32_t s_InvokerIndices[53] =
 	0,
 	0,
 	0,
+<<<<<<< Updated upstream
 	9364,
 	9517,
+=======
+	9386,
+	9540,
+>>>>>>> Stashed changes
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Meta_VoiceSDK_Mic_Common_CodeGenModule;
 const Il2CppCodeGenModule g_Meta_VoiceSDK_Mic_Common_CodeGenModule = 

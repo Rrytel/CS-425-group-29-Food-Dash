@@ -49,6 +49,12 @@ UnityEngine.AI.NavMeshPath::InitializeNavMeshPath
 UnityEngine.AI.NavMeshPath::ClearCornersInternal
 UnityEngine.AI.NavMeshPath::DestroyNavMeshPath
 UnityEngine.AI.NavMeshPath::get_status
+<<<<<<< Updated upstream
+=======
+UnityEngine.Analytics.Analytics::IsInitialized
+UnityEngine.Analytics.Analytics::RegisterEventWithLimit
+UnityEngine.Analytics.Analytics::SendEventWithLimit
+>>>>>>> Stashed changes
 UnityEngine.AndroidJNI::CallBooleanMethod
 UnityEngine.AndroidJNI::CallStaticBooleanMethod
 UnityEngine.AndroidJNI::GetBooleanArrayElement

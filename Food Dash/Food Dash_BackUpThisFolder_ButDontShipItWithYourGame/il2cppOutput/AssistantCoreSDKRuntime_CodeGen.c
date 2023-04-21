@@ -191,10 +191,17 @@ static Il2CppMethodPointer s_methodPointers[64] =
 };
 static const int32_t s_InvokerIndices[64] = 
 {
+<<<<<<< Updated upstream
 	4382,
 	16064,
 	16085,
 	9517,
+=======
+	4392,
+	16123,
+	16144,
+	9540,
+>>>>>>> Stashed changes
 	0,
 	0,
 	0,
@@ -209,16 +216,26 @@ static const int32_t s_InvokerIndices[64] =
 	0,
 	0,
 	0,
+<<<<<<< Updated upstream
 	9232,
 	9364,
 	4382,
 	7528,
 	9517,
 	9364,
+=======
+	9253,
+	9386,
+	4392,
+	7545,
+	9540,
+	9386,
+>>>>>>> Stashed changes
 	0,
 	0,
 	0,
 	0,
+<<<<<<< Updated upstream
 	7528,
 	9517,
 	9232,
@@ -255,6 +272,44 @@ static const int32_t s_InvokerIndices[64] =
 	7528,
 	7528,
 	4382,
+=======
+	7545,
+	9540,
+	9253,
+	7414,
+	9386,
+	7545,
+	9253,
+	7414,
+	4392,
+	9540,
+	7545,
+	7545,
+	4392,
+	9540,
+	16208,
+	7545,
+	9540,
+	4392,
+	7545,
+	4392,
+	4392,
+	4392,
+	9253,
+	7414,
+	9386,
+	7545,
+	9253,
+	7414,
+	9540,
+	7545,
+	9540,
+	4392,
+	9540,
+	7545,
+	7545,
+	4392,
+>>>>>>> Stashed changes
 };
 static const Il2CppTokenRangePair s_rgctxIndices[1] = 
 {

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f928d0d73a35f294fbe357ca17aa3547, type: 3}
   m_Name: MicrosoftHandInteraction Android
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_enabled: 0
   <failedInitialization>k__BackingField: 0
   nameUi: Microsoft Hand Interaction Profile
@@ -32,7 +32,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 486b5e28864f9a94b979b9620ce5006d, type: 3}
   m_Name: ConformanceAutomationFeature Standalone
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_enabled: 0
   <failedInitialization>k__BackingField: 0
   nameUi: Conformance Automation
@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 486b5e28864f9a94b979b9620ce5006d, type: 3}
   m_Name: ConformanceAutomationFeature Android
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_enabled: 0
   <failedInitialization>k__BackingField: 0
   nameUi: Conformance Automation
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1927c045052a06d49a9b21fdcaa26db6, type: 3}
   m_Name: MetaXRFeature Standalone
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_enabled: 0
   <failedInitialization>k__BackingField: 0
   nameUi: MetaXR Feature
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3cf79659a011bd419c7a2a30eb74e9a, type: 3}
   m_Name: EyeGazeInteraction Android
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_enabled: 0
   <failedInitialization>k__BackingField: 0
   nameUi: Eye Gaze Interaction Profile
@@ -130,12 +130,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3cf79659a011bd419c7a2a30eb74e9a, type: 3}
   m_Name: EyeGazeInteraction Standalone
   m_EditorClassIdentifier: 
-  m_enabled: 0
-  <failedInitialization>k__BackingField: 0
-  nameUi: Eye Gaze Interaction Profile
-  version: 0.0.1
-  featureIdInternal: com.unity.openxr.feature.input.eyetracking
-  openxrExtensionStrings: XR_EXT_eye_gaze_interaction
+  m_enabled: 1
+  nameUi: Oculus Quest Support
+  version: 1.0.0
+  featureIdInternal: com.unity.openxr.feature.oculusquest
+  openxrExtensionStrings: XR_OCULUS_android_initialize_loader
   company: Unity
   priority: 0
   required: 0
@@ -150,13 +149,13 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f6bfdbcb316ed242b30a8798c9eb853, type: 3}
   m_Name: KHRSimpleControllerProfile Standalone
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_enabled: 0
   <failedInitialization>k__BackingField: 0
   nameUi: Khronos Simple Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.khrsimpleprofile
-  openxrExtensionStrings: 
+  openxrExtensionStrings:
   company: Unity
   priority: 0
   required: 0
@@ -171,13 +170,13 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: feeef8d85de8db242bdda70cc7ff5acd, type: 3}
   m_Name: OculusTouchControllerProfile Standalone
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_enabled: 0
   <failedInitialization>k__BackingField: 0
   nameUi: Oculus Touch Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.oculustouch
-  openxrExtensionStrings: 
+  openxrExtensionStrings:
   company: Unity
   priority: 0
   required: 0
@@ -192,7 +191,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7de993716e042c6499d0c18eed3a773c, type: 3}
   m_Name: MockRuntime Standalone
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_enabled: 0
   <failedInitialization>k__BackingField: 0
   nameUi: Mock Runtime
@@ -216,13 +215,13 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: feeef8d85de8db242bdda70cc7ff5acd, type: 3}
   m_Name: OculusTouchControllerProfile Android
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_enabled: 0
   <failedInitialization>k__BackingField: 0
   nameUi: Oculus Touch Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.oculustouch
-  openxrExtensionStrings: 
+  openxrExtensionStrings:
   company: Unity
   priority: 0
   required: 0
@@ -237,7 +236,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5a1f07dc5afe854f9f12a4194aca3fb, type: 3}
   m_Name: Android
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   features:
   - {fileID: -8664828561321170673}
   - {fileID: -7037910425859822257}
@@ -262,7 +261,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f928d0d73a35f294fbe357ca17aa3547, type: 3}
   m_Name: MicrosoftHandInteraction Standalone
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_enabled: 0
   <failedInitialization>k__BackingField: 0
   nameUi: Microsoft Hand Interaction Profile
@@ -283,13 +282,13 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 761fdd4502cb7a84e9ec7a2b24f33f37, type: 3}
   m_Name: MicrosoftMotionControllerProfile Standalone
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_enabled: 0
   <failedInitialization>k__BackingField: 0
   nameUi: Microsoft Motion Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.microsoftmotioncontroller
-  openxrExtensionStrings: 
+  openxrExtensionStrings:
   company: Unity
   priority: 0
   required: 0
@@ -304,7 +303,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f0ebc320a151d3408ea1e9fce54d40e, type: 3}
   m_Name: OpenXR Package Settings
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Keys: 0100000007000000
   Values:
   - {fileID: 524530938262767742}
@@ -320,7 +319,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5a1f07dc5afe854f9f12a4194aca3fb, type: 3}
   m_Name: Standalone
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   features:
   - {fileID: -8676944155413855414}
   - {fileID: -6489737382886362691}
@@ -347,7 +346,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ef793c31862a37448e907829482ef80, type: 3}
   m_Name: OculusQuestFeature Android
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_enabled: 1
   <failedInitialization>k__BackingField: 0
   nameUi: Oculus Quest Support
@@ -370,13 +369,13 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 056125dd64c0ed540b40a4af74f7b495, type: 3}
   m_Name: RuntimeDebuggerOpenXRFeature Android
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_enabled: 0
   <failedInitialization>k__BackingField: 0
   nameUi: Runtime Debugger
   version: 1
   featureIdInternal: com.unity.openxr.features.runtimedebugger
-  openxrExtensionStrings: 
+  openxrExtensionStrings:
   company: Unity
   priority: 0
   required: 0
@@ -394,9 +393,12 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1927c045052a06d49a9b21fdcaa26db6, type: 3}
   m_Name: MetaXRFeature Android
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_enabled: 0
+<<<<<<< Updated upstream
   <failedInitialization>k__BackingField: 0
+=======
+>>>>>>> Stashed changes
   nameUi: MetaXR Feature
   version: 0.0.1
   featureIdInternal: com.meta.openxr.feature.metaxr
@@ -428,13 +430,13 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f6bfdbcb316ed242b30a8798c9eb853, type: 3}
   m_Name: KHRSimpleControllerProfile Android
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_enabled: 0
   <failedInitialization>k__BackingField: 0
   nameUi: Khronos Simple Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.khrsimpleprofile
-  openxrExtensionStrings: 
+  openxrExtensionStrings:
   company: Unity
   priority: 0
   required: 0
@@ -449,13 +451,13 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 056125dd64c0ed540b40a4af74f7b495, type: 3}
   m_Name: RuntimeDebuggerOpenXRFeature Standalone
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_enabled: 0
   <failedInitialization>k__BackingField: 0
   nameUi: Runtime Debugger
   version: 1
   featureIdInternal: com.unity.openxr.features.runtimedebugger
-  openxrExtensionStrings: 
+  openxrExtensionStrings:
   company: Unity
   priority: 0
   required: 0
@@ -473,7 +475,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7de993716e042c6499d0c18eed3a773c, type: 3}
   m_Name: MockRuntime Android
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_enabled: 0
   <failedInitialization>k__BackingField: 0
   nameUi: Mock Runtime
@@ -497,13 +499,13 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d6ccd3d0ef0f1d458e69421dccbdae1, type: 3}
   m_Name: ValveIndexControllerProfile Standalone
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_enabled: 0
   <failedInitialization>k__BackingField: 0
   nameUi: Valve Index Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.valveindex
-  openxrExtensionStrings: 
+  openxrExtensionStrings:
   company: Unity
   priority: 0
   required: 0
@@ -518,13 +520,13 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 274c02963f889a64e90bc2e596e21d13, type: 3}
   m_Name: HTCViveControllerProfile Standalone
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   m_enabled: 0
   <failedInitialization>k__BackingField: 0
   nameUi: HTC Vive Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.htcvive
-  openxrExtensionStrings: 
+  openxrExtensionStrings:
   company: Unity
   priority: 0
   required: 0
