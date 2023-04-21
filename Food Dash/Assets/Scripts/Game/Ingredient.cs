@@ -7,7 +7,7 @@ using UnityEngine;
 */
 public class Ingredient : MonoBehaviour
 {
-	public IngredientTypes type  = IngredientTypes.Bun;
+	public IngredientTypes type  = IngredientTypes.Dough;
 
 	string originalName;
 
@@ -23,9 +23,7 @@ public class Ingredient : MonoBehaviour
 	*/
 	void OnTriggerEnter (Collider other)
 	{
-		test_food_script foodScript = GetComponent <test_food_script> ();
-
-		if (other.CompareTag ("plate") && foodScript.cooked && !foodScript.burnt)
+		if (other.CompareTag ("plate"))
 		{
 			other.transform.parent.GetComponent <Plate> ().AddIngredient (this);
 		}
@@ -34,9 +32,16 @@ public class Ingredient : MonoBehaviour
 
 public enum IngredientTypes
 {
+	Dough,
+	Sauce,
 	Bun,
 	Patty,
 	Cheese,
 	Lettuce,
+	Potato,
+	Salt,
+	Beverage,
+	Ice,
+	Cup,
 	Tomato
 }

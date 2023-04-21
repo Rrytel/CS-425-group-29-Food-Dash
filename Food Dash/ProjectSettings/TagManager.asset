@@ -22,6 +22,7 @@ TagManager:
   - Rat zone
   - ratTest
   - PlayerTextOutput
+  - BaitController
   layers:
   - Default
   - TransparentFX

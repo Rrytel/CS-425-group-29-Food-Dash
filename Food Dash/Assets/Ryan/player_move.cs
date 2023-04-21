@@ -61,7 +61,7 @@ public class player_move : MonoBehaviour
         Vector3 moveDirection = new Vector3(input.x, 0f, input.y);
         Debug.Log(moveDirection);
         //gameObject.GetComponent<CharacterController>().Move(moveDirection * Time.deltaTime);
-        //m_rig.velocity = (moveDirection * 10f);
-        m_rig.AddForce(moveDirection * 10f);
+        m_rig.velocity = (moveDirection * 10f);
+        //m_rig.AddForce(moveDirection * 10f);
     }
 }
