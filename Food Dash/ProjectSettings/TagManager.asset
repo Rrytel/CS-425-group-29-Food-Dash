@@ -23,6 +23,7 @@ TagManager:
   - ratTest
   - PlayerTextOutput
   - BaitController
+  - black hole
   layers:
   - Default
   - TransparentFX
@@ -32,7 +33,7 @@ TagManager:
   - UI
   - player
   - 'non player '
-  - 
+  - bait
   - 
   - 
   - 
