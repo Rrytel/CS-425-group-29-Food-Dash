@@ -46,7 +46,6 @@ public class Plate : MonoBehaviour
 			ingredients.Add (IngredientTypes.Lettuce);
 			ingredients.Add (IngredientTypes.Tomato);
 			ingredients.Add (IngredientTypes.Bun);
-			ingredients.Add (IngredientTypes.Tomato);
 			
 		}
 		else if (type == FoodTypes.Cheeseburger)
