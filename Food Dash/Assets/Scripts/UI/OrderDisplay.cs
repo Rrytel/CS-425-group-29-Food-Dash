@@ -37,19 +37,28 @@ public class OrderDisplay : MonoBehaviour
 			// clear the string
 			display = "";
 
-			for (index = 0; index < orderItems.Count - 1; index += 1)
+			// todo: find a font that supports emojis for burger, cheese, and cup
+			for (index = 0; index < orderItems.Count; index += 1)
 			{
 				switch (orderItems [index])
 				{
 					case FoodTypes.Burger:
-						display += "\U0001F354";
+						//display += "\U0001F354";
+						display = "Burger";
 						break;
 					case FoodTypes.Cheeseburger:
-						display += "\U0001F9C0 \U0001F354";
+						//display += "\U0001F9C0 \U0001F354";
+						display = "Cheeseburger";
 						break;
 					case FoodTypes.Drink:
-						display += "\U0001F964";
+						//display += "\U0001F964";
+						display += "Drink";
 						break;
+				}
+
+				if (index < orderItems.Count - 1)
+				{
+					display += ", ";
 				}
 			}
 		}

@@ -25,10 +25,19 @@ public class Ingredient : MonoBehaviour
 	{
 		test_food_script foodScript = GetComponent <test_food_script> ();
 
-		// if the ingredient is cooked but not burnt and placed on a a plate
-		if (other.CompareTag ("plate") && foodScript.cooked && !foodScript.burnt)
+		if (other.CompareTag ("plate"))
 		{
-			other.transform.parent.GetComponent <Plate> ().AddIngredient (this);
+			// check whether the ingredient is a patty
+			if (type != IngredientTypes.Patty)
+			{
+				// if it is not a patty, add it to the plate
+				other.transform.parent.GetComponent <Plate> ().AddIngredient (this);
+			}
+			else if (foodScript.cooked && !foodScript.burnt)
+			{
+				// if it a patty that is cooked but not burnt, add it to the plate
+				other.transform.parent.GetComponent <Plate> ().AddIngredient (this);
+			}
 		}
 	}
 }
