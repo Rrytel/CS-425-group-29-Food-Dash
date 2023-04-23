@@ -48,8 +48,9 @@ public class rat_script : MonoBehaviour
         }
 
         //Set goal
-        if (!agent.enabled)
+        if (inVaccum)
         {
+            
             gameObject.GetComponent<SingularityPullable>().pullable = true;
             return;
         }
@@ -196,12 +197,14 @@ public class rat_script : MonoBehaviour
             case "black hole":
                 if(coll.gameObject.GetComponent<blackHoleController_scr>().active == true)
                 {
-                    
+                    m_Rigidbody.drag = 1;
+                    inVaccum = true;
                     agent.enabled = false;
                 }
                 if (coll.gameObject.GetComponent<blackHoleController_scr>().active == false)
                 {
-                    agent.enabled = true;
+                    inVaccum = false;
+                    StartCoroutine(wakeUp());
                 }
                 break;
         }

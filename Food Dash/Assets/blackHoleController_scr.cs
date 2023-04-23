@@ -7,6 +7,12 @@ public class blackHoleController_scr : MonoBehaviour
     public bool active = false;
     public ParticleSystem ps;
 
+    private void Start()
+    {
+        ps.Stop();
+        active = false;
+    }
+
     private void Update()
     {
         

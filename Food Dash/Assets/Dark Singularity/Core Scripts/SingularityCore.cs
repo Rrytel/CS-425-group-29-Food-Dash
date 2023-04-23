@@ -7,6 +7,10 @@ public class SingularityCore : MonoBehaviour
     //as this is much more performant than destroying the objects
     void OnTriggerStay (Collider other) {
         if(other.GetComponent<SingularityPullable>()){
+            if(other.GetComponent<SingularityPullable>().pullable == false)
+            {
+                return;
+            }
             other.gameObject.SetActive(false);
         }
     }
