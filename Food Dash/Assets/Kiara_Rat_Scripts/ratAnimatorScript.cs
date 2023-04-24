@@ -9,7 +9,10 @@ public class ratAnimatorScript : MonoBehaviour
     public Vector3 oldPos;
     public float speed;
     public Animator m_Animator;
-    bool canWalk = false;
+    bool canWalk = true;
+
+    public float time = 0f;
+    public int walkCounter = 3; //how much time to have the walk animation run
     // Start is called before the first frame update
     void Start()
     {
@@ -25,24 +28,31 @@ public class ratAnimatorScript : MonoBehaviour
 
         if (canWalk && speed > .01)
         {
+
             m_Animator.SetTrigger("Walk");
         }
-        else if (!canWalk)
+        else if (!canWalk || speed < .01)
         {
             m_Animator.SetTrigger("Idle");
         }
 
         //Testing animation
-        /*	
-            If (!canWalk)
+        	//Debug.Log(speed);
+            //Debug.Log(canWalk);
+             
+            //$: can reference vars. w/in string; takes 2 param - 1 = message & 2 = shortcut
+             Debug.Log($"speed: {speed}, canWalk: {canWalk}", gameObject);
+            /*if (!canWalk)
             {
-                m_Animator.SetTrigger(“Walk”);
-            }else if(canWalk && speed > .01){
-
-                m_Animator.SetTrigger(“Idle”);
-
+                m_Animator.SetTrigger("Walk");
             }
-        */
+            else if(canWalk && speed > .01)
+            {
+
+                m_Animator.SetTrigger("Idle");
+
+            }*/
+        
     }
 
     private void OnCollisionEnter(Collision collision)
