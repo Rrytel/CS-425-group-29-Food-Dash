@@ -332,6 +332,7 @@ MonoBehaviour:
   activeAreas: []
   prevAreas: []
   active: 0
+  throwPow: 1.5
   TR: {fileID: 4980331068544172793}
   cookedMat: {fileID: 0}
   burntMat: {fileID: 0}
@@ -622,6 +623,10 @@ PrefabInstance:
     - target: {fileID: 198350373398895308, guid: 3fe0df07025a3e747855b1bb671fc04e, type: 3}
       propertyPath: lengthInSec
       value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 198350373398895308, guid: 3fe0df07025a3e747855b1bb671fc04e, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198350373398895308, guid: 3fe0df07025a3e747855b1bb671fc04e, type: 3}
       propertyPath: InitialModule.startSize.scalar

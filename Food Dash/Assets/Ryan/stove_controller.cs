@@ -275,6 +275,7 @@ public class stove_controller : MonoBehaviour
         Vector3 launchVec = forward + vertical;
         //Launch food
         food.GetComponent<Rigidbody>().AddForce(launchVec);
+        food.GetComponent<test_food_script>().throwPow = 10;
 
         //Debug.Log(launchVec);
     }

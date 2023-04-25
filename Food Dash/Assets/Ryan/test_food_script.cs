@@ -30,7 +30,7 @@ public class test_food_script : MonoBehaviour
     Rigidbody m_Rigidbody;
     int chopState = 0;
     public bool active = false;
-    float throwPow = 1.5f;
+    public float throwPow = 1.5f;
     bool chargeUp = false;
 
     public TrailRenderer TR;
@@ -41,6 +41,7 @@ public class test_food_script : MonoBehaviour
     public bool isChoppable;
     public bool isCookable;
     public ParticleSystem chopParticle;
+    float unGrabTimer = 0f;
 
     void Start()
     {
@@ -54,13 +55,19 @@ public class test_food_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!isHeld && m_Rigidbody.velocity.magnitude < 5)
+        if(!isHeld)
+        {
+            unGrabTimer += 5 * Time.deltaTime;
+        }
+
+        //End trail early
+        if(!isHeld && m_Rigidbody.velocity.magnitude < 1 && unGrabTimer > 0.1f)
         {
             //throwPow -= 1 * Time.deltaTime;
-		if(TR!=null)
-		{
-			TR.enabled = false;
-		}
+		    if(TR!=null)
+		    {
+			    //TR.enabled = false;
+		    }
             
             //throwPow = 1.5f;
         }
@@ -86,9 +93,9 @@ public class test_food_script : MonoBehaviour
         gameObject.GetComponent<XRGrabInteractable>().throwVelocityScale = throwPow;
 
 
-	  if(TR!=null)
-	  {
-		if(throwPow>5)
+	    if(TR!=null)
+	    {
+		    if(throwPow>5)
         	{
             	TR.enabled = true;
         	}
@@ -96,7 +103,7 @@ public class test_food_script : MonoBehaviour
         	{
             	TR.enabled = false;
         	}
-	  }
+	    }
 
 
 
@@ -236,6 +243,7 @@ public class test_food_script : MonoBehaviour
                 break;
 
             case "Rat zone":
+                //Rats will not be bumped
                 if(GO.tag == "Rat")
                 {
                     break;
@@ -245,6 +253,7 @@ public class test_food_script : MonoBehaviour
                 {
                     break;
                 }
+                throwPow = 10;
                 //Get forward direction of acting object and apply magnitude transformations
                 Vector3 forward = coll.transform.parent.transform.forward * 90 * (1 / 1.5f);
                 //Get vertical component and combine
@@ -350,6 +359,7 @@ public class test_food_script : MonoBehaviour
     }
     public void unGrab()
     {
+        unGrabTimer = 0f;
         isHeld = false;
         EndCharge();
     }
