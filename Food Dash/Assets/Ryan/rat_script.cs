@@ -90,9 +90,9 @@ public class rat_script : MonoBehaviour
         }
 
         //Debug.Log(wanderTimer);
-        if(!(wanderTimer > 10))
+        if(!(wanderTimer > 3))
         {
-            wanderTimer += 1 * Time.fixedDeltaTime;
+            wanderTimer += 1 * Time.deltaTime;
             return;
         }
         //Reset wander timer
