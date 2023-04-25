@@ -186,6 +186,11 @@ public class test_food_script : MonoBehaviour
                         //coll.transform.parent.parent.GetComponent<stove_controller>().ResetCook();
 
                         coll.transform.parent.parent.GetComponent<stove_controller>().EjectFood(tempFood, throwPow);
+                        coll.transform.parent.parent.GetComponent<stove_controller>().ResetCook() ;
+                        //Remove velocity and place in work zone
+                        GO.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                        GO.transform.position = coll.transform.GetChild(0).transform.position;
+                        coll.transform.parent.parent.GetComponent<stove_controller>().ObjectEnter(GO);
 
 
 

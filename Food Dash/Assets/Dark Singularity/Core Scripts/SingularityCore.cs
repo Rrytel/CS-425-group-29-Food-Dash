@@ -12,6 +12,7 @@ public class SingularityCore : MonoBehaviour
                 return;
             }
             other.gameObject.SetActive(false);
+            Destroy(other.gameObject);
         }
     }
 

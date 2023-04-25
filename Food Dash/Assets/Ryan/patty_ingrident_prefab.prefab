@@ -321,8 +321,8 @@ MonoBehaviour:
   cooked: 0
   burnt: 0
   heat: 0
-  cookThresh: 25
-  burnThresh: 50
+  cookThresh: 50
+  burnThresh: 200
   chopThresh: 0
   audioSource: {fileID: 3700174163134145312}
   cookedSound: {fileID: 8300000, guid: b9703806690cb49a58ab182032cad276, type: 3}
