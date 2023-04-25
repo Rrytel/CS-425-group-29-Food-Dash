@@ -26,7 +26,7 @@ public class ratAnimatorScript : MonoBehaviour
         speed = Vector3.Distance(oldPos, transform.position);
         oldPos = transform.position;
 
-        if (canWalk && speed > .01)
+        if (canWalk && speed > .001)
         {
 
             m_Animator.SetTrigger("Walk");
