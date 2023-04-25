@@ -305,20 +305,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2788600840085194103, guid: d75f3d05187ea3b4fa92174a5981baa8, type: 3}
   m_PrefabInstance: {fileID: 2788600840079014345}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &14793928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 14793918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bbe887796b8fc647a441864e4931521, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  food: {fileID: 1000014236023566, guid: a2a488e7caca6bd4280bf13b8e973858, type: 3}
-  IPoint: {fileID: 0}
 --- !u!1001 &18428821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7329,20 +7315,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pullable: 0
---- !u!114 &1350758944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1350758942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bbe887796b8fc647a441864e4931521, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  food: {fileID: 1000014236023566, guid: a2a488e7caca6bd4280bf13b8e973858, type: 3}
-  IPoint: {fileID: 0}
 --- !u!195 &1350758947 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 2788600840085193992, guid: d75f3d05187ea3b4fa92174a5981baa8, type: 3}
@@ -7466,7 +7438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbdb62f4e6f36e749ac1eb79a9026f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ratObject: {fileID: 3312712655609097071, guid: 914e05056204c494389be6761fa0c564, type: 3}
+  ratObject: {fileID: 14793918}
   spawns:
   - {fileID: 1487659574}
   - {fileID: 1073526343}
@@ -12466,20 +12438,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pullable: 0
---- !u!114 &2104467717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2104467715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bbe887796b8fc647a441864e4931521, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  food: {fileID: 1000014236023566, guid: a2a488e7caca6bd4280bf13b8e973858, type: 3}
-  IPoint: {fileID: 0}
 --- !u!195 &2104467720 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 2788600840085193992, guid: d75f3d05187ea3b4fa92174a5981baa8, type: 3}
@@ -12852,7 +12810,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: ratAnimated (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3434219562876652144, guid: 8af0754de728a464493b68806a53a412, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8af0754de728a464493b68806a53a412, type: 3}
 --- !u!1001 &5604980412310876002
 PrefabInstance:
