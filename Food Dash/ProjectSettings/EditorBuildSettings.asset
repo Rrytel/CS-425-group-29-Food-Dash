@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/Kiara_Assets/Scenes/WaitingForPlayer.unity
     guid: 1c2acd7d32effcf4ba5976535e271c39
   - enabled: 1
-    path: Assets/Ryan/food_dash.unity
+    path: Assets/Ryan/food_dash_aaron.unity
     guid: d5b49207ad562714f9493592cc01c983
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: b46c4cd5e6f285742bf110b301a3a48d, type: 2}
