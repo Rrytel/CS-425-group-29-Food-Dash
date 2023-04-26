@@ -13,15 +13,21 @@ public class SpawnFood : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
-		if (Input.GetKeyDown (KeyCode.B))
+		if (Input.GetKeyDown (KeyCode.P))
+		{
+			foodPrefab.GetComponent <Food> ().type = FoodTypes.Pizza;
+
+			Instantiate (foodPrefab);
+		}
+		else if (Input.GetKeyDown (KeyCode.B))
 		{
 			foodPrefab.GetComponent<Food>().type = FoodTypes.Burger;
 
 			Instantiate (foodPrefab);
 		}
-		else if (Input.GetKeyDown (KeyCode.C))
+		else if (Input.GetKeyDown (KeyCode.F))
 		{
-			foodPrefab.GetComponent<Food> ().type = FoodTypes.Cheeseburger;
+			foodPrefab.GetComponent <Food> ().type = FoodTypes.Fries;
 
 			Instantiate (foodPrefab);
 		}

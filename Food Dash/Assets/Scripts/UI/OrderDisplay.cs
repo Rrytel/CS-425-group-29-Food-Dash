@@ -28,38 +28,25 @@ public class OrderDisplay : MonoBehaviour
 	string OrderString ()
 	{
 		int index;
-		// invalid order
-		string display = "\U0000274C";
+		string display = "Invalid order";
 		List<FoodTypes> orderItems = customer.GetOrderItems();
 
 		if (orderItems.Count > 0)
 		{
-			// clear the string
-			display = "";
+			display = "I'd like a ";
 
-			// todo: find a font that supports emojis for burger, cheese, and cup
-			for (index = 0; index < orderItems.Count; index += 1)
+			if (orderItems.Count > 1)
 			{
-				switch (orderItems [index])
+				for (index = 0; index < orderItems.Count - 1; index += 1)
 				{
-					case FoodTypes.Burger:
-						//display += "\U0001F354";
-						display = "Burger";
-						break;
-					case FoodTypes.Cheeseburger:
-						//display += "\U0001F9C0 \U0001F354";
-						display = "Cheeseburger";
-						break;
-					case FoodTypes.Drink:
-						//display += "\U0001F964";
-						display += "Drink";
-						break;
+					display += orderItems [index].ToString () + ", ";
 				}
 
-				if (index < orderItems.Count - 1)
-				{
-					display += ", ";
-				}
+				display += "and " + orderItems [index].ToString () + ".";
+			}
+			else
+			{
+				display += orderItems [0].ToString () + ". ";
 			}
 		}
 

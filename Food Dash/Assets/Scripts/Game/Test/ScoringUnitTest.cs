@@ -29,6 +29,7 @@ public class ScoringUnitTest : MonoBehaviour
 
 		// setup sample order
 		itemsList.Add (FoodTypes.Burger);
+		itemsList.Add (FoodTypes.Fries);
 		itemsList.Add (FoodTypes.Drink);
 
 		// spawn customer
