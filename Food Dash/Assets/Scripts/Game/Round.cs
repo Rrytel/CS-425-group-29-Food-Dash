@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Round : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class Round : MonoBehaviour
 
 	// score needed to advance to the next day
 	int minScore;
+	int level;
 
 	// how many customers will visit during this round
 	int totalCustomers;
@@ -30,7 +32,7 @@ public class Round : MonoBehaviour
 	float spawnTimer = 0;
 	float roundTimer = 0;
 
-	List <Customer> currentCustomers = new ();
+	List<Customer> currentCustomers = new ();
 
 	void Start ()
 	{
@@ -41,7 +43,7 @@ public class Round : MonoBehaviour
 		//customerPrefab = Resources.Load <GameObject> (@"..\Prefabs\Game\Customer");
 		//victoryScreen = GameObject.Find ("Victory");
 		//defeatScreen = GameObject.Find ("Defeat");
-		scoring = GetComponent <Score> ();
+		scoring = GetComponent<Score> ();
 
 		NewRound (false);
 	}
@@ -59,7 +61,7 @@ public class Round : MonoBehaviour
 			// if round was won
 			if (EndRound ())
 			{
-				victoryScreen.GetComponentInChildren <TextMeshProUGUI> ().text = "Day " + day.ToString () + " success!";
+				victoryScreen.GetComponentInChildren<TextMeshProUGUI> ().text = "Day " + day.ToString () + " success!";
 				victoryScreen.SetActive (true);
 				rayInteractor.SetActive (true);
 			}
@@ -85,7 +87,31 @@ public class Round : MonoBehaviour
 		// if advancing to the next day
 		if (advance)
 		{
+			/*
+			*	for demo:
+			*	load new scene for next day
+			*/
 			day += 1;
+			level += 1;
+			if (level > 3)
+			{
+				level = 0;
+			}
+
+			if (level == 2)
+			{
+				// 2nd level
+				SceneManager.LoadScene ("food_dash");
+			}
+			else if (level == 3)
+			{
+				// 3rd level
+			}
+			else
+			{
+				// go back to 1st level
+				SceneManager.LoadScene ("food_dash_aaron");
+			}
 		}
 
 		// remove customers from the previous round
@@ -104,7 +130,7 @@ public class Round : MonoBehaviour
 		maxCustomers = 1;
 		spawnFrequency = timeLimit / 100;
 		// minimum score (needs tuning)
-		minScore = totalCustomers * 10;
+		minScore = totalCustomers * 5;
 
 		// disable ray interactor (ui controller)
 		rayInteractor.SetActive (false);
@@ -120,7 +146,7 @@ public class Round : MonoBehaviour
 	{
 		if (currentCustomers.Count < maxCustomers && spawnTimer > spawnFrequency)
 		{
-			currentCustomers.Add (Instantiate (customerPrefab, GetComponent<Transform> ()).GetComponent <Customer> ());
+			currentCustomers.Add (Instantiate (customerPrefab, GetComponent<Transform> ()).GetComponent<Customer> ());
 
 			spawnTimer = 0;
 

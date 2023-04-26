@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Food : MonoBehaviour
 {
-    public FoodTypes type = FoodTypes.Pizza;
+    public FoodTypes type = FoodTypes.Burger;
 
 	string originalName;
 
@@ -35,8 +35,8 @@ public class Food : MonoBehaviour
 
 public enum FoodTypes
 {
-	Pizza,
+	Cheeseburger,
 	Burger,
-	Fries,
+	// drink will have no ingredients, it will just spawn as a completed food
 	Drink
 }

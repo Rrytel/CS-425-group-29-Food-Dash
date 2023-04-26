@@ -22,8 +22,53 @@ public class PlateDisplay : MonoBehaviour
 		displayText.text = PlateString ();
     }
 
+	/*
+	*	creates a string of emojis to represent required ingredients
+	*/
 	string PlateString ()
 	{
-		return plate.type.ToString ();
+		string output = "";
+
+		// the ingredients that the plate still needs
+		List <IngredientTypes> currentIngredients = plate.GetIngredients ();
+
+		// todo: find a font that supports these emojis
+		for (int index = 0; index < currentIngredients.Count; index += 1)
+		{
+			switch (currentIngredients [index])
+			{
+				case IngredientTypes.Bun:
+					//output += "\U0001F35E";
+					output += "Bun";
+					break;
+
+				case IngredientTypes.Cheese:
+					//output += "\U0001F9C0";
+					output += "Cheese";
+					break;
+
+				case IngredientTypes.Lettuce:
+					//output += "\U0001F96C";
+					output += "Lettuce";
+					break;
+
+				case IngredientTypes.Patty:
+					//output += "\U0001F969";
+					output += "Patty";
+					break;
+
+				case IngredientTypes.Tomato:
+					//output += "\U0001F345";
+					output += "Tomato";
+					break;
+			}
+
+			if (index < currentIngredients.Count - 1)
+			{
+				output += ", ";
+			}
+		}
+
+		return output;
 	}
 }
