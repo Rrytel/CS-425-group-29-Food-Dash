@@ -931,11 +931,11 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183259719}
-  m_Material: {fileID: 13400000, guid: 20b27a2b09cf5470e866c2708f9f9dc8, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.999999, y: 0.12728289, z: 9.999999}
+  m_Size: {x: 10.36, y: 0.12728289, z: 10.09}
   m_Center: {x: 0, y: -0.063641444, z: 0}
 --- !u!23 &183259722
 MeshRenderer:
