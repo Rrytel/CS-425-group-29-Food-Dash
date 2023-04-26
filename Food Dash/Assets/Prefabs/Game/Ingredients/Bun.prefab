@@ -19,8 +19,8 @@ GameObject:
   - component: {fileID: 3700174163134145319}
   - component: {fileID: -8214326252924229293}
   m_Layer: 7
-  m_Name: patty_ingrident_prefab
-  m_TagString: Untagged
+  m_Name: Bun
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,7 +47,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3700174163134145318}
-  m_Mesh: {fileID: -6889341429072201443, guid: 11a1f094af3e06440a6e228b4f791a74, type: 3}
+  m_Mesh: {fileID: 4129064063211441949, guid: b6a1084e9fbad4f4d90b011635958831, type: 3}
 --- !u!23 &3700174163134145325
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 46c24c3333405954cbf3d2bdbd52e60e, type: 2}
+  - {fileID: 2100000, guid: 27d1a7c1a4a5dd44f80fffcf390436c9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -321,8 +321,8 @@ MonoBehaviour:
   cooked: 0
   burnt: 0
   heat: 0
-  cookThresh: 50
-  burnThresh: 200
+  cookThresh: 25
+  burnThresh: 50
   chopThresh: 0
   audioSource: {fileID: 3700174163134145312}
   cookedSound: {fileID: 8300000, guid: b9703806690cb49a58ab182032cad276, type: 3}
@@ -546,4 +546,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c630b5bdee76b3944a81d696abf906e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
+  type: 0

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
-*	unprepared food test code
+*	unprepared food code
 */
 public class Plate : MonoBehaviour
 {
-	public FoodTypes type = FoodTypes.Pizza;
+	public FoodTypes type = FoodTypes.Burger;
 	public GameObject foodPrefab;
 
 	bool spawnedFood = false;
@@ -39,32 +39,23 @@ public class Plate : MonoBehaviour
 	*/
 	void DefineIngredients ()
 	{
-		if (type == FoodTypes.Pizza)
-		{
-			ingredients.Add (IngredientTypes.Dough);
-			ingredients.Add (IngredientTypes.Sauce);
-			ingredients.Add (IngredientTypes.Cheese);
-		}
-		else if (type == FoodTypes.Burger)
+		if (type == FoodTypes.Burger)
 		{
 			ingredients.Add (IngredientTypes.Bun);
 			ingredients.Add (IngredientTypes.Patty);
-			//ingredients.Add (IngredientTypes.Cheese);
-			//ingredients.Add (IngredientTypes.Lettuce);
-			ingredients.Add (IngredientTypes.Bun);
+			ingredients.Add (IngredientTypes.Lettuce);
 			ingredients.Add (IngredientTypes.Tomato);
+			ingredients.Add (IngredientTypes.Bun);
 			
 		}
-		else if (type == FoodTypes.Fries)
+		else if (type == FoodTypes.Cheeseburger)
 		{
-			ingredients.Add (IngredientTypes.Potato);
-			ingredients.Add (IngredientTypes.Salt);
-		}
-		else if (type == FoodTypes.Drink)
-		{
-			ingredients.Add (IngredientTypes.Beverage);
-			ingredients.Add (IngredientTypes.Ice);
-			ingredients.Add (IngredientTypes.Cup);
+			ingredients.Add (IngredientTypes.Bun);
+			ingredients.Add (IngredientTypes.Patty);
+			ingredients.Add (IngredientTypes.Cheese);
+			ingredients.Add (IngredientTypes.Lettuce);
+			ingredients.Add (IngredientTypes.Tomato);
+			ingredients.Add (IngredientTypes.Bun);
 		}
 	}
 
@@ -89,5 +80,13 @@ public class Plate : MonoBehaviour
 		}
 
 		return false;
+	}
+
+	/*
+	*	returns a list of the unfulfilled ingredients
+	*/
+	public List <IngredientTypes> GetIngredients ()
+	{
+		return ingredients;
 	}
 }
