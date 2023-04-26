@@ -7,7 +7,7 @@ using UnityEngine;
 */
 public class Ingredient : MonoBehaviour
 {
-	public IngredientTypes type  = IngredientTypes.Bun;
+	public IngredientTypes type  = IngredientTypes.Dough;
 
 	string originalName;
 
@@ -23,30 +23,25 @@ public class Ingredient : MonoBehaviour
 	*/
 	void OnTriggerEnter (Collider other)
 	{
-		test_food_script foodScript = GetComponent <test_food_script> ();
-
 		if (other.CompareTag ("plate"))
 		{
-			// check whether the ingredient is a patty
-			if (type != IngredientTypes.Patty)
-			{
-				// if it is not a patty, add it to the plate
-				other.transform.parent.GetComponent <Plate> ().AddIngredient (this);
-			}
-			else if (foodScript.cooked && !foodScript.burnt)
-			{
-				// if it a patty that is cooked but not burnt, add it to the plate
-				other.transform.parent.GetComponent <Plate> ().AddIngredient (this);
-			}
+			other.transform.parent.GetComponent <Plate> ().AddIngredient (this);
 		}
 	}
 }
 
 public enum IngredientTypes
 {
+	Dough,
+	Sauce,
 	Bun,
 	Patty,
 	Cheese,
 	Lettuce,
+	Potato,
+	Salt,
+	Beverage,
+	Ice,
+	Cup,
 	Tomato
 }

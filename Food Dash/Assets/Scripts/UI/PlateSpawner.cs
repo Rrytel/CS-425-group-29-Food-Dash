@@ -22,14 +22,18 @@ public class PlateSpawner : MonoBehaviour
 			switch (iteration)
 			{
 				case 0:
-					platePrefab.GetComponent <Plate> ().type = FoodTypes.Burger;
+					platePrefab.GetComponent <Plate> ().type = FoodTypes.Pizza;
 					break;
 
 				case 1:
-					platePrefab.GetComponent <Plate> ().type = FoodTypes.Cheeseburger;
+					platePrefab.GetComponent <Plate> ().type = FoodTypes.Burger;
 					break;
 
 				case 2:
+					platePrefab.GetComponent <Plate> ().type = FoodTypes.Fries;
+					break;
+
+				case 4:
 					platePrefab.GetComponent <Plate> ().type = FoodTypes.Drink;
 					break;
 			}
@@ -38,7 +42,7 @@ public class PlateSpawner : MonoBehaviour
 
 			iteration += 1;
 			
-			if (iteration > 2)
+			if (iteration > 4)
 			{
 				iteration = 0;
 			}

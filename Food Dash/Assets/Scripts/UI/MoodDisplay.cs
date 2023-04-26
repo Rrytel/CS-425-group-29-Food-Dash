@@ -24,23 +24,6 @@ public class MoodDisplay : MonoBehaviour
 
 	string MoodString ()
 	{
-		string output = "";
-
-		switch (customer.GetMood ())
-		{
-			case Moods.Happy:
-				output = "\U0001F600";
-				break;
-
-			case Moods.Impatient:
-				output = "\U0001F928";
-				break;
-
-			case Moods.Upset:
-				output = "\U0001F620";
-				break;
-		}
-
-		return output;
+		return customer.GetMood().ToString();
 	}
 }
