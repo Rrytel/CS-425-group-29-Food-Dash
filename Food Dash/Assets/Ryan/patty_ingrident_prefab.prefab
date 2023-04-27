@@ -331,6 +331,7 @@ MonoBehaviour:
   activeAreas: []
   prevAreas: []
   active: 0
+  throwPow: 1.5
   TR: {fileID: 3700174163134145319}
   cookedMat: {fileID: 2100000, guid: 8d8accd05df1b84468a7b1feae50c68e, type: 2}
   burntMat: {fileID: 2100000, guid: bb82f3a2983f24f4d80bedf1473dc6bf, type: 2}
@@ -546,4 +547,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c630b5bdee76b3944a81d696abf906e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
+  type: 1
