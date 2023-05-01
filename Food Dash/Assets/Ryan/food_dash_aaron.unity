@@ -3142,6 +3142,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4198527796611440952, guid: 14afb37b1b1bcd84e91eade809dad010, type: 3}
+      propertyPath: m_text
+      value: 'Day 0 Success! You earned $7 today with inspection grade: A.'
+      objectReference: {fileID: 0}
     - target: {fileID: 4494290404303742314, guid: 14afb37b1b1bcd84e91eade809dad010, type: 3}
       propertyPath: m_Name
       value: Victory
@@ -4126,10 +4130,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2063063657}
-    - target: {fileID: 1450952010661511529, guid: a25e54b9543b13740a741ada3d9f8b42, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -120
-      objectReference: {fileID: 0}
     - target: {fileID: 2169583868169654508, guid: a25e54b9543b13740a741ada3d9f8b42, type: 3}
       propertyPath: gameController
       value: 
@@ -4236,12 +4236,12 @@ GameObject:
   - component: {fileID: 955434067}
   - component: {fileID: 955434066}
   m_Layer: 5
-  m_Name: Game Over
+  m_Name: Canvas
   m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &955434066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4281,7 +4281,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &955434068
 Canvas:
   m_ObjectHideFlags: 0
@@ -4291,8 +4291,8 @@ Canvas:
   m_GameObject: {fileID: 955434065}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 2
+  m_Camera: {fileID: 2063063657}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -4310,20 +4310,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 955434065}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 133090795}
-  m_Father: {fileID: 2063063656}
-  m_RootOrder: 3
+  m_Father: {fileID: 1696872394}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &974445456
 GameObject:
   m_ObjectHideFlags: 0
@@ -4590,8 +4590,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 922800834577600847, guid: f2b0b47d7947a6c49b87c898f650d49b, type: 3}
-      propertyPath: timeLimit
-      value: 120
+      propertyPath: level
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 922800834577600847, guid: f2b0b47d7947a6c49b87c898f650d49b, type: 3}
       propertyPath: defeatScreen
@@ -7526,6 +7526,38 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 5.0006995, z: 5.00035}
   m_Center: {x: 0, y: 0, z: -0.00017488003}
+--- !u!1 &1696872393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1696872394}
+  m_Layer: 5
+  m_Name: Game Over
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1696872394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696872393}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2000}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 955434069}
+  m_Father: {fileID: 2063063656}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1706004715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9180,7 +9212,7 @@ Transform:
   - {fileID: 905588085}
   - {fileID: 654722342}
   - {fileID: 1320347343}
-  - {fileID: 955434069}
+  - {fileID: 1696872394}
   m_Father: {fileID: 1519113255}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9209,7 +9241,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 10000
-  field of view: 60
+  field of view: 26.991467
   orthographic: 0
   orthographic size: 5
   m_Depth: 1

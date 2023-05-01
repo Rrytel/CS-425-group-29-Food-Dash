@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f1192225cd3e7428174149761e4e91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  day: 1
-  timeLimit: 90
+  level: 0
+  timeLimit: 240
   customerPrefab: {fileID: 5488821722800851327, guid: e9435079ecd8582409aab6beb9992a55, type: 3}
   victoryScreen: {fileID: 0}
   defeatScreen: {fileID: 0}

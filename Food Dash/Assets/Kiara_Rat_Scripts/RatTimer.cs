@@ -16,7 +16,7 @@ public class RatTimer : MonoBehaviour
         spawnTime = 15;
 
         //Based on the round the user is in, spawn a diff. # of rats
-        int day = gameController.GetComponent<Round>().day;
+        int day = gameController.GetComponent<Round>().GetDay ();
         if (day == 1)
         {
             gameSpawn = 3;
