@@ -8,11 +8,25 @@ public class RatTimer : MonoBehaviour
     float spawnTime = 15;
     float gameSpawn = 5;
     public List<GameObject> spawns;
+    public GameObject gameController;
     // Start is called before the first frame update
     void Start()
     {
+
         spawnTime = 15;
-        gameSpawn = 5;
+
+        //Based on the round the user is in, spawn a diff. # of rats
+        int day = gameController.GetComponent<Round>().day;
+        if (day == 1)
+        {
+            gameSpawn = 3;
+        }else if(day == 2){
+            gameSpawn = 5;
+        }else if (day == 3)
+        {
+            gameSpawn = 7;
+        }
+        //gameSpawn = 5;
     }
 
     // Update is called once per frame
@@ -28,7 +42,7 @@ public class RatTimer : MonoBehaviour
             spawnTime = 15f;
 
             int index = Random.Range(0, spawns.Count);
-            Debug.Log("index: " + index);
+            Debug.Log($"index: {index}");
             //give the rat a random pos.
             var randPos = spawns[index].transform.position; 
             //var randPos = new Vector3(Random.Range(-4.96f, 0.04f), 0.19f, Random.Range(-3.18f, -0.7f));

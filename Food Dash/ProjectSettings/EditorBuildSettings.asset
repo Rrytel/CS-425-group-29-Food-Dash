@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Kiara_Assets/Scenes/TrialKeyboard.unity
     guid: 1a803d83e6e526b4581e9879119a8710
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: eb9f2c5b906ade642ba499101d91238d
   - enabled: 0
@@ -34,7 +34,13 @@ EditorBuildSettings:
     guid: 1c2acd7d32effcf4ba5976535e271c39
   - enabled: 1
     path: Assets/Ryan/food_dash_aaron.unity
+    guid: 5d7740727df430649bbfb250c0595592
+  - enabled: 1
+    path: Assets/Ryan/food_dash.unity
     guid: d5b49207ad562714f9493592cc01c983
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: b46c4cd5e6f285742bf110b301a3a48d, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 631805a0d4de6e54faa8f77547e8637c, type: 2}

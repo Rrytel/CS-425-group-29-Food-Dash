@@ -6,7 +6,7 @@ Library: lib_burst_generated
 --dump=Function
 --float-precision=Standard
 --disable-warnings=BC1370
---compilation-defines=UNITY_2021_3_13
+--compilation-defines=UNITY_2021_3_15
 --compilation-defines=UNITY_2021_3
 --compilation-defines=UNITY_2021
 --compilation-defines=UNITY_5_3_OR_NEWER
@@ -214,8 +214,8 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Oculus.Interaction.OVR.Samples.dll
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Meta.WitAi.TTS.Samples.dll
---root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Meta.WitAi.Lib.dll
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Oculus.Voice.Demo.dll
+--root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Meta.WitAi.Lib.dll
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Oculus.Interaction.OVR.dll
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\Unity.VisualEffectGraph.Runtime.dll
 --root-assembly=C:\Users\aaron\Documents\GitHub\CS-425-group-29-Food-Dash\Food Dash\Temp\StagingArea\Data\Managed\AssistantCoreSDKRuntime.dll

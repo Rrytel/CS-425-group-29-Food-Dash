@@ -17,6 +17,7 @@ public class rat_script : MonoBehaviour
     private bool touchFloor = false;
     private bool seekingBait = false;
     public float baitRaidus = 5;
+    public Light SP;
 
     public float wanderRad = 500f;
 
@@ -40,7 +41,15 @@ public class rat_script : MonoBehaviour
     void Update()
     {
         
-        
+        if(!agent.enabled)
+        {
+            SP.enabled = false;
+        }
+        else
+        {
+            SP.enabled = true;
+        }
+
         if(agent.hasPath)
         {
             //Rat notices food, anime eyes
@@ -48,8 +57,9 @@ public class rat_script : MonoBehaviour
         }
 
         //Set goal
-        if (!agent.enabled)
+        if (inVaccum)
         {
+            
             gameObject.GetComponent<SingularityPullable>().pullable = true;
             return;
         }
@@ -89,9 +99,9 @@ public class rat_script : MonoBehaviour
         }
 
         //Debug.Log(wanderTimer);
-        if(!(wanderTimer > 10))
+        if(!(wanderTimer > 3))
         {
-            wanderTimer += 1 * Time.fixedDeltaTime;
+            wanderTimer += 1 * Time.deltaTime;
             return;
         }
         //Reset wander timer
@@ -196,12 +206,14 @@ public class rat_script : MonoBehaviour
             case "black hole":
                 if(coll.gameObject.GetComponent<blackHoleController_scr>().active == true)
                 {
-                    
+                    m_Rigidbody.drag = 1;
+                    inVaccum = true;
                     agent.enabled = false;
                 }
                 if (coll.gameObject.GetComponent<blackHoleController_scr>().active == false)
                 {
-                    agent.enabled = true;
+                    inVaccum = false;
+                    StartCoroutine(wakeUp());
                 }
                 break;
         }

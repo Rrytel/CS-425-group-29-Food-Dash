@@ -109,7 +109,7 @@ public class stove_controller : MonoBehaviour
 
         //Set marker that shows when cooking is complete
         endMarker.enabled = true;
-        endMarker.rectTransform.rotation = Quaternion.Euler(0f, 180f, (cook / burn) * 360);
+        endMarker.rectTransform.rotation = Quaternion.Euler(0f, 0f, (cook / burn) * 360);
         //value on the timer is equal to the heat value of the food - shows cooking process of the meal
         timerVal = food.GetComponent<test_food_script>().heat;
         
@@ -271,10 +271,11 @@ public class stove_controller : MonoBehaviour
         //Get forward direction and apply magnitude
         Vector3 forward = transform.forward * 90 * (launchPow/1.5f);
         //Get vertical component and combine
-        Vector3 vertical = new Vector3(0f, 500f, 0f);
+        Vector3 vertical = new Vector3(0f, 200f, 0f);
         Vector3 launchVec = forward + vertical;
         //Launch food
         food.GetComponent<Rigidbody>().AddForce(launchVec);
+        food.GetComponent<test_food_script>().throwPow = 10;
 
         //Debug.Log(launchVec);
     }
@@ -282,21 +283,25 @@ public class stove_controller : MonoBehaviour
     public void ResetCook()
     {
         gameObject.GetComponent<stove_controller>().StopCoroutine(CC);
+        //Reset values 
         if (colorShift != null)
         {
-            //StopCoroutine(colorShift);
+            StopCoroutine(colorShift);
         }
+
+
         StartCoroutine("markerFade");
-        //Reset values 
         audioSource.Stop();
         transform.Find("pan").localPosition = new Vector3(0f, 0f, 0f);
         occupied = false;
+        //marker.enabled = false;
+        //CompleteMarker.enabled = false;
+
+        //CompleteMarker.color = Color.white;
         if (colorShift != null)
             StopCoroutine(colorShift);
         colorShift = StartCoroutine(colorShiftCMark(CompleteMarker.color, Color.white));
-        //marker.enabled = false;
-        //CompleteMarker.enabled = false;
-        //CompleteMarker.color = Color.white;
+
         ps.Stop(true);
         //LoadingBar.fillAmount = 0;
         timerVal = 0;

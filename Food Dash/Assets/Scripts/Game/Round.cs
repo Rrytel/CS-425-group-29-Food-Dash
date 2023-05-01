@@ -45,7 +45,14 @@ public class Round : MonoBehaviour
 		//defeatScreen = GameObject.Find ("Defeat");
 		scoring = GetComponent<Score> ();
 
-		NewRound (false);
+		// set new round properties
+		totalCustomers = day + Random.Range (0, day);
+		maxCustomers = 1;
+		spawnFrequency = timeLimit / 100;
+		// minimum score (needs tuning)
+		minScore = totalCustomers * 5;
+
+		Time.timeScale = 1;
 	}
 
 	void Update ()
@@ -93,25 +100,28 @@ public class Round : MonoBehaviour
 			*/
 			day += 1;
 			level += 1;
-			if (level > 3)
-			{
-				level = 0;
-			}
+		}
 
-			if (level == 2)
-			{
-				// 2nd level
-				SceneManager.LoadScene ("food_dash");
-			}
-			else if (level == 3)
-			{
-				// 3rd level
-			}
-			else
-			{
-				// go back to 1st level
+		// go back to first level after completing last
+		if (level > 2)
+		{
+			level = 1;
+		}
+
+
+		switch (level)
+		{
+			case 1:
 				SceneManager.LoadScene ("food_dash_aaron");
-			}
+				break;
+
+			case 2:
+				SceneManager.LoadScene ("food_dash");
+				break;
+
+			default:
+				SceneManager.LoadScene ("food_dash");
+				break;
 		}
 
 		// remove customers from the previous round
@@ -126,7 +136,7 @@ public class Round : MonoBehaviour
 		scoring.ResetScore ();
 
 		// set new round properties
-		totalCustomers = day + Random.Range (0, day);
+		totalCustomers = day;
 		maxCustomers = 1;
 		spawnFrequency = timeLimit / 100;
 		// minimum score (needs tuning)

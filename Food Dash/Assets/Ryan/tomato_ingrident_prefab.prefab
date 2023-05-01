@@ -15012,6 +15012,7 @@ MonoBehaviour:
   activeAreas: []
   prevAreas: []
   active: 0
+  throwPow: 1.5
   TR: {fileID: 7947380356287896582}
   cookedMat: {fileID: 0}
   burntMat: {fileID: 0}
