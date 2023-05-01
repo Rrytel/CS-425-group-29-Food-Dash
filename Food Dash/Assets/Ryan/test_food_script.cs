@@ -172,7 +172,41 @@ public class test_food_script : MonoBehaviour
                 activeAreas.Add(coll);
                 if(isHeld)
                 {
+                    //If we want to eject food when not thrown
+                    /*if (prevAreas.Contains(coll))
+                    {
+                        break;
+                    }
+                    if (active)
+                    {
+                        break;
+                    }
+                    //Kick food out
+                    if (coll.transform.parent.parent.GetComponent<stove_controller>().occupied == true)
+                    {
+                        GameObject tempFood = coll.transform.parent.parent.GetComponent<stove_controller>().activeItems[0];
 
+                        coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(tempFood.gameObject);
+                        //coll.transform.parent.parent.GetComponent<stove_controller>().ResetCook();
+
+                        coll.transform.parent.parent.GetComponent<stove_controller>().EjectFood(tempFood, throwPow);
+                        coll.transform.parent.parent.GetComponent<stove_controller>().ResetCook();
+                        //Remove velocity and place in work zone
+                        
+                        coll.transform.parent.parent.GetComponent<stove_controller>().ObjectEnter(GO);
+
+
+
+                        //coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(tempFood.gameObject);
+                        //tempFood.gameObject.GetComponent<Rigidbody>().MovePosition(coll.transform.parent.parent.GetComponent<stove_controller>().launchPos.transform.position);
+                        //tempFood.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, -60));
+
+                        //coll.transform.parent.parent.GetComponent<stove_controller>().ObjectExit(tempFood.gameObject);
+                        //coll.transform.parent.parent.GetComponent<stove_controller>().activeItems.Clear();
+                        //tempFood.GetComponent<test_food_script>().DA();
+                    
+                    }
+                    */
                 }
                 if(isHeld == false)
                 {
