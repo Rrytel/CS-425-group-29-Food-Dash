@@ -17,6 +17,7 @@ public class rat_script : MonoBehaviour
     private bool touchFloor = false;
     private bool seekingBait = false;
     public float baitRaidus = 5;
+    public Light SP;
 
     public float wanderRad = 500f;
 
@@ -40,7 +41,15 @@ public class rat_script : MonoBehaviour
     void Update()
     {
         
-        
+        if(!agent.enabled)
+        {
+            SP.enabled = false;
+        }
+        else
+        {
+            SP.enabled = true;
+        }
+
         if(agent.hasPath)
         {
             //Rat notices food, anime eyes

@@ -48,8 +48,10 @@ public class RespawnFood : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //check if the user is pressing a certain button or trigger
         if (other.gameObject.tag == "Player")
         {
+            
             Debug.Log("Player touching");
             //Instantiate(food, IPoint.position, Quaternion.identity);
             spawnFood();
