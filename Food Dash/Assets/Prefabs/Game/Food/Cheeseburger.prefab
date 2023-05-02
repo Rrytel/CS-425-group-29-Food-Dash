@@ -321,6 +321,7 @@ MonoBehaviour:
   foodType: patty
   cooked: 0
   burnt: 0
+  chopped: 0
   heat: 0
   cookThresh: 25
   burnThresh: 50

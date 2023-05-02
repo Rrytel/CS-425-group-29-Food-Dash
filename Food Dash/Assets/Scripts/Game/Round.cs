@@ -14,6 +14,7 @@ public class Round : MonoBehaviour
 	public GameObject customerPrefab;
 	public GameObject victoryScreen;
 	public GameObject defeatScreen;
+	public GameObject gameOverScreen;
 	public GameObject rayInteractor;
 	
 	Score scoring;
@@ -58,22 +59,28 @@ public class Round : MonoBehaviour
 			Time.timeScale = 0;
 
 			// if round was won
-			if (EndRound ())
+			if (EndRound () == 1)
 			{
 				victoryScreen.GetComponentInChildren<TextMeshProUGUI> ().text = "Day " + day.ToString () + " success! ";
 				victoryScreen.GetComponentInChildren<TextMeshProUGUI> ().text += "You earned $" + scoring.GetScore ().ToString () + " today ";
-				victoryScreen.GetComponentInChildren<TextMeshProUGUI> ().text += "with inspection grade: " + scoring.GetGrade ().ToString () + ".";
+				victoryScreen.GetComponentInChildren<TextMeshProUGUI> ().text += "with inspection grade " + scoring.GetGrade ().ToString () + ".";
 				victoryScreen.SetActive (true);
 				rayInteractor.SetActive (true);
 			}
 			// if round was lost
-			else
+			else if (EndRound () == 0)
 			{
 				defeatScreen.GetComponentInChildren<TextMeshProUGUI> ().text = "Day " + day.ToString () + " fail! ";
 				defeatScreen.GetComponentInChildren<TextMeshProUGUI> ().text += "You earned $" + scoring.GetScore ().ToString () + " today ";
-				defeatScreen.GetComponentInChildren<TextMeshProUGUI> ().text += "with inspection grade: " + scoring.GetGrade ().ToString () + ", ";
+				defeatScreen.GetComponentInChildren<TextMeshProUGUI> ().text += "with inspection grade " + scoring.GetGrade ().ToString () + ", ";
 				defeatScreen.GetComponentInChildren<TextMeshProUGUI> ().text += "but need " + minScore.ToString () + " to win.";
 				defeatScreen.SetActive (true);
+				rayInteractor.SetActive (true);
+			}
+			// true game over screen
+			else
+			{
+				gameOverScreen.SetActive (true);
 				rayInteractor.SetActive (true);
 			}
 		}
@@ -197,15 +204,32 @@ public class Round : MonoBehaviour
 	*	end the round and determine if the round was a success
 	*	returns true on win
 	*/
-	bool EndRound ()
+	int EndRound ()
 	{
 		/*
 		*	stop gameplay
 		*	maybe: save stats
 		*/
 
+		// if there are too many rats present at the end of the round
+		if (scoring.GetGrade () == 'F')
+		{
+			// true game over screen, the user will have to start from day 1
+			day = 1;
+			level = 1;
+
+			return -1;
+		}
+
 		// if minimum score is achieved
-		return scoring.GetScore () >= minScore;
+		if (scoring.GetScore () >= minScore)
+		{
+			return 1;
+		}
+		else
+		{
+			return 0;
+		}
 	}
 
 	public int GetDay ()

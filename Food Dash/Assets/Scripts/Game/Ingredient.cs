@@ -27,16 +27,36 @@ public class Ingredient : MonoBehaviour
 
 		if (other.CompareTag ("plate"))
 		{
-			// check whether the ingredient is a patty
-			if (type != IngredientTypes.Patty)
+			switch (type)
 			{
-				// if it is not a patty, add it to the plate
-				other.transform.parent.GetComponent <Plate> ().AddIngredient (this);
-			}
-			else if (foodScript.cooked && !foodScript.burnt)
-			{
-				// if it a patty that is cooked but not burnt, add it to the plate
-				other.transform.parent.GetComponent <Plate> ().AddIngredient (this);
+				case IngredientTypes.Patty:
+					// if a patty is cooked but not burnt
+					if (foodScript.cooked && !foodScript.burnt)
+					{
+						other.transform.parent.GetComponent<Plate> ().AddIngredient (this);
+					}
+					break;
+
+				case IngredientTypes.Lettuce:
+					// if lettuce is chopped
+					if (foodScript.chopped)
+					{
+						other.transform.parent.GetComponent<Plate> ().AddIngredient (this);
+					}
+					break;
+
+				case IngredientTypes.Tomato:
+					// if tomato is chopped
+					if (foodScript.chopped)
+					{
+						other.transform.parent.GetComponent<Plate> ().AddIngredient (this);
+					}
+					break;
+
+				default:
+					// default ingredient behavior
+					other.transform.parent.GetComponent<Plate> ().AddIngredient (this);
+					break;
 			}
 		}
 	}
