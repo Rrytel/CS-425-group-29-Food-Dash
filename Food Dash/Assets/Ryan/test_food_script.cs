@@ -262,16 +262,18 @@ public class test_food_script : MonoBehaviour
                 break;
 
             case "Knife":
-                
-                if(isChoppable)
+                //jess
+                if (isChoppable)
                 {
                     //Increment chop counter
                     chopState += 1;
-                    //Play chop sound
+
+                   
 
                     //Play chop animation
                     chopParticle.Emit(1);
                 }
+
 
 
                 break;
