@@ -2158,6 +2158,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tomato_ingrident_prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 7947380356287896583, guid: d1916db9c5430f8418f5d477ded6e67e, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3765f8d053363c745b8ac0cce1ddb9f9, type: 3}
     - target: {fileID: 7947380356287896590, guid: d1916db9c5430f8418f5d477ded6e67e, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -7767,6 +7771,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4980331068544172792, guid: 4f7d1e43a545d2f4bbb8f55affd37adc, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0b896752ba3457a4f912510c46093d59, type: 3}
     - target: {fileID: 4980331068544172794, guid: 4f7d1e43a545d2f4bbb8f55affd37adc, type: 3}
       propertyPath: m_Name
       value: lettuce_ingrident_prefab
@@ -10664,6 +10672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dde84e4c9a7643c459761b7c459677b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ratSound: {fileID: 0}
 --- !u!65 &1926395941
 BoxCollider:
   m_ObjectHideFlags: 0
