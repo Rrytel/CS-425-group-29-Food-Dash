@@ -6,8 +6,13 @@ TextureImporter:
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
+<<<<<<< Updated upstream:Food Dash/Assets/Plugins/Tiny Giant Studio/Modular 3D Text/Resources/Modular 3D Text/Justice Horizontal.png.meta
     enableMipMap: 0
     sRGBTexture: 1
+=======
+    enableMipMap: 1
+    sRGBTexture: 0
+>>>>>>> Stashed changes:Food Dash/Assets/Brick Project Studio/Fast Food Restaurant Kit/Common/Textures/INT_FFK_01_N.png.meta
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -23,6 +28,11 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+<<<<<<< Updated upstream:Food Dash/Assets/Plugins/Tiny Giant Studio/Modular 3D Text/Resources/Modular 3D Text/Justice Horizontal.png.meta
+=======
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+>>>>>>> Stashed changes:Food Dash/Assets/Brick Project Studio/Fast Food Restaurant Kit/Common/Textures/INT_FFK_01_N.png.meta
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -51,7 +61,11 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
+<<<<<<< Updated upstream:Food Dash/Assets/Plugins/Tiny Giant Studio/Modular 3D Text/Resources/Modular 3D Text/Justice Horizontal.png.meta
   textureType: 2
+=======
+  textureType: 1
+>>>>>>> Stashed changes:Food Dash/Assets/Brick Project Studio/Fast Food Restaurant Kit/Common/Textures/INT_FFK_01_N.png.meta
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -96,6 +110,21 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+<<<<<<< Updated upstream:Food Dash/Assets/Plugins/Tiny Giant Studio/Modular 3D Text/Resources/Modular 3D Text/Justice Horizontal.png.meta
+=======
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+>>>>>>> Stashed changes:Food Dash/Assets/Brick Project Studio/Fast Food Restaurant Kit/Common/Textures/INT_FFK_01_N.png.meta
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -120,6 +149,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
