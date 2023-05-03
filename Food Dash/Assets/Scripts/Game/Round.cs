@@ -82,6 +82,7 @@ public class Round : MonoBehaviour
 			{
 				gameOverScreen.SetActive (true);
 				rayInteractor.SetActive (true);
+				rayInteractor.SetActive (true);
 			}
 		}
 

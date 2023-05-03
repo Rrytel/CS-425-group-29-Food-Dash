@@ -134,7 +134,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.1
+  bundleVersion: .9
   preloadedAssets:
   - {fileID: 0}
   - {fileID: 0}
@@ -203,8 +203,6 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 11400000, guid: b46c4cd5e6f285742bf110b301a3a48d, type: 2}
-  - {fileID: 8442101534890849939, guid: 631805a0d4de6e54faa8f77547e8637c, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -224,7 +222,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.DefaultCompany.FoodDash
+    Android: com.CS426Spring2023Team29.FoodDash
     Standalone: com.DefaultCompany.Food-Dash
   buildNumber:
     Standalone: 0
