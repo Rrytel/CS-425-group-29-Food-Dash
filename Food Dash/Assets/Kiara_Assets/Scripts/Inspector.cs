@@ -20,8 +20,8 @@ public class Inspector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if 45 seconds have passed, give an inspection
-        if (Time.time >= time + 80f)
+        //if 45 seconds have passed, give an inspection - was 80f
+        if (Time.time >= time + 180f)
         {
             giveInspection();
         }
