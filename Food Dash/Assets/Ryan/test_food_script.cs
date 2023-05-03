@@ -15,6 +15,7 @@ public class test_food_script : MonoBehaviour
     public string foodType;
     public bool cooked = false;
     public bool burnt = false;
+	public bool chopped = false;
     
     public float heat = 0;
     public float cookThresh;
@@ -149,8 +150,8 @@ public class test_food_script : MonoBehaviour
         //Update mesh based on stage in chopping process
         if(chopState > chopThresh)
         {
-            //Update variables
-
+			//Update variables
+			chopped = true;
             //Swap for chopped mesh
             //meshF.sharedMesh = Resources.Load<Mesh>("sink_handwash");
             meshF.sharedMesh = choppedMesh;

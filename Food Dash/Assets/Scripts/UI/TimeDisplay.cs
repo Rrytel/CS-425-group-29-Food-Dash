@@ -29,7 +29,7 @@ public class TimeDisplay : MonoBehaviour
 		}
 		else
 		{
-			displayText.text = "Day " + roundTracker.day.ToString ();
+			displayText.text = "Day " + roundTracker.GetDay ().ToString ();
 		}
 
 		// show the time every 15 seconds

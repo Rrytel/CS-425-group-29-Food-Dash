@@ -237,6 +237,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1949481947184092204, guid: 2fce62ea9ec9aee46b06666ca3eab8a3, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 540
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949481947184092204, guid: 2fce62ea9ec9aee46b06666ca3eab8a3, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3319587371424692003, guid: 2fce62ea9ec9aee46b06666ca3eab8a3, type: 3}
@@ -293,6 +297,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7241079915075208986, guid: 2fce62ea9ec9aee46b06666ca3eab8a3, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 540
+      objectReference: {fileID: 0}
+    - target: {fileID: 7241079915075208986, guid: 2fce62ea9ec9aee46b06666ca3eab8a3, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 7759270568693009689, guid: 2fce62ea9ec9aee46b06666ca3eab8a3, type: 3}
@@ -301,11 +309,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8008695477798658918, guid: 2fce62ea9ec9aee46b06666ca3eab8a3, type: 3}
       propertyPath: m_text
-      value: Day 0 Fail!
+      value: 'Day 0 Fail! You earned $0 today with inspection grade: F, but need
+        $5 to win.'
       objectReference: {fileID: 0}
     - target: {fileID: 8008695477798658918, guid: 2fce62ea9ec9aee46b06666ca3eab8a3, type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 144
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008695477798658918, guid: 2fce62ea9ec9aee46b06666ca3eab8a3, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 144
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fce62ea9ec9aee46b06666ca3eab8a3, type: 3}

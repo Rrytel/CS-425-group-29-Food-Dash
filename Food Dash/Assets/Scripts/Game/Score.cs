@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-	float inspectorGrade;
+	char grade;
 	int score = 0;
 
 	/*
@@ -28,22 +28,43 @@ public class Score : MonoBehaviour
 	*/
 	public int GetScore ()
 	{
+		float multiplier;
+
 		// inspector grade
-		var multiplier = GameObject.FindGameObjectsWithTag ("Rat").Length switch
+		switch (GameObject.FindGameObjectsWithTag ("Rat").Length)
 		{
-			// a
-			0 => 1.5f,
-			// b
-			1 => 1.25f,
-			// c
-			2 => 1,
-			// d
-			3 => 0.75f,
-			// f
-			_ => 0.5f,
-		};
+			case 0:
+				grade = 'A';
+				multiplier = 1.5f;
+				break;
+
+			case 1:
+				grade = 'B';
+				multiplier = 1.25f;
+				break;
+
+			case 2:
+				grade = 'C';
+				multiplier = 1;
+				break;
+
+			case 3:
+				grade = 'D';
+				multiplier = 0.75f;
+				break;
+
+			default:
+				grade = 'F';
+				multiplier = 0.5f;
+				break;
+		}
 
 		return (int) (score * multiplier);
+	}
+
+	public char GetGrade ()
+	{
+		return grade;
 	}
 
 	public void ResetScore ()

@@ -11,7 +11,7 @@ public class RatTimer : MonoBehaviour
     public GameObject gameController;
 
     //delay for timer to start for rats to start spawning
-    private float delay = 45.0f; 
+    private float delay = 45.0f;
     float timer;
 
     // Start is called before the first frame update
@@ -22,8 +22,8 @@ public class RatTimer : MonoBehaviour
 
 
         //Based on the round the user is in, spawn a diff. # of rats
-        int day = gameController.GetComponent<Round>().day;
-        if (day == 1 || day == 0)
+        int day = gameController.GetComponent<Round>().GetDay ();
+        if (day == 0 || day == 1)
         {
             gameSpawn = 3;
         }else if(day == 2){
@@ -57,14 +57,14 @@ public class RatTimer : MonoBehaviour
                 int index = Random.Range(0, spawns.Count);
                 Debug.Log($"index: {index}");
                 //give the rat a random pos.
-                var randPos = spawns[index].transform.position; 
+                var randPos = spawns[index].transform.position;
 
                 //create an object at the random positon calculated
                 if(gameSpawn > 0)
                 {
-                
+
                 Instantiate(ratObject, randPos, Quaternion.identity);
-                    
+
                     gameSpawn--;
                 }
                 //Debug.Log(spawnTime);
@@ -73,7 +73,7 @@ public class RatTimer : MonoBehaviour
                 for (int i = 0; i < spawns.Count; i++)
                 {
                     Debug.Log(spawns[i]);
-                    
+
                 }
                 //for (int j=0)
                 //spawnTime = 45f;
@@ -84,11 +84,8 @@ public class RatTimer : MonoBehaviour
                 Debug.Log("Timer has run out!");
             }
         }
-        
+
 
         //Debug.Log("Time has passed game playing: " + Time.time);
     }
 }
-
-
-
