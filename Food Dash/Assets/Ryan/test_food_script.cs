@@ -262,8 +262,7 @@ public class test_food_script : MonoBehaviour
                 break;
 
             case "Knife":
-                //jess
-                if (isChoppable)
+                if (isChoppable && chopState <= chopThresh)
                 {
                     //Increment chop counter
                     chopState += 1;

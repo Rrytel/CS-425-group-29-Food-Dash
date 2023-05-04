@@ -1,3 +1,4 @@
+/*
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ using UnityEngine.Events;
 
 public class UI_InteractionController : MonoBehaviour
 {
+    
     [SerializeField] private GameObject uiController;
     [SerializeField] private GameObject baseController;
     [SerializeField] private InputActionReference uiSwitcherInputAction;
@@ -150,3 +152,4 @@ public class UI_InteractionController : MonoBehaviour
         }
     }
 }
+    */

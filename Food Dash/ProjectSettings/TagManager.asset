@@ -24,6 +24,7 @@ TagManager:
   - PlayerTextOutput
   - BaitController
   - black hole
+  - player mark
   layers:
   - Default
   - TransparentFX
