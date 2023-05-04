@@ -4912,6 +4912,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5386520189195861329, guid: a25e54b9543b13740a741ada3d9f8b42, type: 3}
   m_PrefabInstance: {fileID: 905588084}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &905588086 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6538087093240730302, guid: a25e54b9543b13740a741ada3d9f8b42, type: 3}
+  m_PrefabInstance: {fileID: 905588084}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &975841213
 GameObject:
   m_ObjectHideFlags: 0
@@ -7561,6 +7566,7 @@ MonoBehaviour:
   level: 2
   timeLimit: 240
   customerPrefab: {fileID: 5488821722800851327, guid: e9435079ecd8582409aab6beb9992a55, type: 3}
+  gameUI: {fileID: 905588086}
   victoryScreen: {fileID: 471058564}
   defeatScreen: {fileID: 1480684125}
   gameOverScreen: {fileID: 1821867731}
