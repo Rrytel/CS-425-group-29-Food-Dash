@@ -263,16 +263,17 @@ public class test_food_script : MonoBehaviour
                 break;
 
             case "Knife":
-                
-                if(isChoppable)
+                if (isChoppable && chopState <= chopThresh)
                 {
                     //Increment chop counter
                     chopState += 1;
-                    //Play chop sound
+
+                   
 
                     //Play chop animation
                     chopParticle.Emit(1);
                 }
+
 
 
                 break;

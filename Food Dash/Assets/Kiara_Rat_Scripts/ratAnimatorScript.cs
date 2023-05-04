@@ -41,7 +41,7 @@ public class ratAnimatorScript : MonoBehaviour
             //Debug.Log(canWalk);
              
             //$: can reference vars. w/in string; takes 2 param - 1 = message & 2 = shortcut
-             Debug.Log($"speed: {speed}, canWalk: {canWalk}", gameObject);
+           //  Debug.Log($"speed: {speed}, canWalk: {canWalk}", gameObject);
             /*if (!canWalk)
             {
                 m_Animator.SetTrigger("Walk");

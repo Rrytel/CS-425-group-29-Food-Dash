@@ -24,6 +24,10 @@ TagManager:
   - PlayerTextOutput
   - BaitController
   - black hole
+  - player mark
+  - RoomLight
+  - SamplesInfoPanel
+  - Lettuce
   layers:
   - Default
   - TransparentFX

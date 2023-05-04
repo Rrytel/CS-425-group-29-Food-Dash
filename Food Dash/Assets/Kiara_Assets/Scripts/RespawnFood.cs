@@ -38,10 +38,10 @@ public class RespawnFood : MonoBehaviour
         {
             Debug.Log("It's not a player touching the crate");
         }*/
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Player touching collision");
-            
+
         }
         //if ((transform.position - collision.position))
     }
@@ -51,21 +51,21 @@ public class RespawnFood : MonoBehaviour
         //check if the user is pressing a certain button or trigger
         if (other.gameObject.tag == "Player")
         {
-            
+
             Debug.Log("Player touching");
             //Instantiate(food, IPoint.position, Quaternion.identity);
             spawnFood();
         }
     }
 
-   /* private void Update()
-    {
-        float distance = 100;
-        if((transform.position - GameObject.FindGameObjectWithTag("Player").transform.position ).sqrMagnitude > distance * distance)
-        {
-            spawnFood();
-        }
-    }*/
+    /* private void Update()
+     {
+         float distance = 100;
+         if((transform.position - GameObject.FindGameObjectWithTag("Player").transform.position ).sqrMagnitude > distance * distance)
+         {
+             spawnFood();
+         }
+     }*/
 
     /* void OnMouseOver()
      {
@@ -81,3 +81,4 @@ public class RespawnFood : MonoBehaviour
      }
     */
 }
+
