@@ -9,10 +9,12 @@ public class ChopLettuceSound : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+           
         if (other.gameObject.tag == "Lettuce")
         {
             isChopping = true;
             PlayChopLettuceSound();
+       
         }
     }
 
@@ -26,6 +28,7 @@ public class ChopLettuceSound : MonoBehaviour
 
     void PlayChopLettuceSound()
     {
+        Debug.Log("does");
         if (chopLettuce != null && isChopping)
         {
             AudioSource.PlayClipAtPoint(chopLettuce, transform.position);
