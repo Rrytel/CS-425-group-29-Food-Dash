@@ -33,11 +33,13 @@ public class MoodDisplay : MonoBehaviour
 				break;
 
 			case Moods.Impatient:
-				output = "\U0001F928";
+				// impatient emoji doesn't display with this font
+				output = /* "\U0001F928" */ "Impatient";
 				break;
 
 			case Moods.Upset:
-				output = "\U0001F620";
+				// upset emoji doesn't display with this font
+				output = /* "\U0001F620" */ "Upset";
 				break;
 		}
 

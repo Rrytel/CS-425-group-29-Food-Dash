@@ -14,10 +14,13 @@ public class Score : MonoBehaviour
 	*/
 	public void UpdateScore (Order served)
 	{
-		int increment = 200;
+		int increment = 240;
 		int penalty = served.GetLifetime () ;
 
-		score += increment - penalty;
+		if (increment - penalty >= 0)
+		{
+			score += increment - penalty;
+		}
 
 		//print ("Order value: " + served.GetPrice ());
 		//print ("Order penalty: " + served.GetLifetime ());

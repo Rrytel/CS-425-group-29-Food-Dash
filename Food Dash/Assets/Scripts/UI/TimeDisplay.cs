@@ -23,14 +23,7 @@ public class TimeDisplay : MonoBehaviour
     {
 		int timeLeft = roundTracker.GetTimeLeft ();
 
-		if (timeLeft < 60)
-		{
-			displayText.text = timeLeft.ToString ();
-		}
-		else
-		{
-			displayText.text = "Day " + roundTracker.GetDay ().ToString ();
-		}
+		displayText.text = timeLeft.ToString ();
 
 		// show the time every 15 seconds
 		if (timeLeft % 30 == 0 || timeLeft == 5)
