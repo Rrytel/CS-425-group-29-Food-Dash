@@ -12,6 +12,7 @@ public class Round : MonoBehaviour
 	// how long each round will last (in seconds)
 	public int timeLimit = 240;
 	public GameObject customerPrefab;
+	public GameObject gameUI;
 	public GameObject victoryScreen;
 	public GameObject defeatScreen;
 	public GameObject gameOverScreen;
@@ -58,6 +59,8 @@ public class Round : MonoBehaviour
 		{
 			Time.timeScale = 0;
 
+			gameUI.SetActive (false);
+
 			// if round was won
 			if (EndRound () == 1)
 			{
@@ -81,7 +84,6 @@ public class Round : MonoBehaviour
 			else
 			{
 				gameOverScreen.SetActive (true);
-				rayInteractor.SetActive (true);
 				rayInteractor.SetActive (true);
 			}
 		}
@@ -145,6 +147,8 @@ public class Round : MonoBehaviour
 
 		// disable ray interactor (ui controller)
 		rayInteractor.SetActive (false);
+		// enable ui
+		gameUI.SetActive (true);
 
 		Time.timeScale = 1;
 	}
