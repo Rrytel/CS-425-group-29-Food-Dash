@@ -86,6 +86,7 @@ public class Round : MonoBehaviour
 			else
 			{
 				gameOverScreen.SetActive (true);
+				Time.timeScale = 1;
 				SceneManager.LoadScene ("Main Menu");
 			}
 		}
