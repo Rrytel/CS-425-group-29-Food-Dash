@@ -44,6 +44,9 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/Ryan/food_dash 1.unity
+    guid: 8fb4d21d973a6d440b793a8ecc8c9c0a
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: b46c4cd5e6f285742bf110b301a3a48d, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 631805a0d4de6e54faa8f77547e8637c, type: 2}

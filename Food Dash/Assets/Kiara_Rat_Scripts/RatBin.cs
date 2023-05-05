@@ -11,7 +11,7 @@ public class RatBin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>(); // get audio source component
+        //audioSource = GetComponent<AudioSource>(); // get audio source component
     }
 
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class RatBin : MonoBehaviour
     //destroy the passed in rat object and play rat sound
     void RatTouching(Collision rat)
     {
-        audioSource.PlayOneShot(ratSound); // play rat sound
+        //audioSource.PlayOneShot(ratSound); // play rat sound
         Destroy(rat.gameObject); // destroy rat object
     }
 }

@@ -34,6 +34,8 @@ public class Round : MonoBehaviour
 	/* float spawnTimer = 0; */
 	float roundTimer = 0;
 	List<Customer> currentCustomers = new ();
+	// time between inspection fail and reset to main menu
+	float gameResetTimer = 5;
 
 	void Start ()
 	{
@@ -84,7 +86,7 @@ public class Round : MonoBehaviour
 			else
 			{
 				gameOverScreen.SetActive (true);
-				rayInteractor.SetActive (true);
+				SceneManager.LoadScene ("Main Menu");
 			}
 		}
 
