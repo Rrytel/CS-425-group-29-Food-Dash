@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class TomatoChopping : MonoBehaviour
 {
+    public AudioSource audioSource;
     public AudioClip ChopTomato; // Renamed from chopSound
-    private AudioSource audioSource;
-    private bool isChopping = false;
+
 
     void Start()
     {
@@ -15,19 +15,11 @@ public class TomatoChopping : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Tomato") && !isChopping)
+        if (other.gameObject.CompareTag("Tomato"))
         {
-            isChopping = true;
             audioSource.PlayOneShot(ChopTomato); // Updated from chopSound
         }
     }
 
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Tomato"))
-        {
-            isChopping = false;
-        }
-    }
 }
 

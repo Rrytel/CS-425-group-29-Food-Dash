@@ -5,6 +5,10 @@ using UnityEngine;
 public class RatTimer : MonoBehaviour
 {
     public GameObject ratObject;
+
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
     float spawnTime;
     float gameSpawn;
     public List<GameObject> spawns;
@@ -17,21 +21,26 @@ public class RatTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        audioSource = GetComponent<AudioSource>();
         spawnTime = 15;
 
 
         //Based on the round the user is in, spawn a diff. # of rats
-        int day = gameController.GetComponent<Round>().GetDay ();
+        int day = gameController.GetComponent<Round>().GetDay();
         if (day == 0 || day == 1)
         {
             gameSpawn = 3;
-        }else if(day == 2){
+        }
+        else if (day == 2)
+        {
             gameSpawn = 5;
-        }else if (day == 3)
+        }
+        else if (day == 3)
         {
             gameSpawn = 7;
-        } else {
+        }
+        else
+        {
             gameSpawn = day + 4;
         }
         //gameSpawn = 5;
@@ -44,9 +53,9 @@ public class RatTimer : MonoBehaviour
 
         //rats won't spawn until 45 sec has passed in the game and then every 15 sec for ever many rats are to spawn that day
         timer += Time.deltaTime;
-        if(timer > delay)
+        if (timer > delay)
         {
-                spawnTime = spawnTime - Time.deltaTime;
+            spawnTime = spawnTime - Time.deltaTime;
             if (spawnTime <= 0)
             {
                 Debug.Log("This is the spawn time: " + spawnTime);
@@ -60,10 +69,11 @@ public class RatTimer : MonoBehaviour
                 var randPos = spawns[index].transform.position;
 
                 //create an object at the random positon calculated
-                if(gameSpawn > 0)
+                if (gameSpawn > 0)
                 {
 
-                Instantiate(ratObject, randPos, Quaternion.identity);
+                    Instantiate(ratObject, randPos, Quaternion.identity);
+                    audioSource.PlayOneShot(audioClip);
 
                     gameSpawn--;
                 }

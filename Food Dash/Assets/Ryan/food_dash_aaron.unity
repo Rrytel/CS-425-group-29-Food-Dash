@@ -3039,6 +3039,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tomato_ingrident_prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 7947380356287896581, guid: d1916db9c5430f8418f5d477ded6e67e, type: 3}
+      propertyPath: m_TagString
+      value: Tomato
+      objectReference: {fileID: 0}
     - target: {fileID: 7947380356287896590, guid: d1916db9c5430f8418f5d477ded6e67e, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -3090,6 +3094,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7947380356287896590, guid: d1916db9c5430f8418f5d477ded6e67e, type: 3}
   m_PrefabInstance: {fileID: 600209208}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &600209210 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7947380356287896581, guid: d1916db9c5430f8418f5d477ded6e67e, type: 3}
+  m_PrefabInstance: {fileID: 600209208}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &600209211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600209210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dc828678a1e3304d96f10c6abbc1fb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChopTomato: {fileID: 8300000, guid: 3765f8d053363c745b8ac0cce1ddb9f9, type: 3}
 --- !u!1001 &627711021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3773,6 +3795,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4980331068544172785, guid: 4f7d1e43a545d2f4bbb8f55affd37adc, type: 3}
   m_PrefabInstance: {fileID: 801988789}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &801988791 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4980331068544172794, guid: 4f7d1e43a545d2f4bbb8f55affd37adc, type: 3}
+  m_PrefabInstance: {fileID: 801988789}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &801988792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801988791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b7641e547fbff547afeb1961da467c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chopLettuce: {fileID: 8300000, guid: 0b896752ba3457a4f912510c46093d59, type: 3}
 --- !u!4 &808900120 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5609614764136041274, guid: 104904e761210c64ca30c9a65771ccad, type: 3}

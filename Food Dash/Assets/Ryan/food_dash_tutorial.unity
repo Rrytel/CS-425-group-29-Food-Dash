@@ -5212,6 +5212,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: tomato_ingrident_prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 7947380356287896581, guid: d1916db9c5430f8418f5d477ded6e67e, type: 3}
+      propertyPath: m_TagString
+      value: Tomato
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947380356287896583, guid: d1916db9c5430f8418f5d477ded6e67e, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3765f8d053363c745b8ac0cce1ddb9f9, type: 3}
     - target: {fileID: 7947380356287896590, guid: d1916db9c5430f8418f5d477ded6e67e, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -5256,8 +5264,124 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7947380356287896583, guid: d1916db9c5430f8418f5d477ded6e67e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d1916db9c5430f8418f5d477ded6e67e, type: 3}
+--- !u!1 &929592800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7947380356287896581, guid: d1916db9c5430f8418f5d477ded6e67e, type: 3}
+  m_PrefabInstance: {fileID: 929592799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &929592801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929592800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dc828678a1e3304d96f10c6abbc1fb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  ChopTomato: {fileID: 8300000, guid: 3765f8d053363c745b8ac0cce1ddb9f9, type: 3}
+--- !u!82 &929592802
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929592800}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3765f8d053363c745b8ac0cce1ddb9f9, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &967609174
 GameObject:
   m_ObjectHideFlags: 0
@@ -7229,6 +7353,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ratObject: {fileID: 656353256892248015, guid: 8af0754de728a464493b68806a53a412, type: 3}
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 0}
   spawns:
   - {fileID: 1487659574}
   - {fileID: 1073526343}
@@ -8364,12 +8490,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4980331068544172792, guid: 4f7d1e43a545d2f4bbb8f55affd37adc, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4980331068544172792, guid: 4f7d1e43a545d2f4bbb8f55affd37adc, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4980331068544172794, guid: 4f7d1e43a545d2f4bbb8f55affd37adc, type: 3}
       propertyPath: m_Name
       value: lettuce_ingrident_prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 4980331068544172794, guid: 4f7d1e43a545d2f4bbb8f55affd37adc, type: 3}
+      propertyPath: m_TagString
+      value: Lettuce
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f7d1e43a545d2f4bbb8f55affd37adc, type: 3}
+--- !u!1 &1597750815 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4980331068544172794, guid: 4f7d1e43a545d2f4bbb8f55affd37adc, type: 3}
+  m_PrefabInstance: {fileID: 1597750814}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1597750816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597750815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b7641e547fbff547afeb1961da467c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chopLettuce: {fileID: 8300000, guid: 0b896752ba3457a4f912510c46093d59, type: 3}
 --- !u!1001 &1602198472
 PrefabInstance:
   m_ObjectHideFlags: 0

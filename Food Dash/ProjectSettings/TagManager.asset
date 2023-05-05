@@ -28,6 +28,7 @@ TagManager:
   - RoomLight
   - SamplesInfoPanel
   - Lettuce
+  - Tomato
   layers:
   - Default
   - TransparentFX
