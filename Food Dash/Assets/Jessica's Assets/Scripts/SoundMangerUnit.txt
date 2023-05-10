@@ -1,0 +1,65 @@
+using NUnit.Framework;
+using UnityEngine;
+
+[TestFixture]
+public class SoundManagerTests
+{
+    private GameObject soundManagerObject;
+    private SoundManager soundManager;
+
+    [SetUp]
+    public void SetUp()
+    {
+        // Create a new instance of the SoundManager script
+        soundManagerObject = new GameObject();
+        soundManager = soundManagerObject.AddComponent<SoundManager>();
+    }
+
+    [TearDown]
+    public void TearDown()
+    {
+        // Clean up the created GameObject and script instance
+        GameObject.DestroyImmediate(soundManagerObject);
+    }
+
+    [Test]
+    public void PlayBackgroundMusic_WhenCalled_BackgroundMusicIsPlaying()
+    {
+        // Arrange
+
+        // Act
+        soundManager.PlayBackgroundMusic();
+
+        // Assert
+        Assert.IsTrue(soundManager.backgroundMusic.isPlaying);
+    }
+
+    [Test]
+    public void StopBackgroundMusic_WhenCalled_BackgroundMusicIsNotPlaying()
+    {
+        // Arrange
+        soundManager.PlayBackgroundMusic();
+
+        // Act
+        soundManager.StopBackgroundMusic();
+
+        // Assert
+        Assert.IsFalse(soundManager.backgroundMusic.isPlaying);
+    }
+
+    [Test]
+    public void PlayCookingSound_WhenCalled_CookingSoundIsPlayed()
+    {
+        // Arrange
+        bool cookingSoundPlayed = false;
+        soundManager.cookingSound = Resources.Load<AudioClip>("CookingSound");
+
+        // Act
+        soundManager.PlayCookingSound();
+
+        // Assert
+        Assert.IsTrue(cookingSoundPlayed); // Check if the cooking sound was played (You can use a callback or event to set this flag in the actual implementation)
+    }
+
+    // Add more tests for the other sound-related methods (e.g., PlayChoppingSound, PlaySizzlingSound, etc.) following a similar pattern.
+}
